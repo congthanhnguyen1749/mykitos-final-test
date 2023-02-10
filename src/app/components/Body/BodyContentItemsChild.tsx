@@ -73,7 +73,6 @@ export const BodyContentItemsChild = () => {
               width: changemobileTextW,
               height: changemobileTextW,
               marginBottom: '30px',
-              boxShadow: '3px 4px 5px rgba(255,255,255,.6)',
               borderRadius: '100%',
               transition: 'all 3s linear',
             }}
