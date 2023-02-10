@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Text } from '@mantine/core';
+import { Box, Flex, Image, Text, keyframes } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import React from 'react';
 import stoneActive from '../../../assets/images/Body/icon/stone/WebStone/WhiteB.svg';
@@ -21,19 +21,22 @@ export const CardFlashesStoneFrom: any = props => {
   const changemobilemargin: any = mobile ? 10 : 40;
   const changeWidthPc: any = mobile ? '70%' : '20%';
   const changeSizeActive: any = mobile ? '-30%' : '10%';
-  const changeRouter: any = () => {
-    setHideandunhide(!hideandunhide);
-    setFtrue(!ftrue);
-    props.parentCallback(ftrue);
-  };
+  // check true or false
   const [check, setCheck]: any = React.useState(true);
   const [check1, setCheck1]: any = React.useState(true);
   const [check2, setCheck2]: any = React.useState(true);
   const [check3, setCheck3]: any = React.useState(true);
+  // check spread card
+  const [checks, setChecks]: any = React.useState(false);
+  const [check1s, setCheck1s]: any = React.useState(false);
+  const [check2s, setCheck2s]: any = React.useState(false);
+  const [check3s, setCheck3s]: any = React.useState(false);
+  // get items to change
   const flipBack: any = React.useRef();
   const flipBack1: any = React.useRef();
   const flipBack2: any = React.useRef();
   const flipBack3: any = React.useRef();
+  // value rotate items
   const changedeg: any = check ? '180deg' : '0deg';
   const changedeg1: any = check1 ? '180deg' : '0deg';
   const changedeg2: any = check2 ? '180deg' : '0deg';
@@ -41,19 +44,29 @@ export const CardFlashesStoneFrom: any = props => {
   const changeleftStone: any = mobile ? '3%' : '13%';
   const flipCardBack: any = props => {
     flipBack.current.style.transform = `rotateY(${changedeg})`;
-    setCheck(!check);
+    setCheck(true);
+    setChecks(true);
   };
   const flipCardBack1: any = () => {
     flipBack1.current.style.transform = `rotateY(${changedeg1})`;
-    setCheck1(!check1);
+    setCheck1(true);
+    setCheck1s(true);
   };
   const flipCardBack2: any = () => {
     flipBack2.current.style.transform = `rotateY(${changedeg2})`;
-    setCheck2(!check2);
+    setCheck2(true);
+    setCheck2s(true);
   };
   const flipCardBack3: any = () => {
     flipBack3.current.style.transform = `rotateY(${changedeg3})`;
-    setCheck3(!check3);
+    setCheck3(true);
+    setCheck3s(true);
+  };
+  console.log(changedeg, changedeg1, changedeg2, changedeg3);
+  const changeRouter: any = () => {
+    setHideandunhide(!hideandunhide);
+    setFtrue(!ftrue);
+    props.parentCallback(ftrue);
   };
   return hideandunhide ? (
     <Flex
@@ -294,10 +307,10 @@ export const CardFlashesStoneFrom: any = props => {
       </Flex>
       {/* position button spread carf */}
 
-      {changedeg == '180deg' ||
-      changedeg1 == '180deg' ||
-      changedeg2 == '180deg' ||
-      changedeg3 == '180deg' ? (
+      {checks == false ||
+      check1s == false ||
+      check2s == false ||
+      check3s == false ? (
         ''
       ) : (
         <Flex
@@ -312,16 +325,19 @@ export const CardFlashesStoneFrom: any = props => {
             border: '1px solid white',
             boxShadow:
               '0 0 0.1rem #fff, 0 0 0.1rem #fff, 0 0 0.1rem #ff2c52, 0 0 0.1rem #ff2c52, 0 0 0.4rem #ff2c52, inset 0 0 0.4rem #ff2c52',
+            transition: 'all 5s linear',
             cursor: 'pointer',
             ':hover': {
               background: 'rgba(0,0,0,0.5)',
             },
           }}
+          className='chnagehidebut'
           h={changeSizeHeightButton}
           w={changeSizeWidthButton}
           bg={'rgba(0, 0, 0, 0.4)'}
           justify={'center'}
           align={'center'}
+          opacity={0}
         >
           <Text fz={changeSizeText} fw={600} size={10} color={'white'}>
             Giải bài

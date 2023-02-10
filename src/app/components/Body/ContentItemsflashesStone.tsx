@@ -41,17 +41,16 @@ export const ContentItemsflashesStone = () => {
       window.removeEventListener('scroll', listenScrollEvent);
     };
   }, []);
-
+  console.log(loca.pathname.slice(30));
   return (
     <Box>
       <Flex
         justify={'flex-start'}
         align={'center'}
         direction={'column'}
-        mt={'5vh'}
         w={'100%'}
         sx={{ position: 'relative', top: '0', left: '0', right: '0' }}
-        mih={'85vh'}
+        mih={'90vh'}
       >
         {/* header */}
 
@@ -72,7 +71,23 @@ export const ContentItemsflashesStone = () => {
             color={'white'}
             mb={20}
           >
-            Trải bài xu hướng tình yêu sắp tới
+            Trải bài xu hướng{' '}
+            {loca.pathname.slice(30) == 'timetheme'
+              ? 'thời gian'
+              : loca.pathname.slice(30) == 'lovetheme'
+              ? 'tình yêu'
+              : loca.pathname.slice(30) == 'selftheme'
+              ? 'bản thân'
+              : loca.pathname.slice(30) == 'moneytheme'
+              ? 'tiền bạc'
+              : loca.pathname.slice(30) == 'familytheme'
+              ? 'gia đình'
+              : loca.pathname.slice(30) == 'careertheme'
+              ? 'sự nghiệp'
+              : loca.pathname.slice(30) == 'sosietytheme'
+              ? 'xã hội'
+              : ''}{' '}
+            sắp tới
           </Text>
           <Box opacity={0}>
             <Arrowleft />
@@ -86,6 +101,7 @@ export const ContentItemsflashesStone = () => {
             sx={{
               transition: 'all .3s linear',
             }}
+            mb={'3vh'}
             opacity={1}
           >
             <ScrollChangeCard />
@@ -93,19 +109,17 @@ export const ContentItemsflashesStone = () => {
         ) : (
           ''
         )}
-
         {/* end another navbar */}
         {/* content */}
         <Flex w={'100%'} h={'100%'} justify={'center'} align={'center'}>
           <CardFlashesStoneFrom parentCallback={callbackFunction} />
         </Flex>
-
         {message ? (
-          <Box mt={10}>
+          <Box mt={5}>
             <ItemsInfoCard />
             <ItemsInfoCard />
             <ItemsInfoCard />
-            <ItemsInfoCard />
+            <ItemsInfoCard /> 
           </Box>
         ) : (
           ''

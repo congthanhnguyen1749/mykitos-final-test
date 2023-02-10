@@ -56,7 +56,7 @@ export const MenuHeaderMobile = () => {
           align={'center'}
           justify={'space-between'}
           h={100}
-          w={'200px'}
+          w={'268px'}
           sx={{
             borderBottom: ' 1px solid gray',
             borderRight: '1px solid gray',
@@ -72,7 +72,7 @@ export const MenuHeaderMobile = () => {
         <Flex
           align={'center'}
           justify={'flex-start'}
-          w={200}
+          w={268}
           h={'100vh'}
           sx={{ background: '#090F1B', borderRight: '1px solid gray' }}
           direction={'column'}

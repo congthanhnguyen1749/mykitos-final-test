@@ -3,13 +3,16 @@ import * as React from 'react';
 // cart
 import Icon_ActiveCart from '../../../../assets/images/icons/card/card.svg';
 import Icon_UnActiveCart from '../../../../assets/images/icons/card/card2.svg';
+import Icon_UnActiveCartMobile from '../../../../assets/images/Header/button_header/Frame 3466182.svg';
 
 // center
 import Icon_ActiveCenter from '../../../../assets/images/icons/center/Component 59.svg';
+import Icon_ActiveCenterMobile from '../../../../assets/images/Header/button_header/Frame 3466437.svg';
 import Icon_UnActiveCenter from '../../../../assets/images/icons/center/center.svg';
 
 // snowBall
 import Icon_ActiveSnowball from '../../../../assets/images/icons/iconSnowBall/Frame 3466290.svg';
+import Icon_ActiveSnowballMobile from '../../../../assets/images/Header/button_header/Property 1=Variant3.svg';
 import Icon_UnActiveSnowball from '../../../../assets/images/icons/iconSnowBall/iconNoColorDailyCard.svg';
 
 // change language
@@ -24,6 +27,7 @@ import userCircle from '../../../../assets/images/icons/loginAndCoin/iconLogin/i
 export const iconData: Object[] = [
   {
     iconActived: Icon_ActiveSnowball,
+    iconMobileActived: Icon_ActiveSnowballMobile,
     iconInactived: Icon_UnActiveSnowball,
     key: 'daily',
     label: 'Header.iconMenu.iconSnowBall',
@@ -32,12 +36,14 @@ export const iconData: Object[] = [
   {
     iconActived: Icon_ActiveCenter,
     iconInactived: Icon_UnActiveCenter,
+    iconMobileActived: Icon_ActiveCenterMobile,
     key: 'get',
     label: 'Header.iconMenu.iconCard',
     link: 'getreading',
   },
   {
     iconActived: Icon_ActiveCart,
+    iconMobileActived: Icon_UnActiveCartMobile,
     iconInactived: Icon_UnActiveCart,
     key: 'cart',
     label: 'Header.iconMenu.iconCart',
