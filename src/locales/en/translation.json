@@ -1,0 +1,265 @@
+{
+  "LoginPage": {
+    "username": {
+      "label": "Username",
+      "placeholder": " Enter your username",
+      "validationEmpty": "You have not signed up yet",
+      "notWhiteSpaces": "Username cannot contain spaces",
+      "validation": "Include only lowercase letters and numbers"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Enter your password",
+      "validation": "At least 8 characters",
+      "validationEmpty": "You have not entered your password",
+      "forgot": "Forgot Password?",
+      "remember": "Remember Password",
+      "notWhiteSpaces": "Password cannot contain spaces"
+    },
+    "confirmPassword": {
+      "label": "Confirm password",
+      "placeholder": "Confirm your password",
+      "validation": "Password is incorrect"
+    },
+    "policy": {
+      "textAgree": "Agree to",
+      "TermsOfService": "Terms of Service",
+      "end": "and",
+      "PrivacyPolicy": "Privacy Policy"
+    },
+    "button": {
+      "login": "Log In",
+      "register": "Sign Up"
+    },
+    "term": {
+      "label": "Agree with Terms of Service",
+      "error": "You have to agree with Terms of Service in order to register."
+    },
+    "error": {
+      "system_error": "There is something wrong. Please check your username and password again and retry after 30s.",
+      "invalid_username": "Username doesn't exist.",
+      "valid_username": "Username has already existed",
+      "invalid_password": "Your password is invalid.",
+      "invalid_general": "Username or password is incorrect."
+    },
+    "textLink": {
+      "askRegister": "Already had an account?",
+      "askLogin": "Don’t have an account?",
+      "loginNow": "Log In now",
+      "registerNow": "Sign Up now"
+    },
+    "divider": "Or"
+  },
+  "Header": {
+    "sale": "Sale",
+    "iconMenu": {
+      "game": "Game",
+      "voucher": "Voucher",
+      "chat": "Chat",
+      "notification": "Notification",
+      "profile": "Profile",
+      "iconCart": "Cart",
+      "iconSnowBall": "Daily card",
+      "iconCard": "Get reading"
+    }
+  },
+  "Body": {
+    "Violetcrystal": {
+      "description": "Chủ đề thời gian",
+      "label": "Trải bài hàng ngày, hàng tuần, hàng tháng và hàng 6 tháng"
+    },
+    "Seacrystal": {
+      "description": "Chủ đề Tình yêu",
+      "label": "Trải bài về con đường tình duyên, định hướng lựa chọn tri trỷ và mối quan hệ của bạn với người ấy"
+    },
+    "Qrangecrystal": {
+      "description": "Chủ đề Bản thân",
+      "label": "Trải bài giúp bạn hiểu sâu sắc hơn về bản thân và định hướng sự nghiệp một cách tương đối cho bạn."
+    },
+    "Qraycrystal": {
+      "description": "Chủ đề Tiền bạc",
+      "label": "Trải bài về tài chính sắp tới của bạn"
+    },
+    "Darkvioletcrystal": {
+      "description": "Chủ đề Gia đình",
+      "label": "Trải bài về tình hình gia đình thời gian tới và mối quan hệ với người thân"
+    },
+    "Whitecrystal": {
+      "description": "Chủ đề Sự nghiệp",
+      "label": "Trải bài về con đường sự nghiệp sắp tới, lựa chọn công việc, định hướng sự nghiệp"
+    },
+    "Glaxycrystal": {
+      "description": "Chủ đề Quan hệ xã hội",
+      "label": "Trải bài về tình hình bạn bè xã hội và mối quan hệ với bạn bè, đồng nghiệp"
+    },
+    "lovetheme": {
+      "Cart1": {
+        "description": "Trải bài xu hướng tình yêu sắp tới",
+        "label": "Trải bài sẽ cho bạn biết tình hình đường tình duyên của bạn sắp tới ưu và nhược điểm của bạn khi yêu cũng như kết quả cho sự kiện sắp tới."
+      },
+      "Cart2": {
+        "description": "Trải bài Cán Cân Thiên Bình",
+        "label": "Bạn đang đứng trước 2 đối tượng hoặc 2 cơ hội và đang muốn lựa chọn phù hợp nhất cho bản thân thì đây là trải bài phù hợp với bạn, Trải bài sẽ giúp bạn xem xét lại ưu nhược điểm của các đối tượng cũng như giúp bạn đưa ra lựa chọn tốt nhất."
+      },
+      "Cart11": {
+        "description": "Tôi đang phân vân giữa 3 người",
+        "label": "Bạn đang đứng trước nhiều hơn 2 đối tượng và đang muốn lựa chọn phù hợp nhất cho bản thân thì đây là trải bài phù hợp với bạn, Trải bài sẽ giúp bạn xem xét lại ưu nhược điểm của các đối tượng cũng như giúp bạn đưa ra lựa chọn tốt nhất."
+      },
+      "Cart4": {
+        "description": "Trải bài tấm gương mối quan hệ",
+        "label": "Nếu bạn đã có đối tượng hoặc đang trong một mối quan hệ, trải bài có thể giúp bạn nhìn nhận lại mối quan hệ 1 cách rõ ràng cũng như tình cảm và mong muốn của cả 2 bên cũng như xu hướng tương lai của mối quan hệ, ngoài ra, trải bài cũng có thể sẽ cho bạn lời khuyên về mối quan hệ trong tương lai."
+      }
+    },
+    "timetheme": {
+      "Cart7": {
+        "description": "Trải bài hằng ngày",
+        "label": "Trải bài sẽ cho bạn biết mỗi ngày của bạn sẽ thế nào để chuẩn bị tốt nhất cho ngày hôm đó."
+      },
+      "Cart8": {
+        "description": "Trải bài 7 ngày trong tuần",
+        "label": "Trải bài sẽ cho bạn biết tình hình từng ngày trong tuần sắp tới của bạn."
+      },
+      "Cart9": {
+        "description": "Trải bài tháng này",
+        "label": "Trải bài sẽ cho bạn biết tình hình chung các tuần sắp tới và dự đoán kết quả cho tháng tới."
+      },
+      "Cart10": {
+        "description": "Trải bài 6 tháng tới",
+        "label": "Trải bài sẽ cho bạn biết tình hình chung 6 tháng tới của bạn."
+      }
+    },
+    "careertheme": {
+      "Cart1": {
+        "description": "Trải bài bốn ngọn gió con đường sự nghiệp",
+        "label": "Trải bài cho biết về tổng quan cũng như ưu, nhược điểm về công việc của bạn và xu hướng diễn biến công việc trong thời gian tới."
+      },
+      "Cart2": {
+        "description": "Trải bài Cán Cân Thiên Bình giữa 2 công việc ",
+        "label": "Bạn đang đứng trước 2 công việc hoặc 2 dự án và đang muốn lựa chọn phù hợp nhất cho bản thân thì đây là trải bài phù hợp với bạn, Trải bài sẽ giúp bạn xem xét lại ưu nhược điểm của các đối tượng cũng như giúp bạn đưa ra lựa chọn tốt nhất."
+      },
+      "Cart5": {
+        "description": "Trải bài ngã ba đường giữa 3 công việc",
+        "label": "Bạn đang đứng trước nhiều hơn 2 cơ hội kinh doanh hoặc đang muốn lựa chọn nghề phù hợp nhất cho bản thân thì đây là trải bài phù hợp với bạn, Trải bài sẽ giúp bạn xem xét lại ưu nhược điểm của các đối tượng cũng như giúp bạn đưa ra lựa chọn tốt nhất."
+      },
+      "Cart11": {
+        "description": "Trải bài định hướng nghề nghiệp",
+        "label": "Trải bài sẽ cho bạn biết tình hình chung 6 tháng tới của bạn."
+      },
+      "Cart6": {
+        "description": "Trải bài Celtic Cross",
+        "label": "Khi bạn muốn biết toàn bộ thông tin về công việc trong quá khứ, hiện tại và tương lai cũng như cần lời khuyên tối ưu cho công việc sắp tới của mình, thì đây chính là trải bài dành cho bạn."
+      }
+    },
+    "moneytheme": {
+      "Cart1": {
+        "description": "Trải bài chuyện tiền bạc sắp tới",
+        "label": "Trải bài cho biết về tổng quan cũng như ưu, nhược điểm về chuyện tiền bạc của bạn và xu hướng diễn biến tình hình tài chính trong thời gian tới."
+      },
+      "Cart2": {
+        "description": "Trải bài Cán Cân Thiên Bình giữa 2 cơ hội tài chính",
+        "label": "Bạn đang đứng trước 2 cơ hội về đầu tư và bạn đang muốn lựa chọn phù hợp nhất cho bản thân thì đây là trải bài phù hợp với bạn, Trải bài sẽ giúp bạn xem xét lại ưu nhược điểm của các dự án cũng như giúp bạn đưa ra lựa chọn tốt nhất."
+      }
+    },
+    "familytheme": {
+      "Cart1": {
+        "description": "Trải bài chuyện bốn ngọn gió tình hình gia đình",
+        "label": "Trải bài cho biết về tổng quan cũng như ưu, nhược điểm về chuyện gia đình bạn và xu hướng diễn biến gia đình bạn trong thời gian tới."
+      },
+      "Cart4": {
+        "description": "Trải bài tấm gương mối quan hệ",
+        "label": "Trải bài có thể giúp bạn nhìn nhận lại mối quan hệ một cách rõ ràng cũng như tình cảm và mong muốn của bạn và người thân trong gia đình cũng như xu hướng tương lai của mối quan hệ, ngoài ra, trải bài cũng có thể sẽ cho bạn lời khuyên về mối quan hệ trong tương lai. "
+      }
+    },
+    "selftheme": {
+      "Cart1": {
+        "description": "Trải bài thấu hiểu bản thân",
+        "label": "Trải bài giúp bạn tìm hiểu sâu sắc hơn về bản thân từ tính cách con người đến những xu hướng về cảm xúc, tư duy và những thế mạnh, điểm yếu của bạn."
+      },
+      "Cart12": {
+        "description": "Trải bài định hướng sự nghiệp",
+        "label": "Trải bài giúp bạn xác định định hướng công việc, học tập qua việc tìm hiểu về ưu điểm, nhược điểm và tính cách của bạn.   "
+      }
+    },
+    "sosietytheme": {
+      "Cart1": {
+        "description": "Trải bài chuyện bạn bè, đồng nghiệp sắp tới",
+        "label": "Trải bài cho biết về tổng quan cũng như thuận lợi, khó khăn về các mối quan hệ bạn bè, đồng nghiệp và xu hướng diễn biến mối quan hệ đó trong thời gian tới."
+      },
+      "Cart4": {
+        "description": "Trải bài định hướng sự nghiệp",
+        "label": "Trải bài có thể giúp bạn nhìn nhận lại mối quan hệ một cách rõ ràng cũng như tình cảm và mong muốn của bạn với bạn bè, đồng nghiệp cũng như xu hướng tương lai của mối quan hệ, ngoài ra, trải bài cũng có thể sẽ cho bạn lời khuyên về tình bạn trong tương lai."
+      }
+    }
+  },
+  "RegisterAccountType": {
+    "boxPlayer": {
+      "title": "Come join us to have fun and get Voucher",
+      "button": "Player Account"
+    },
+    "boxShop": {
+      "title": "Create your own shop and bring gifts to the customers",
+      "button": "Shop Account"
+    },
+    "mobileTitle": "Pick the type of account"
+  },
+  "Footer": {
+    "about": {
+      "title": "About Gochie",
+      "games": "Games",
+      "voucher": "Voucher",
+      "condition": "Term & Condition",
+      "security": "Privacy Policy"
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "Email: borostudio2018@gmail.com",
+      "hotline": "Hotline: 0392202429"
+    },
+    "download": "Download",
+    "company": "VIETDEFI Limited Company",
+    "address": "Address: Lot 6, group 49 Trung Kinh, Yen Hoa Ward, Cau Giay District, Hanoi City, Vietnam",
+    "vietdefi": "2021 VIETDEFI"
+  },
+  "Preferences": {
+    "title": "Your shopping preferences",
+    "button": "Done",
+    "skip": "skip",
+    "interestTitle": {
+      "1": "Men's Fashion",
+      "2": "Women's Fashion",
+      "3": "Kid's Fashion",
+      "4": "Phones & Accessories",
+      "5": "Books & magazines",
+      "6": "Computers & laptops",
+      "7": "Cameras & Camcorders",
+      "8": "Clock & Watch",
+      "9": "Men's Shoes",
+      "10": "Women's shoes",
+      "11": "Consumer electronics",
+      "12": "Sports",
+      "13": "Vehicles & Accessories",
+      "14": "Gaming & Console",
+      "15": "House & Life",
+      "16": "Beauty",
+      "17": "Men's bags & wallets",
+      "18": "Women's bags & purses",
+      "19": "Accessories & Jewelry",
+      "20": "Tourism & Hotels",
+      "21": "Restaurant & Dining",
+      "22": "Movie",
+      "23": "Phone recharge card",
+      "24": "Events & entertainment",
+      "25": "Toys",
+      "26": "Pet",
+      "27": "Food",
+      "28": "Science"
+    }
+  },
+  "BackPage": {
+    "skip": "Skip",
+    "backAuth": {
+      "resetPassword": "Reset password",
+      "changePassword": "Change password"
+    }
+  }
+}

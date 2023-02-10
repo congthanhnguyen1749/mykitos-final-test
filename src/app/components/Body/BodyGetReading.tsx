@@ -1,0 +1,86 @@
+import React from 'react';
+import { BodyDailyCardItemsGroup } from './BodyDailyCardItemsGroup';
+import { Box, Flex, SimpleGrid, Text } from '@mantine/core';
+import { LabelTextcrystal } from './data/data';
+import { useMediaQuery } from '@mantine/hooks';
+import { useNavigate } from 'react-router-dom';
+export const BodyGetReading: any = () => {
+  const navigate: any = useNavigate();
+
+  const mobile: any = useMediaQuery('(max-width: 755px)');
+  const setlayoutMobile: any = mobile ? '20px' : '50px';
+  const changesizelabel: any = mobile ? '15px' : '24px';
+  const changemobile: any = mobile ? '100%' : '120vh';
+  const changemtmobile: any = mobile ? 20 : 50;
+
+  const changeContentItems: any = (value, index) => {
+    navigate(`/get/contentItem/${value.link}`);
+
+  };
+  return (
+    <Flex
+      sx={{
+        width: 'fit-content',
+      }}
+      direction={'column'}
+      w={'100%'}
+      h={changemobile}
+    >
+      <Box
+        w={' 100%'}
+        mt={setlayoutMobile}
+        h={'10%'}
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
+        }}
+      >
+        <Text fz={'32px'} fw={'600'} lh={'41px'} fs={'normal'} color={'white'}>
+          Get reading
+        </Text>
+        <Text
+          fz={changesizelabel}
+          fw={'600'}
+          mt={'10px'}
+          lh={'31px'}
+          fs={'normal'}
+          color={'#9FBBD8'}
+          align="center"
+        >
+          Hãy chọn chủ đề mà bạn muốn hỏi!
+        </Text>
+      </Box>
+      <SimpleGrid
+        w={'100%'}
+        mt={changemtmobile}
+        cols={3}
+        breakpoints={[
+          { maxWidth: 1200, cols: 3 },
+          { maxWidth: 950, cols: 2 },
+          { maxWidth: 755, cols: 1 },
+        ]}
+        sx={{
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'flex-start',
+          flexWrap: 'wrap',
+          '&::-webkit-scrollbar': {
+            width: '0px',
+            background: 'transparent',
+          },
+        }}
+      >
+        {LabelTextcrystal.map((value, index) => {
+          return (
+            <div onClick={e => changeContentItems(value, index)} key={index}>
+              <BodyDailyCardItemsGroup data={value}></BodyDailyCardItemsGroup>
+            </div>
+          );
+        })}
+      </SimpleGrid>
+    </Flex>
+  );
+};

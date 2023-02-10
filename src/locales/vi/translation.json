@@ -1,0 +1,362 @@
+{
+  "LoginPage": {
+    "username": {
+      "label": "Tên đăng nhập",
+      "placeholder": "Điền tên đăng nhập",
+      "validationEmpty": "Bạn chưa đăng ký tài khoản",
+      "notWhiteSpaces": "Tên đăng nhập không được có khoẳng trắng",
+      "validation": "Chỉ bao gồm chữ cái thường và số"
+    },
+    "password": {
+      "label": "Mật khẩu",
+      "placeholder": "Nhập mật khẩu",
+      "validation": "Tối thiểu 8 ký tự",
+      "validationEmpty": "Bạn chưa nhập mật khẩu",
+      "forgot": "Quên mật khẩu?",
+      "remember": "Lưu mật khẩu",
+      "notWhiteSpaces": "Mật khẩu không được có khoẳng trắng"
+    },
+    "confirmPassword": {
+      "label": "Xác nhận mật khẩu",
+      "placeholder": "Nhập lại mật khẩu",
+      "validation": "Mật khẩu không khớp"
+    },
+    "policy": {
+      "textAgree": "Đồng ý với",
+      "TermsOfService": "Điều khoản dịch vụ",
+      "end": "và",
+      "PrivacyPolicy": "Chính sách bảo mật"
+    },
+    "button": {
+      "login": "Đăng Nhập",
+      "register": "Đăng Ký"
+    },
+    "term": {
+      "label": "Đồng ý với điều khoản dịch vụ.",
+      "error": "Bạn phải đồng ý với điều khoản dịch vụ trước khi đăng ký."
+    },
+    "error": {
+      "system_error": "Có lỗi xảy ra. Vui lòng kiểm tra và thử lại sau 30s.",
+      "invalid_username": "Tên đăng nhập không tồn tại.",
+      "valid_username": "Tên đăng nhập đã tồn tại",
+      "invalid_password": "Mật khẩu không đúng.",
+      "invalid_general": "Tên đăng nhập hoặc mật khẩu không chính xác."
+    },
+    "textLink": {
+      "askRegister": "Bạn đã có tài khoản? ",
+      "askLogin": "Bạn chưa có tài khoản? ",
+      "loginNow": "Đăng Nhập ngay",
+      "registerNow": "Đăng Ký ngay"
+    },
+    "divider": "Hoặc"
+  },
+  "Header": {
+    "sale": "Đăng bán",
+    "iconMenu": {
+      "game": "Trò chơi",
+      "voucher": "Cửa hàng",
+      "chat": "Tin Nhắn",
+      "notification": "Thông báo",
+      "profile": "Cá Nhân",
+      "iconCart": "Giỏ hàng thầy bói",
+      "iconSnowBall": "Tìm kiếm vận mệnh",
+      "iconCard": "Xem vận mệnh của bạn"
+    }
+  },
+  "Body": {
+    "Violetcrystal": {
+      "description": "Chủ đề thời gian",
+      "label": "Trải bài hàng ngày, hàng tuần, hàng tháng và hàng 6 tháng"
+    },
+    "Seacrystal": {
+      "description": "Chủ đề Tình yêu",
+      "label": "Trải bài về con đường tình duyên, định hướng lựa chọn tri trỷ và mối quan hệ của bạn với người ấy"
+    },
+    "Qrangecrystal": {
+      "description": "Chủ đề Bản thân",
+      "label": "Trải bài giúp bạn hiểu sâu sắc hơn về bản thân và định hướng sự nghiệp một cách tương đối cho bạn."
+    },
+    "Qraycrystal": {
+      "description": "Chủ đề Tiền bạc",
+      "label": "Trải bài về tài chính sắp tới của bạn"
+    },
+    "Darkvioletcrystal": {
+      "description": "Chủ đề Gia đình",
+      "label": "Trải bài về tình hình gia đình thời gian tới và mối quan hệ với người thân"
+    },
+    "Whitecrystal": {
+      "description": "Chủ đề Sự nghiệp",
+      "label": "Trải bài về con đường sự nghiệp sắp tới, lựa chọn công việc, định hướng sự nghiệp"
+    },
+    "Glaxycrystal": {
+      "description": "Chủ đề Quan hệ xã hội",
+      "label": "Trải bài về tình hình bạn bè xã hội và mối quan hệ với bạn bè, đồng nghiệp"
+    },
+    "loveTheme": {
+      "Cart1": {
+        "description": "Trải bài xu hướng tình yêu sắp tới",
+        "label": "Trải bài sẽ cho bạn biết tình hình đường tình duyên của bạn sắp tới ưu và nhược điểm của bạn khi yêu cũng như kết quả cho sự kiện sắp tới."
+      },
+      "Cart2": {
+        "description": "Trải bài Cán Cân Thiên Bình",
+        "label": "Bạn đang đứng trước 2 đối tượng hoặc 2 cơ hội và đang muốn lựa chọn phù hợp nhất cho bản thân thì đây là trải bài phù hợp với bạn, Trải bài sẽ giúp bạn xem xét lại ưu nhược điểm của các đối tượng cũng như giúp bạn đưa ra lựa chọn tốt nhất."
+      },
+      "Cart3": {
+        "description": "Tôi đang phân vân giữa 3 người",
+        "label": "Bạn đang đứng trước nhiều hơn 2 đối tượng và đang muốn lựa chọn phù hợp nhất cho bản thân thì đây là trải bài phù hợp với bạn, Trải bài sẽ giúp bạn xem xét lại ưu nhược điểm của các đối tượng cũng như giúp bạn đưa ra lựa chọn tốt nhất."
+      },
+      "Cart4": {
+        "description": "Trải bài tấm gương mối quan hệ",
+        "label": "Nếu bạn đã có đối tượng hoặc đang trong một mối quan hệ, trải bài có thể giúp bạn nhìn nhận lại mối quan hệ 1 cách rõ ràng cũng như tình cảm và mong muốn của cả 2 bên cũng như xu hướng tương lai của mối quan hệ, ngoài ra, trải bài cũng có thể sẽ cho bạn lời khuyên về mối quan hệ trong tương lai."
+      }
+    }
+  },
+  "RegisterAccountType": {
+    "boxPlayer": {
+      "title": "Come join us to have fun and get Voucher",
+      "button": "Player Account"
+    },
+    "boxShop": {
+      "title": "Create your own shop and bring gifts to the customers",
+      "button": "Shop Account"
+    },
+    "mobileTitle": "Chọn loại tài khoản"
+  },
+  "Footer": {
+    "about": {
+      "title": "Về Gochie",
+      "games": "Games",
+      "voucher": "Voucher",
+      "condition": "Điều khoản và điều kiện",
+      "security": "Chính sách bảo mật"
+    },
+    "contact": {
+      "title": "Liên hệ",
+      "email": "Email: borostudio2018@gmail.com",
+      "hotline": "Hotline: 0392202429"
+    },
+    "download": "Tải xuống trên",
+    "company": "Công ty TNHH VIETDEFI ",
+    "address": "Lô 6 tổ 49 Trung Kính, Phường Yên Hoà, Quận Cầu Giấy, Thành phố Hà Nội, Việt Nam",
+    "vietdefi": "2021 VIETDEFI"
+  },
+  "Preferences": {
+    "title": "Sở thích mua sắm của bạn",
+    "button": "Xong",
+    "skip": "Bỏ qua",
+    "interestTitle": {
+      "1": "Thời trang nam nứ",
+      "2": "Thời trang nữ",
+      "3": "Thời trang trẻ em ",
+      "4": "Điện thoại & phụ kiện",
+      "5": "Sách & tạp chí",
+      "6": "Máy tính & laptop",
+      "7": "Máy ảnh & quay phim",
+      "8": "Đồng hồ",
+      "9": "Giày dép nam",
+      "10": "Giày dép nữ",
+      "11": "Thiết bị điện gia dụng",
+      "12": "Thể thao",
+      "13": "Xe & phụ kiện",
+      "14": "Gaming & Console",
+      "15": "Nhà cửa và đời sống",
+      "16": "Sắc đẹp",
+      "17": "Túi, ví nam",
+      "18": "Túi, ví nư",
+      "19": "Phụ kiện & trang sức",
+      "20": "Du lịch & khách sạn",
+      "21": "Nhà hàng & ăn uống",
+      "22": "Xem phim",
+      "23": "Nạp tiền điện thoại",
+      "24": "Sự kiện & giải trí",
+      "25": "Đồ chơi ",
+      "26": "Thú cưng",
+      "27": "Đồ ăn ",
+      "28": "Khoa học"
+    }
+  },
+  "BackPage": {
+    "skip": "bỏ qua",
+    "backAuth": {
+      "resetPassword": "Đặt lại mật khẩu",
+      "changePassword": "Đổi mật khẩu",
+      "forgotPassword": "Quên mật khẩu"
+    },
+    "profile": {
+      "changePassword": "Đổi mật khẩu",
+      "information": "Hồ sơ của tôi",
+      "logout": "Đăng Xuất",
+      "policy": "Chính sách bảo mật",
+      "rules": "Điều khoản sử dụng",
+      "setting": "Cài đặt"
+    }
+  },
+  "Auth": {
+    "changePassword": {
+      "please": "Vui lòng đặt lại mật khẩu.",
+      "label": "Để bảo mật tài khoản, vui lòng không chia sẻ mật khẩu cho người khác.",
+      "labelPassword": "Mật khẩu mới : ",
+      "placeholderPassword": "Nhập  mật khẩu mới",
+      "labelConfirmPassword": "Nhập lại mật khẩu : ",
+      "placeholderConfirmPassword": "Nhập lại mật khẩu mới",
+      "labelCurrentPassword": "Mật khẩu hiện tại : ",
+      "placeholderCurrentPassword": "Nhập lại mật khẩu mới",
+      "button": "Lưu"
+    },
+    "username": {
+      "please": "Vui lòng cung cấp tên đăng nhập Gochie để lấy lại mật khẩu."
+    },
+    "confirmOTP": {
+      "label": "Nhập mã OTP vừa nhận được gửi qua Messenger của bạn:",
+      "effect": "Mã OTP có hiệu lực trong ",
+      "resend": "Gửi lại",
+      "button": "Tiếp Theo"
+    },
+    "methodOTP": {
+      "please": "Vui lòng chọn cách thức nhận mã OTP.",
+      "label": "Nhận mã OTP qua:"
+    }
+  },
+  "Game": {
+    "category": {
+      "accumulate": "Chơi game tích xu",
+      "challenge": "Thách đấu Game",
+      "voucher": "Game vui, Voucher VIP"
+    }
+  },
+  "Profile": {
+    "myStore": "Cửa hàng của tôi",
+    "taskBar": {
+      "profile": "Hồ sơ của tôi",
+      "giftBox": "Quà đăng nhập",
+      "walletVoucher": "Ví Voucher",
+      "walletGochie": "Ví Gochie",
+      "setting": "Cài đặt",
+      "key": "Đổi mật khẩu ",
+      "lock": "Chính sách bảo mật",
+      "book": "Điều khoản sử dụng",
+      "out": "Đăng xuất"
+    },
+    "information": {
+      "labelUsername": "Tên đăng nhập:",
+      "labelUser": "Tên người dùng:",
+      "labelDate": "Ngày sinh:",
+      "titleSex": "Giới tính:",
+      "maleSex": "Name",
+      "femaleSex": "Nữ",
+      "otherSex": "Khác",
+      "accountLink": "Liên kết tài khoản:",
+      "message": "Liên kết Messenger",
+      "telegram": "Liên kết Telegram",
+      "save": "Lưu",
+      "please": "Vui lòng liên kết Messenger hoặc Telegram của bạn để bảo mật tài khoản."
+    },
+    "giftBox": {
+      "day": "Ngày",
+      "note": " Hãy quay lại vào ngày mai để nhận 100 xu nha!"
+    },
+    "changePassword": {
+      "header": "Đổi mật khẩu",
+      "invalidCurrentPassword": "Mật khẩu hiện tại không đúng !"
+    },
+    "setting": {
+      "notification": "Thông báo",
+      "sound": "Âm thanh",
+      "language": "Ngôn ngữ",
+      "contact": "Liên lạc",
+      "reviews": "Đánh giá ứng dụng",
+      "deleteAccount": "Xóa tài khoản",
+      "notificationGame": "Game",
+      "notificationTransaction": "Cập nhật giao dịch",
+      "notificationVoucher": "Voucher",
+      "notificationShopping": "Cửa hàng đã mua sắm",
+      "contactText1": "Khi có câu hỏi hoặc yêu cầu truy cập thông tin, Người dùng vui lòng liên hệ Bộ phận Hỗ trợ của chúng tôi theo các địa chỉ sau:",
+      "contactTitle": "Công ty VIETDEFI",
+      "contactText2": "Địa chỉ:",
+      "contactText2Span": "Tầng 02,  Lô 6+7 khu Đô Thị Nam Thanh, Ngõ 1 đường Nguyễn Thị Duệ, Yên Hòa, Cầu Giấy, Hà Nội",
+      "contactText3": " Website:   ",
+      "contactText4": "Email: ",
+      "contactText4Span": "borostudio2018@gmail.com  ",
+      "contactText5": "Hotline:",
+      "contactText5Span": "1900 1000",
+      "contactText6": "Facebook:",
+      "contactText6Span": "[đang cập nhật]",
+      "contactText7": "Youtube",
+      "contactText7Span": "[đang cập nhật]",
+      "contactText8": "Instagram",
+      "contactText8Span": "[đang cập nhật]"
+    },
+    "policy": {
+      "Header": "Thông tin chung:",
+      "generalOne": "Chúng tôi cám ơn và trân trọng sự tin tưởng của Người dùng, cũng như nguyên tắc cơ bản trong quá trình hoạt động của Công ty VIETDEFI và ứng dụng Gochie chính là bảo vệ sự riêng tư và bảo mật của Người dùng.",
+      "generalTwo": "Chính sách Bảo mật này sẽ giúp Người dùng hiểu rõ hơn về cách thức mà Công ty VIETDEFI và các Thương hiệu đối tác của chúng tôi sử dụng và bảo vệ các dữ liệu cá nhân mà Người dùng cung cấp cho khi sử dụng Ứng dụng, hoặc khi bạn sử dụng dịch vụ liệt kê trong Điều khoản và Điều kiện sử dụng dịch vụ của chúng tôi, hoặc khi liên hệ với chúng tôi theo các phương thức khác nhau. Việc Người dùng sử dụng Ứng dụng hoặc Dịch vụ của chúng tôi sẽ chịu sự điều chỉnh của Chính sách Bảo mật này.",
+      "generalThree": "Chúng tôi cam kết bảo mật dữ liệu cá nhân của Người dùng và ngăn chặn việc đánh cắp, truy cập trái phép, và tiết lộ dữ liệu cá nhân của bạn bằng cách sử dụng những công nghệ, phần mềm mới nhất và theo phương thức tốt nhất.",
+      "generalFour": "Chúng tôi bảo lưu quyền sửa đổi Chính sách Bảo mật này tùy từng thời điểm, và sẽ ngay lập tức thông báo cho Người dùng. Người dùng cũng có thể cập nhật những thay đổi Chính sách Bảo mật mới nhất bằng cách truy cập vào Ứng dụng.",
+      "chapter1": "I. Tổ chức thu thập và quản lý Thông tin Cá nhân của Người dùng",
+      "chapter1Text": "Tổ chức thu thập và quản lý Thông tin Cá nhân của Người dùng là Công ty VIETDEFI có trụ sở chính tại Tầng 02,  Lô 6+7 khu Đô Thị Nam Thanh Ngõ 1 đường Nguyễn Thị Duệ, Yên Hòa, Cầu Giấy, Hà Nội. ",
+      "chapter2": "II. Thu thập Thông tin Cá nhân",
+      "chapter2Text1": "Khi Người dùng đăng ký tài khoản hoặc sử dụng Dịch vụ có trên Gochie, Người dùng tự nguyện cung cấp một số thông tin cho chúng tôi. Một số thông tin này là không bắt buộc và Người dùng có quyền được cập nhật và thay đổi khi cần thiết, bao gồm Tên tài khoản, Email, Số điện thoại, Ngày sinh, Giới tính. Người dùng cũng có cấp quyền truy cập dữ liệu vị trí của thiết bị di động cho Ứng dụng Gochie. Người dùng cũng có thể sẽ cung cấp cho Công ty VIETDEFI quyền truy cập những thông tin mà Người dùng chia sẻ trên các phương tiện thông tin khác như Facebook, Google, v.v. thông qua việc kết nối các phương tiện đó với Gochie. ",
+      "chapter2Text2": "Một số thông tin nhất định khác cũng có thể sẽ được thu thập khi Người dùng sử dụng Ứng dụng, bao gồm dữ liệu duyệt thông tin (clickstream), thông tin định danh, dạng trình duyệt của thiết bị di động của Người mua, v.v.",
+      "chapter2Text3": "Chúng tôi có thể thu thập thông tin của bạn từ những nguồn thông tin công khai sẵn có như sách danh bạ điện thoại, v.v., hoặc từ các bên thứ ba mà chúng tôi có thỏa thuận để quảng cáo Gochie và Dịch vụ của Công ty VIETDEFI.",
+      "chapter3": "III. Mục đích thu thập và Sử dụng Thông tin Cá nhân",
+      "chapter3Text1": "Chúng tôi sử dụng thông tin cá nhân thu thập được như trình bày bên trên nhằm mục đích cung cấp Dịch vụ của chúng tôi cho Người dùng; góp phần có được và hiểu rõ nhu cầu giải trí cũng như mua sắm của Người dùng; cải thiện Ứng dụng của chúng tôi; thực hiện phân tích thống kê; tuân thủ quy định an toàn và pháp luật; hoạt động quảng cáo trực tiếp; thông báo cho Người dùng về những thay đổi liên quan đến Dịch vụ của chúng tôi; và các dịch vụ khác mà chúng tôi cung cấp cho Người dùng tùy từng thời điểm.",
+      "chapter3Text2": "Người dùng có thể gửi Ý kiến đến một trong các địa chỉ liên hệ của chúng tôi nếu Người dùng không đồng ý cho phép Công ty VIETDEFI tiết lộ, chia sẻ thông tin của bạn cho các bên thứ ba như chi tiết trong Chính sách Bảo mật này hoặc sử dụng thông tin của Người dùng nhằm gửi các quảng cáo, giới thiệu sản phẩm và các mục đích thương mại khác. Tuy nhiên, bạn vui lòng lưu ý rằng với việc Người dùng yêu cầu như trên có thể khiến Công ty VIETDEFI không thể cung cấp cho Người dùng một phần hoặc toàn bộ Dịch vụ của chúng tôi.",
+      "chapter3Text3": "Chúng tôi có thể tiết lộ thông tin cá nhân của bạn theo yêu cầu, lệnh hoặc quyết định của cơ quan nhà nước có thẩm quyền theo quy định của pháp luật.",
+      "chapter4": "IV. Lưu giữ và Xóa Thông tin Cá nhân",
+      "chapter4Text": "Thông tin cá nhân của Người dùng sẽ được lưu giữ trong hệ thống máy chủ của Ứng dụng của chúng tôi trong vòng 10 năm kể từ sau lần cuối cùng bạn tương tác với Ứng dụng của chúng tôi hoặc cho đến khi chúng tôi nhận được yêu cầu xóa thông tin cá nhân của Người dùng."
+    },
+    "rules": {
+      "Header": "Điều khoản sử dụng Gochie",
+      "chapter1": "I. Giới thiệu",
+      "chapter1Text1": "Ứng dụng Gochie là ứng dụng thương mại điện tử vận hành bởi CÔNG TY VIETDEFI, một công ty với mã số doanh nghiệp 0109707213 và trụ sở chính tại Tầng 02,  Lô 6+7 khu Đô Thị Nam Thanh Ngõ 1 đường Nguyễn Thị Duệ, Yên Hòa, Cầu Giấy, Hà Nội. Điều khoản Gochie dưới đây áp dụng đối với khách hàng thân thiết, Công ty VIETDEFI, đối tác tham gia, bao gồm quy chế hoạt động của ứng dụng VIETDEFI và cơ chế giải quyết tranh chấp phát sinh khi tham gia sử dụng ứng dụng.",
+      "chapter1Text2": "Thương nhân, tổ chức và cá nhân tham gia giao dịch trên Ứng Dụng Gochie có quyền tiến hành giao dịch trực tuyến trên cơ sở tôn trọng quyền, lợi ích hợp pháp của các bên liên quan và không trái với quy định của pháp luật.",
+      "chapter2": "II. Đồng ý với các điều khoản và điều kiện này",
+      "chapter2Text1": "Bằng cách nhấn chọn “Đăng ký” để tạo tài khoản trên Ứng dụng Gochie, Người dùng được tự động xem như đã đọc,hiểu và đồng ý với các điều khoản và điều kiện này và các quy định của các văn kiện được tham chiếu dưới đây.",
+      "chapter2Text2": "Công ty bảo lưu quyền sửa đổi, điều chỉnh, bổ sung, hủy bỏ và/ hoặc thay thế bất kỳ quy định nào của các điều khoản và điều kiện này vào bất kỳ lúc nào. Chúng tôi sẽ thông báo cho Người dùng ít nhất 5 [năm] ngày trước khi sửa đổi, điều chỉnh, bổ sung, hủy bỏ và/ hoặc thay thế đó có hiệu lực, sẽ được xem như Người dùng đồng ý với sửa đổi, điều chỉnh, bổ sung, hủy bỏ và/ hoặc thay thế đó.",
+      "chapter3": "III. Hướng dẫn sử dụng ứng dụng Gochie",
+      "chapter3Text1": "Tạo tài khoản. Đây là bước đầu tiên và là bước tiên quyết khi bạn muốn sử dụng Ứng dụng Gochie. Việc tạo tài khoản trên Gochie là hoàn tiền miễn phí.",
+      "chapter3Text2": "Bằng việc tạo tài khoản trên Ứng dụng Gochie, bạn đã xác nhận rằng:",
+      "chapter3List1": "Bạn là cá nhân không bị mất/ hạn chế năng lực hành vi dân sự; đối với các đối tác tổ chức cần được thành lập hợp pháp và hiện đang hoạt động. ",
+      "chapter3List2": "Toàn bộ các thông tin cá nhân mà bạn cung cấp cho Ứng dụng Gochie là thông tin của chính bạn, trung thực và chính xác tại mọi thời điểm.",
+      "chapter3Text3": "Sau khi tạo tài khoản, bạn có thể trải nghiệm mua sắm trên ứng dụng Gochie theo các Điều khoản và Điều kiện này, Quy chế hoạt động của Ứng dụng Gochie, và pháp luật Việt Nam.",
+      "chapter3Text4": "Bạn có trách nhiệm bảo mật tên sử dụng và mật khẩu của tài khoản của mình. Trong trường hợp bị tiết lộ, bạn phải ngay lập tức liên hệ với một trong những địa chỉ sau của Công ty VIETDEFI. Tuy nhiên, trong mọi trường hợp, VIETDEFI sẽ không chịu trách nhiệm đối với bất kỳ mất mát và/ hoặc thiệt hại của bạn dưới mọi hình thức. ",
+      "chapter4": "IV. Quy chế hoạt động của ứng dụng Gochie",
+      "chapter4Text1": "Quy chế hoạt động của ứng dụng Gochie là một phần không thể tách rời của các điều khoản và điều kiện này. Tham chiếu đến các điều khoản và điều kiện này có nghĩa là tham chiếu đến các điều khoản và điều kiện này đã bao gồm các quy định của quy chế hoạt động của Ứng dụng Gochie.",
+      "chapter4Text2": "Về cách thức trải nghiệm trên ứng dụng Gochie, bao gồm:",
+      "chapter4List1": "Cách thức chơi Game trên hệ thống và tích Xu.",
+      "chapter4List2": "Cách thức thực hiện Mua, Bán, Giao dịch Voucher trên Chợ Voucher của Gochie.",
+      "chapter4List3": "Cách sử dụng Voucher Người dùng đã lưu trên Ứng dụng khi giao dịch cả online và offline.",
+      "chapter4List4": "Cách trở thành Khách hàng thân thiết và Khách hàng tiềm năng để nhận những ưu đãi từ các Cửa hàng đối tác của Gochie.",
+      "chapter4List5": "Các phương thức liên hệ để thuận tiện cho việc hỗ trợ Người dùng của Gochie",
+      "chapter4Text3": "Khi có câu hỏi hoặc yêu cầu truy cập thông tin, Người dùng vui lòng liên hệ Bộ phận Hỗ trợ của chúng tôi theo các địa chỉ sau:",
+      "chapter4Company": "Công ty VIETDEFI",
+      "chapter4Text4": "Địa chỉ: Tầng 02,  Lô 6+7 khu Đô Thị Nam Thanh Ngõ 1 đường Nguyễn Thị Duệ, Yên Hòa, Cầu Giấy, Hà Nội",
+      "chapter4Text5": "Website:",
+      "chapter4Text6": "Email: ",
+      "chapter4Text7": "Hotline:",
+      "chapter4Text8": "Facebook: [đang cập nhật]",
+      "chapter4Text9": "Youtube: [đang cập nhật]",
+      "chapter4Text10": "Instagram: [đang cập nhật]",
+      "chapter4Text11": "Chính sách có hiệu lực từ ngày 29/11/2022"
+    },
+    "logout": {
+      "title1": "Chắc chắn muốn đăng xuất?",
+      "title2": "Gochie sẽ rất nhớ bạn đó!",
+      "button": "Đăng xuất"
+    }
+  },
+  "Popup": {
+    "title": {
+      "updatePasswordSuccess": "Đổi mật khẩu thành công!",
+      "updatePasswordFail": "Gochie rất tiếc phải thông báo bạn không thể lấy lại mật khẩu do chưa liên kết Messenger hoặc Telegram!",
+      "updatePasswordBeforeAsk": "Những thay đổi của bạn chưa được lưu. Bạn vẫn muốn thoát?",
+      "unlinked": "Gochie rất tiếc phải thông báo bạn không thể lấy lại mật khẩu do chưa liên kết Messenger hoặc Telegram! "
+    },
+    "button": {
+      "updatePasswordCancel": "Không",
+      "updatePasswordConfirm": "Có",
+      "unlinked_register": "Đăng kí tài khoản mới ",
+      "unlinked_link": "Liên kết ngay"
+    }
+  }
+}
