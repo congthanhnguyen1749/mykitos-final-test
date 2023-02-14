@@ -41,7 +41,7 @@ export const ContentItemsflashesStone = () => {
       window.removeEventListener('scroll', listenScrollEvent);
     };
   }, []);
-  console.log(loca.pathname.slice(30));
+
   return (
     <Box>
       <Flex
@@ -119,7 +119,7 @@ export const ContentItemsflashesStone = () => {
             <ItemsInfoCard />
             <ItemsInfoCard />
             <ItemsInfoCard />
-            <ItemsInfoCard /> 
+            <ItemsInfoCard />
           </Box>
         ) : (
           ''

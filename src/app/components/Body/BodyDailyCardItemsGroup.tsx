@@ -25,8 +25,24 @@ export const BodyDailyCardItemsGroup: any = (props: BodyItemProps) => {
         justify={'space-evenly'}
         align={'center'}
         direction={'column'}
+        sx={{
+          ':hover': {
+            boxShadow: '5px 5px 5px 0 rgba(255, 255, 255, 0.25)',
+            transition: 'transform.2s ease-in-out',
+          },
+        }}
       >
-        <Avatar size={85} mt={'23px'} src={props.data.iconCrystal}></Avatar>
+        <Avatar
+          size={85}
+          mt={'23px'}
+          src={props.data.iconCrystal}
+          sx={{
+            ':hover': {
+              transform: 'scale(1.05)',
+              transition: 'transform.2s ease-in-out',
+            },
+          }}
+        ></Avatar>
         <Text fw={700} fz={17.5} color={'#FFFFFF'} align={'center'}>
           {t(props.data.description)}
         </Text>

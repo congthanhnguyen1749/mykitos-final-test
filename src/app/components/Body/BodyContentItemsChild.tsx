@@ -6,9 +6,14 @@ import { Box, Flex, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { LabelTextcrystal } from './data/data';
 import { Transform } from 'stream';
+import { useUserSlice } from 'store/app/user';
+import { useSelector } from 'react-redux';
+import { getStoneSelector } from 'store/slice/changeStone/selectors';
 
 export const BodyContentItemsChild = () => {
   const mobile: any = useMediaQuery('(max-width: 755px)');
+
+  const data = useSelector(getStoneSelector);
   const loca = useLocation();
   const changemobile: any = mobile ? '100%' : '90vh';
   const changemobileText: any = mobile ? '18px' : '28px';
@@ -26,9 +31,9 @@ export const BodyContentItemsChild = () => {
   };
 
   return (
-    <Box mt={30} w={'100vw'} h={changemobile}>
+    <Box w={'100vw'} h={changemobile}>
       <Flex justify={'space-around'} align={'center'}>
-        <Box>
+        <Box  mt={50}>
           <Arrowleft onClick={backPage} />
         </Box>
         <Text
@@ -36,7 +41,7 @@ export const BodyContentItemsChild = () => {
           fw={600}
           fz={changemobileText}
           lh={'23.4px'}
-          color={'white'}
+          color={'white'} mt={50}
         >
           Trải bài xu hướng{' '}
           {loca.pathname.slice(23) == 'timetheme'

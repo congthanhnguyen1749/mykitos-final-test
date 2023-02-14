@@ -5,6 +5,7 @@ import { WebHeader } from 'app/components/Header/WebHeader';
 import { Outlet, useLocation } from 'react-router-dom';
 import { useMediaQuery } from '@mantine/hooks';
 import { MobileHeader } from 'app/components/Header/MobileHeader/MobileHeader';
+import Footer from 'app/components/Footer';
 export function DemoComponents() {
   const loca = useLocation();
   const tablet = useMediaQuery('(max-width: 992px)');
@@ -49,6 +50,9 @@ export function DemoComponents() {
             <Outlet></Outlet>
           </Stack>
         </Center>
+        <Box>
+          <Footer></Footer>
+        </Box>
       </Box>
     </BackgroundImage>
   );

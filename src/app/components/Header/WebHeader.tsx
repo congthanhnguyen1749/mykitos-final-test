@@ -6,10 +6,16 @@ import { HeaderUserGroup } from './HeaderUserGroup';
 import { iconData, languageData } from 'app/components/Header/data/data';
 import { ReactComponent as Logo } from '../../../assets/images/logo/logo1.svg';
 import { LanguageSwitch } from './LanguageSwitch';
+import { useNavigate } from 'react-router-dom';
 export const WebHeader: any = () => {
   const [keyActive, setKeyActive] = React.useState(8);
   const lg = useMediaQuery('(min-width: 1200px)');
+  const nav = useNavigate();
   let logoWidth = lg ? 260 : 60;
+  const changenavIcon = () => {
+    nav('/');
+    console.log('jo')
+  };
   return (
     <Header
       height={'10vh'}
@@ -22,7 +28,7 @@ export const WebHeader: any = () => {
       }}
     >
       <Flex align="center" justify="space-around" h={'100%'}>
-        <Box w={logoWidth}>
+        <Box onClick={() => changenavIcon()} w={logoWidth}>
           <Logo />
         </Box>
         {lg ? (

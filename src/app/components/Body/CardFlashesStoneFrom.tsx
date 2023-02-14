@@ -62,7 +62,7 @@ export const CardFlashesStoneFrom: any = props => {
     setCheck3(true);
     setCheck3s(true);
   };
-  console.log(changedeg, changedeg1, changedeg2, changedeg3);
+
   const changeRouter: any = () => {
     setHideandunhide(!hideandunhide);
     setFtrue(!ftrue);
@@ -331,7 +331,7 @@ export const CardFlashesStoneFrom: any = props => {
               background: 'rgba(0,0,0,0.5)',
             },
           }}
-          className='chnagehidebut'
+          className="chnagehidebut"
           h={changeSizeHeightButton}
           w={changeSizeWidthButton}
           bg={'rgba(0, 0, 0, 0.4)'}

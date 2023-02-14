@@ -4,18 +4,19 @@ import { Box, Flex, SimpleGrid, Text } from '@mantine/core';
 import { LabelTextcrystal } from './data/data';
 import { useMediaQuery } from '@mantine/hooks';
 import { useNavigate } from 'react-router-dom';
+import './flipCard.css';
 export const BodyGetReading: any = () => {
   const navigate: any = useNavigate();
 
-  const mobile: any = useMediaQuery('(max-width: 755px)');
+  const mobile: any = useMediaQuery('(max-width: 1450px)');
   const setlayoutMobile: any = mobile ? '20px' : '50px';
   const changesizelabel: any = mobile ? '15px' : '24px';
-  const changemobile: any = mobile ? '100%' : '120vh';
+  const changemobile: any = mobile ? '100%' : '90.05vh';
   const changemtmobile: any = mobile ? 20 : 50;
+  const changeanimatie: any = mobile ? '0%' : '8%';
 
   const changeContentItems: any = (value, index) => {
     navigate(`/get/contentItem/${value.link}`);
-
   };
   return (
     <Flex
@@ -37,12 +38,22 @@ export const BodyGetReading: any = () => {
           flexDirection: 'column',
         }}
       >
-        <Text fz={'32px'} fw={'600'} lh={'41px'} fs={'normal'} color={'white'}>
+        <Text
+          className="chnagehidebut"
+          fz={'32px'}
+          fw={'600'}
+          lh={'41px'}
+          fs={'normal'}
+          color={'white'}
+          opacity={0}
+        >
           Get reading
         </Text>
         <Text
           fz={changesizelabel}
+          className="chnagehidebut"
           fw={'600'}
+          opacity={0}
           mt={'10px'}
           lh={'31px'}
           fs={'normal'}
@@ -56,6 +67,8 @@ export const BodyGetReading: any = () => {
         w={'100%'}
         mt={changemtmobile}
         cols={3}
+        opacity={0}
+        className="chnagehidebut"
         breakpoints={[
           { maxWidth: 1200, cols: 3 },
           { maxWidth: 950, cols: 2 },
@@ -71,6 +84,7 @@ export const BodyGetReading: any = () => {
             width: '0px',
             background: 'transparent',
           },
+          transform:`translateY(${changeanimatie})`
         }}
       >
         {LabelTextcrystal.map((value, index) => {

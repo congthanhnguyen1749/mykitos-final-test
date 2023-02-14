@@ -15,10 +15,6 @@
   transform-style: preserve-3d;
 }
 
-/* .flip-box:hover .flip-box-inner {
-  transform: rotateY(180deg);
-} */
-
 .flip-box-front,
 .flip-box-back {
   position: absolute;
@@ -41,6 +37,7 @@
 
 .chnagehidebut {
   animation: alo linear 3s 1s forwards alternate;
+  animation: alo linear 0.5s 0.3s forwards alternate;
 }
 @keyframes alo {
   0% {

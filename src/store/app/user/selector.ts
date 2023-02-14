@@ -1,7 +1,6 @@
 import { createSelector } from '@reduxjs/toolkit';
-import { RootState } from '../../../types';
 import { initialState } from './index';
 
-const selectDomain = (state: RootState) => state.user || initialState;
+const selectDomain = (state) => state?.counter || initialState;
 
-export const selectUser = createSelector([selectDomain], user => user);
+export const selectUser = createSelector([selectDomain], counter => counter);

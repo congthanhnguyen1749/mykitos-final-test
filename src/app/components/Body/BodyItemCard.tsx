@@ -13,7 +13,6 @@ export const BodyItemCard = ({ props }) => {
   const movetochild = () => {
     navigate(`/get/contentItemsChild/${loca.pathname.slice(17)}`);
   };
-  console.log(props)
   return (
     <Flex
       justify={'space-around'}

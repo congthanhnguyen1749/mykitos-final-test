@@ -34,7 +34,7 @@ export function HeaderUserGroup() {
           borderRadius: '100px',
           overflow: 'hidden',
           background:
-            'url(https://scontent.fhan3-3.fna.fbcdn.net/v/t39.30808-6/326386491_1212570036040238_9033932867486650537_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=chdj5F4LncsAX_bGiYn&tn=kmxygw2PtVo3I5ud&_nc_ht=scontent.fhan3-3.fna&oh=00_AfC7xaYjE5ngNJn8W7EtV3dTDQj4EBtW6i91shawNSUAfw&oe=63E783CA)',
+            'url(https://cdn.britannica.com/91/181391-050-1DA18304/cat-toes-paw-number-paws-tiger-tabby.jpg)',
           backgroundSize: '100%',
           backgroundRepeat: 'no-repeat',
           objectFit: 'cover',
