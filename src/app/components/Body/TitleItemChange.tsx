@@ -1,6 +1,7 @@
 import { Box, Flex, Image, Text } from '@mantine/core';
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import { ReactComponent as Arrowleft } from '../../../assets/images/Body/icon/arrow/arrow-narrow-left.svg';
+import './flipCard.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useMediaQuery } from '@mantine/hooks';
 export const TitleItemChange = () => {
@@ -13,8 +14,13 @@ export const TitleItemChange = () => {
   const textdescription = mobile ? '26px' : '32px';
   const textlabel = mobile ? '18px' : '24px';
   const marginlabel = mobile ? '15px' : '35px';
+  const location = useLocation();
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+ 
+  }, [location.pathname]);
   return (
-    <Flex w={'100%'} h={'15vh'}>
+    <Flex opacity={0} className="chnagehidebut" w={'100%'} h={'15vh'}>
       <Flex
         m={'-12px 0 0 2px'}
         justify={'flex-left'}
@@ -41,13 +47,13 @@ export const TitleItemChange = () => {
           fs={'normal'}
           color={'white'}
         >
-          {loca.pathname == '/get/lovetheme' ? 'Chủ Đề Tình Yêu' : ''}
-          {loca.pathname == '/get/timetheme' ? 'Chủ đề Thời gian' : ''}
-          {loca.pathname == '/get/selftheme' ? 'Chủ đề Bản thân' : ''}
-          {loca.pathname == '/get/moneytheme' ? 'Chủ đề Tiền bạc' : ''}
-          {loca.pathname == '/get/familytheme' ? 'Chủ đề Gia đình' : ''}
-          {loca.pathname == '/get/careertheme' ? 'Chủ đề Sự nghiệp' : ''}
-          {loca.pathname == '/get/sosietytheme' ? 'Chủ đề Quan hệ xã hội' : ''}
+          {loca.pathname == '/get/contentItem/lovetheme' ? 'Chủ Đề Tình Yêu' : ''}
+          {loca.pathname == '/get/contentItem/timetheme' ? 'Chủ đề Thời gian' : ''}
+          {loca.pathname == '/get/contentItem/selftheme' ? 'Chủ đề Bản thân' : ''}
+          {loca.pathname == '/get/contentItem/moneytheme' ? 'Chủ đề Tiền bạc' : ''}
+          {loca.pathname == '/get/contentItem/familytheme' ? 'Chủ đề Gia đình' : ''}
+          {loca.pathname == '/get/contentItem/careertheme' ? 'Chủ đề Sự nghiệp' : ''}
+          {loca.pathname == '/get/contentItem/sosietytheme' ? 'Chủ đề Quan hệ xã hội' : ''}
         </Text>
         <Text
           w={'280px'}

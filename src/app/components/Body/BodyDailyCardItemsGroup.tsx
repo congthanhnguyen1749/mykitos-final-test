@@ -1,11 +1,13 @@
-import { Avatar, Flex, Image, Text } from '@mantine/core';
+import { Avatar, Flex, Image, Text, HoverCard } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import React from 'react';
+import { useHover } from '@mantine/hooks';
 import { useTranslation } from 'react-i18next';
 interface BodyItemProps {
   data?: any;
 }
 export const BodyDailyCardItemsGroup: any = (props: BodyItemProps) => {
+  const { hoverBox, ref }: any = useHover();
   const { t }: any = useTranslation();
   return (
     <div
@@ -24,6 +26,7 @@ export const BodyDailyCardItemsGroup: any = (props: BodyItemProps) => {
         h={'100%'}
         justify={'space-evenly'}
         align={'center'}
+        ref={ref}
         direction={'column'}
         sx={{
           ':hover': {
@@ -35,6 +38,7 @@ export const BodyDailyCardItemsGroup: any = (props: BodyItemProps) => {
         <Avatar
           size={85}
           mt={'23px'}
+          className="test-avatar"
           src={props.data.iconCrystal}
           sx={{
             ':hover': {
@@ -42,7 +46,7 @@ export const BodyDailyCardItemsGroup: any = (props: BodyItemProps) => {
               transition: 'transform.2s ease-in-out',
             },
           }}
-        ></Avatar>
+        ></Avatar>{' '}
         <Text fw={700} fz={17.5} color={'#FFFFFF'} align={'center'}>
           {t(props.data.description)}
         </Text>

@@ -37,7 +37,7 @@
 
 .chnagehidebut {
   animation: alo linear 3s 1s forwards alternate;
-  animation: alo linear 0.5s 0.3s forwards alternate;
+  animation: alo linear 0.5s 0.2s forwards alternate;
 }
 @keyframes alo {
   0% {

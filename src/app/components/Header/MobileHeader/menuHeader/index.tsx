@@ -41,7 +41,7 @@ export const MenuHeaderMobile = () => {
         ref={getref}
         style={{
           color: 'white',
-          width: '100vw',
+          width: '100%',
           height: '100vh',
           position: 'absolute',
           top: '0',
@@ -49,7 +49,6 @@ export const MenuHeaderMobile = () => {
           transition: 'all .5s linear ',
           zIndex: '100111111111',
           opacity: '0',
-          // background: 'red',
         }}
       >
         <Flex

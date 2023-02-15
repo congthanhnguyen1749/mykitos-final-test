@@ -2,6 +2,7 @@ import { Box, Flex } from '@mantine/core';
 import React from 'react';
 import { TitleItemChange } from './TitleItemChange';
 import { ContentChange } from './ContentChange';
+import './flipCard.css';
 import { DataItemCard } from './data/data';
 import { useMediaQuery } from '@mantine/hooks';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -58,7 +59,13 @@ export const BodyContentItems = () => {
   return (
     <Flex justify={'flex-start'} direction={'column'} align={'center'} w="100%">
       <TitleItemChange />
-      <Flex justify={'flex-start'} direction={'column'} align={'center'}>
+      <Flex
+        opacity={0}
+        className="chnagehidebut"
+        justify={'flex-start'}
+        direction={'column'}
+        align={'center'}
+      >
         {newAr[0].map((v, i) => {
           return (
             <Box onClick={() => changeImgCard()} key={i}>

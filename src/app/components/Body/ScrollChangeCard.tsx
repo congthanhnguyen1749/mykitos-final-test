@@ -1,9 +1,11 @@
 import { Box, Flex, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import React from 'react';
+import './flipCard.css';
+
 import backCart from '../../../assets/images/cards/card_back_0.jpg';
 import stoneActive from '../../../assets/images/Body/icon/stone/WebStone/WhiteB.svg';
-import './flipCard.css';
+
 export const ScrollChangeCard = () => {
   const mobile = useMediaQuery('(max-width: 755px)');
   const marginBox = mobile ? '20px' : '40px';
@@ -21,7 +23,7 @@ export const ScrollChangeCard = () => {
   };
   return (
     <Flex
-      w={'100%'}
+      w={'100vw'}
       h={'15vh'}
       bg={'rgba(0, 0, 0, 0.6)'}
       justify={'center'}
@@ -41,7 +43,7 @@ export const ScrollChangeCard = () => {
         bgr={'no-repeat'}
         bgsz={'contain'}
       ></Box>
-      
+
       <Box p={'0 10px'}>
         <div
           className="flip-box"

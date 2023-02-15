@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
 import { ReactComponent as Arrowleft } from '../../../assets/images/Body/icon/arrow/arrow-narrow-left.svg';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Box, Flex, Image, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { CarsulSlideMantine } from './CarsulSlideMantine';
 import { dataStone } from './data/data';
+import './flipCard.css';
+
 export const ContentItemsChooseStone = () => {
   const loca = useLocation();
   const navigate = useNavigate();
@@ -17,7 +19,7 @@ export const ContentItemsChooseStone = () => {
   const skipPage: any = () => {
     navigate(`/get/contentItemsflashesStone/${loca.pathname.slice(29)}`);
   };
-  
+
   const mobile = useMediaQuery('(max-width: 755px)');
   const changeViewSlider = mobile ? '373px' : '1125px';
   const marginBox = mobile ? '20px' : '10vh';
@@ -26,9 +28,19 @@ export const ContentItemsChooseStone = () => {
   const labelcontentFront = mobile ? '.8rem' : '1.2rem';
   const heightSlider = mobile ? 'auto' : '350px';
   const heightBoxMobile = mobile ? 'auto' : '110vh';
-
+  const location = useLocation();
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
   return (
-    <Flex direction={'column'} mt={marginBox} w={'100%'} h={heightBoxMobile}>
+    <Flex
+      opacity={0}
+      className="chnagehidebut"
+      direction={'column'}
+      mt={marginBox}
+      w={'100%'}
+      h={heightBoxMobile}
+    >
       {/* header */}
       <Flex justify={'space-around'} align={'center'}>
         <Box>
@@ -62,7 +74,7 @@ export const ContentItemsChooseStone = () => {
         justify={'center'}
         align={'center'}
         onClick={() => changePageItems()}
-        w={'100vw'}
+        w={'100%'}
       >
         <Flex w={'100%'} direction={'column'} align={'center'}>
           <Text

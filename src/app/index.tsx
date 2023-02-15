@@ -21,7 +21,6 @@ import { Box } from '@mantine/core';
 import { createSlice } from 'utils/@reduxjs/toolkit';
 export function App() {
   const { i18n } = useTranslation();
-
   return (
     <BrowserRouter>
       <Box w={'100%'} h={'100%'}>

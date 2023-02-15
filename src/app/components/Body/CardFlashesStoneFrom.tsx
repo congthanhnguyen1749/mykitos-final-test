@@ -1,9 +1,9 @@
 import { Box, Flex, Image, Text, keyframes } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import stoneActive from '../../../assets/images/Body/icon/stone/WebStone/WhiteB.svg';
 import backCart from '../../../assets/images/cards/card_back_0.jpg';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './flipCard.css';
 export const CardFlashesStoneFrom: any = props => {
   const [ftrue, setFtrue] = React.useState(true);
@@ -68,13 +68,18 @@ export const CardFlashesStoneFrom: any = props => {
     setFtrue(!ftrue);
     props.parentCallback(ftrue);
   };
+  const location = useLocation();
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+ 
+  }, [location.pathname]);
   return hideandunhide ? (
     <Flex
       justify={'center'}
       align={'center'}
       direction={'column'}
       mt={changehCard}
-      w={'100vw'}
+      w={'100%'}
       h={'100%'}
     >
       {/* top cart */}
@@ -82,7 +87,7 @@ export const CardFlashesStoneFrom: any = props => {
         sx={{ position: 'relative' }}
         justify={'center'}
         align={'flex-end'}
-        w={'80%'}
+        w={'80vw'}
       >
         {/* cart top */}
         <Flex

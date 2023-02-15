@@ -14,7 +14,6 @@ export const WebHeader: any = () => {
   let logoWidth = lg ? 260 : 60;
   const changenavIcon = () => {
     nav('/');
-    console.log('jo')
   };
   return (
     <Header

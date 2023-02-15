@@ -3,7 +3,12 @@ import React from 'react';
 import { MenuHeaderMobile } from './menuHeader';
 import logo from '../../../../assets/mobile/avatar/logo 1.svg';
 import { UserListTask } from './UserTask';
+import { useNavigate } from 'react-router-dom';
 export const MobileHeader = () => {
+  const lavi = useNavigate()
+  const changeoutewhenclick = () => { 
+lavi('/')
+   }
   return (
     <Flex
       justify={'space-between'}
@@ -16,7 +21,7 @@ export const MobileHeader = () => {
       <Box p={'5px 20px 5px 20px'}>
         <MenuHeaderMobile></MenuHeaderMobile>
       </Box>
-      <Box>
+      <Box onClick={()=>changeoutewhenclick()}>
         <img src={logo} alt="" />
       </Box>
       <Box p={'5px 20px 5px 20px'}>

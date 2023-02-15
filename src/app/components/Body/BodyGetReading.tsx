@@ -3,21 +3,47 @@ import { BodyDailyCardItemsGroup } from './BodyDailyCardItemsGroup';
 import { Box, Flex, SimpleGrid, Text } from '@mantine/core';
 import { LabelTextcrystal } from './data/data';
 import { useMediaQuery } from '@mantine/hooks';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './flipCard.css';
+import { useLayoutEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { StoneSliceReduce } from 'store/slice/changeStone';
 export const BodyGetReading: any = () => {
-  const navigate: any = useNavigate();
+  // state
+  const [chagneBall, setChagneBall] = React.useState(0);
+  // end state
 
+  // variables
+  const navigate: any = useNavigate();
   const mobile: any = useMediaQuery('(max-width: 1450px)');
   const setlayoutMobile: any = mobile ? '20px' : '50px';
   const changesizelabel: any = mobile ? '15px' : '24px';
   const changemobile: any = mobile ? '100%' : '90.05vh';
   const changemtmobile: any = mobile ? 20 : 50;
   const changeanimatie: any = mobile ? '0%' : '8%';
+  // end variables
 
+  // dispatch snowball id
+  const dispatch = useDispatch();
+  const { StoneActions } = StoneSliceReduce();
+
+  useLayoutEffect(() => {
+    // dispatch(StoneActions.changeStoneValue(chagneBall));
+  }, [chagneBall]);
+
+  // end dispatch snowball id
   const changeContentItems: any = (value, index) => {
-    navigate(`/get/contentItem/${value.link}`);
+    // navigate(`/get/contentItem/${value.link}`);
+    dispatch(StoneActions.changeStoneValue(index));
+    // setChagneBall(index);
   };
+
+  const location = useLocation();
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <Flex
       sx={{
@@ -84,7 +110,7 @@ export const BodyGetReading: any = () => {
             width: '0px',
             background: 'transparent',
           },
-          transform:`translateY(${changeanimatie})`
+          transform: `translateY(${changeanimatie})`,
         }}
       >
         {LabelTextcrystal.map((value, index) => {

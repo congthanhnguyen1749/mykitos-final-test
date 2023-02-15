@@ -15,7 +15,7 @@ const Footer = () => {
   const setwicon = mobile ? '130%' : '100%';
   const { scrollIntoView, targetRef } = useScrollIntoView<HTMLDivElement>({ offset: 60 });
   return (
-    <Flex direction={'column'} justify={'center'} align={'center'} w={'100vw'}>
+    <Flex direction={'column'} justify={'center'} align={'center'} w={'100%'}>
       <Flex
         justify={'center'}
         align={'center'}

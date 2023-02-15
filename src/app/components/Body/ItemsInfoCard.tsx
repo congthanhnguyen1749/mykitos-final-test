@@ -1,12 +1,14 @@
 import { Box, Flex, Image, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 // arrow
 import arrowTop from '../../../assets/images/Body/icon/arrow/arrowTop.svg';
+import './flipCard.css';
 import arrowBottom from '../../../assets/images/Body/icon/arrow/arrowBottom.svg';
 // end arrow
 // cart
 import cardtest from '../../../assets/images/cards/card_back_2.png';
+import { useLocation } from 'react-router-dom';
 // end card
 export const ItemsInfoCard = () => {
   const [arrowAndShowBox, setArrowAndShowBox] = React.useState(true);
@@ -19,10 +21,14 @@ export const ItemsInfoCard = () => {
   const changeActive = () => {
     setArrowAndShowBox(!arrowAndShowBox);
   };
+  const location = useLocation();
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname]);
   return (
     // main
     <Flex
-      mt={5}
+      mt={5} opacity={0} className="chnagehidebut"
       justify={'center'}
       onClick={() => changeActive()}
       bg={'rgba(0, 0, 0, 0.4)'}

@@ -10,7 +10,6 @@ export function DemoComponents() {
   const loca = useLocation();
   const tablet = useMediaQuery('(max-width: 992px)');
   const mobile = useMediaQuery('(max-width: 768px)');
-  // const changemobile = tablet ? 'auto' : changeview;
   return (
     <BackgroundImage
       src={Background}
@@ -22,7 +21,7 @@ export function DemoComponents() {
       p={0}
       m={0}
     >
-      <Box w={'100vw'} h={'100%'}>
+      <Box w={'100%'} h={'100%'}>
         <Flex
           sx={{
             position: 'fixed',
@@ -32,7 +31,7 @@ export function DemoComponents() {
             zIndex: 11111,
           }}
           h={'10vh'}
-          w={'100vw'}
+          w={'100%'}
         >
           {mobile ? <MobileHeader /> : <WebHeader />}
         </Flex>
@@ -43,7 +42,7 @@ export function DemoComponents() {
             left: '0',
             right: '0',
           }}
-          w={'100vw'}
+          w={'100%'}
           h={'100%'}
         >
           <Stack>

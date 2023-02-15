@@ -1,12 +1,13 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import { ReactComponent as Arrowleft } from '../../../assets/images/Body/icon/arrow/arrow-narrow-left.svg';
-import Violetcrystal from '../../../assets/images/Body/Crystalball/whitecrystal.svg';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Box, Flex, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { CardFlashesStoneFrom } from './CardFlashesStoneFrom';
 import { ScrollChangeCard } from './ScrollChangeCard';
 import { ItemsInfoCard } from './ItemsInfoCard';
+import './flipCard.css';
+import './flipCard.css';
 export const ContentItemsflashesStone = () => {
   const mobile = useMediaQuery('(max-width: 755px)');
   const loca = useLocation();
@@ -41,9 +42,12 @@ export const ContentItemsflashesStone = () => {
       window.removeEventListener('scroll', listenScrollEvent);
     };
   }, []);
-
+  const location = useLocation();
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
   return (
-    <Box>
+    <Box opacity={0} className="chnagehidebut">
       <Flex
         justify={'flex-start'}
         align={'center'}
@@ -97,12 +101,11 @@ export const ContentItemsflashesStone = () => {
         {/* another navbar */}
         {messageNav ? (
           <Box
-            w={'100vw'}
-            sx={{
-              transition: 'all .3s linear',
-            }}
+            w={'100%'}
+       
             mb={'3vh'}
-            opacity={1}
+            opacity={0}
+            className="chnagehidebut"
           >
             <ScrollChangeCard />
           </Box>
