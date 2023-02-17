@@ -3,6 +3,8 @@ import React from 'react';
 import Coin from '../../../assets/images/Body/icon/coin/Xu.svg';
 import { useMediaQuery } from '@mantine/hooks';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { StoneSliceReduce } from 'store/slice/changeStone';
+import { useDispatch } from 'react-redux';
 export const BodyItemCard = ({ props }) => {
   const mobile = useMediaQuery('(max-width: 755px)');
   const changesizemargintop = mobile ? '13px' : '';
@@ -10,8 +12,13 @@ export const BodyItemCard = ({ props }) => {
   const changesizeimg = mobile ? '6px 8px 6px 8px' : '12px 16px 12px 16px';
   const navigate = useNavigate();
   const loca = useLocation();
+  const dispatch = useDispatch();
+  const { StoneActions } = StoneSliceReduce();
+
   const movetochild = () => {
     navigate(`/get/contentItemsChild/${loca.pathname.slice(17)}`);
+    // đẩy dữ liệu key của từng cụm image card  lên redux
+    dispatch(StoneActions.ChangeStoneKey(props.key));
   };
   return (
     <Flex

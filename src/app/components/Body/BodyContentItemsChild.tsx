@@ -17,9 +17,7 @@ export const BodyContentItemsChild: any = () => {
   const changemobile: any = mobile ? '100%' : '90vh';
   const changemobileText: any = mobile ? '18px' : '28px';
   const changemobileTextW: any = mobile ? '180px' : '250px';
-  const getdataImg: any = LabelTextcrystal.filter((v, i) => {
-    return v.link == loca.pathname.slice(23);
-  });
+
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -29,25 +27,31 @@ export const BodyContentItemsChild: any = () => {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
-
-  const select: any = useSelector(getProfileSelector);
-
-  const dispatch: any = useDispatch();
-  const { StoneActions } = StoneSliceReduce();
+  // thay đổi điều hướng backPage
+  const Key_Change_Route_Backpage = useSelector(getProfileSelector);
+  // end change
+  const changeRouteSnowBall =
+    Key_Change_Route_Backpage.snowBall.snowBall_Index == 0
+      ? 'timetheme'
+      : Key_Change_Route_Backpage.snowBall.snowBall_Index == 1
+      ? 'lovetheme'
+      : Key_Change_Route_Backpage.snowBall.snowBall_Index == 2
+      ? 'selftheme'
+      : Key_Change_Route_Backpage.snowBall.snowBall_Index == 3
+      ? 'moneytheme'
+      : Key_Change_Route_Backpage.snowBall.snowBall_Index == 4
+      ? 'familytheme'
+      : Key_Change_Route_Backpage.snowBall.snowBall_Index == 5
+      ? 'careertheme'
+      : Key_Change_Route_Backpage.snowBall.snowBall_Index == 6
+      ? 'sosietytheme'
+      : '';
+  const getdataImg: any = LabelTextcrystal.filter((v, i) => {
+    return v.key == Key_Change_Route_Backpage.snowBall.snowBall_Index;
+  });
 
   const backPage: any = () => {
-    navigate(`/get/contentItem/lovetheme`);
-    dispatch(
-      StoneActions.changeStoneValue({
-        id: 12,
-        active: false,
-        name: 'getting2',
-        title: 'hello world2',
-        description: 'make sure2',
-        image: 'url2',
-        coin: 23,
-      }),
-    );
+    navigate(`/get/contentItem/${changeRouteSnowBall}`);
   };
 
   return (

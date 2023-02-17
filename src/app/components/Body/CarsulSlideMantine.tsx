@@ -6,6 +6,8 @@ import arrowLeft from '../../../assets/images/Body/icon/arrow/leftWithCoin.svg';
 import arrowRight from '../../../assets/images/Body/icon/arrow/rightWithCoin.svg';
 import coin from '../../../assets/images/Body/icon/coin/Xu.svg';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { StoneSliceReduce } from 'store/slice/changeStone';
 export interface bodyStoneInfoProps {
   data: any;
 }
@@ -23,10 +25,16 @@ export const CarsulSlideMantine: any = (props: bodyStoneInfoProps) => {
   const changeH = mobile ? '200px' : '280px';
   const setheightSlider = mobile ? '180px' : '300px';
   const magTop = mobile ? 0 : 180;
+  const mtbut = mobile ? -10 : '';
   const loca = useLocation();
+  // dispatch get id stoned
+  const dispatch = useDispatch();
+  const { StoneActions } = StoneSliceReduce();
+  // end dispatch get id
   const chnageslide: any = e => {
     setKeyChange(e);
     setChangeLabel(e);
+    dispatch(StoneActions.getStoneKeyOfOldFace(e))
   };
 
   const changerouters: any = params => {
@@ -130,7 +138,7 @@ export const CarsulSlideMantine: any = (props: bodyStoneInfoProps) => {
         align={'center'}
         m={'0 auto'}
         justify={'space-between'}
-        mt={10}
+        mt={mtbut}
         w={changeArrow}
         h={70}
         mb={50}

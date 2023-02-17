@@ -1,10 +1,20 @@
 import { Box, Flex, Image, Text, keyframes } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
-import React, { useLayoutEffect } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import stoneActive from '../../../assets/images/Body/icon/stone/WebStone/WhiteB.svg';
 import backCart from '../../../assets/images/cards/card_back_0.jpg';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './flipCard.css';
+import { InfomationsCart, LabelTextcrystal, dataStone } from './data/data';
+import { useDispatch, useSelector } from 'react-redux';
+import { getProfileSelector } from 'store/slice/changeStone/selectors';
+import ItemsCardUse from './itemsCardUse';
+import { StoneSliceReduce } from 'store/slice/changeStone';
+
+export interface ChangeCard {
+  data: any;
+}
+
 export const CardFlashesStoneFrom: any = props => {
   const [ftrue, setFtrue] = React.useState(true);
   const [hideandunhide, setHideandunhide] = React.useState(true);
@@ -19,60 +29,75 @@ export const CardFlashesStoneFrom: any = props => {
   const changeSizeActiveIcon: any = mobile ? 58 : 108;
   const changehCard: any = mobile ? '5vh' : '10vh';
   const changemobilemargin: any = mobile ? 10 : 40;
+  const indexBug: any = mobile ? 0 : 1;
   const changeWidthPc: any = mobile ? '70%' : '20%';
-  const changeSizeActive: any = mobile ? '-30%' : '10%';
-  // check true or false
-  const [check, setCheck]: any = React.useState(true);
-  const [check1, setCheck1]: any = React.useState(true);
-  const [check2, setCheck2]: any = React.useState(true);
-  const [check3, setCheck3]: any = React.useState(true);
-  // check spread card
-  const [checks, setChecks]: any = React.useState(false);
-  const [check1s, setCheck1s]: any = React.useState(false);
-  const [check2s, setCheck2s]: any = React.useState(false);
-  const [check3s, setCheck3s]: any = React.useState(false);
-  // get items to change
-  const flipBack: any = React.useRef();
-  const flipBack1: any = React.useRef();
-  const flipBack2: any = React.useRef();
-  const flipBack3: any = React.useRef();
-  // value rotate items
-  const changedeg: any = check ? '180deg' : '0deg';
-  const changedeg1: any = check1 ? '180deg' : '0deg';
-  const changedeg2: any = check2 ? '180deg' : '0deg';
-  const changedeg3: any = check3 ? '180deg' : '0deg';
-  const changeleftStone: any = mobile ? '3%' : '13%';
-  const flipCardBack: any = props => {
-    flipBack.current.style.transform = `rotateY(${changedeg})`;
-    setCheck(true);
-    setChecks(true);
-  };
-  const flipCardBack1: any = () => {
-    flipBack1.current.style.transform = `rotateY(${changedeg1})`;
-    setCheck1(true);
-    setCheck1s(true);
-  };
-  const flipCardBack2: any = () => {
-    flipBack2.current.style.transform = `rotateY(${changedeg2})`;
-    setCheck2(true);
-    setCheck2s(true);
-  };
-  const flipCardBack3: any = () => {
-    flipBack3.current.style.transform = `rotateY(${changedeg3})`;
-    setCheck3(true);
-    setCheck3s(true);
-  };
 
+  // change index to random card index
+  const changeleftStone: any = mobile ? '3%' : '13%';
+  const [changeIndex, setChangeIndex] = React.useState(0);
+  const [changeIndex1, setChangeIndex1] = React.useState(0);
+  const [changeIndex2, setChangeIndex2] = React.useState(0);
+  const [changeIndex3, setChangeIndex3] = React.useState(0);
   const changeRouter: any = () => {
     setHideandunhide(!hideandunhide);
     setFtrue(!ftrue);
-    props.parentCallback(ftrue);
+    props.data[1](!ftrue);
   };
   const location = useLocation();
   useLayoutEffect(() => {
-    window.scrollTo(0, 0)
- 
+    window.scrollTo(0, 0);
   }, [location.pathname]);
+  function TaoSoNgauNhien(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  useLayoutEffect(() => {
+    setTimeout(() => {
+      var numRan = TaoSoNgauNhien(0, 1); //Trả về một số ngẫu nhiên từ 1 đến 10
+      var numRan1 = TaoSoNgauNhien(2, 3); //Trả về một số ngẫu nhiên từ 3 đến 8
+      var numRan2 = TaoSoNgauNhien(4, 5); //Trả về một số ngẫu nhiên từ 2 đến 5
+      var numRan3 = TaoSoNgauNhien(6, 7); //Trả về một số ngẫu nhiên từ 2 đến 5
+      setChangeIndex(numRan);
+      setChangeIndex1(numRan1);
+      setChangeIndex2(numRan2);
+      setChangeIndex3(numRan3);
+    }, 100);
+  }, []);
+
+  // dispatchers
+
+  const dispatch = useDispatch();
+  const { StoneActions } = StoneSliceReduce();
+
+  // end dispatch
+
+  const [butSpreadCard1, setButSpreadCard1] = useState(true);
+  const [butSpreadCard2, setButSpreadCard2] = useState(true);
+  const [butSpreadCard3, setButSpreadCard3] = useState(true);
+  const [butSpreadCard4, setButSpreadCard4] = useState(true);
+
+  // selector
+
+  const selector = useSelector(getProfileSelector);
+
+  // end selector
+
+  // options spread card
+  const setHideButtonSpred1: any = first => {
+    setButSpreadCard1(false);
+    dispatch(StoneActions.getidCardRandom1(changeIndex));
+  };
+  const setHideButtonSpred2: any = first => {
+    setButSpreadCard2(false);
+    dispatch(StoneActions.getidCardRandom2(changeIndex1));
+  };
+  const setHideButtonSpred3: any = first => {
+    setButSpreadCard3(false);
+    dispatch(StoneActions.getidCardRandom3(changeIndex2));
+  };
+  const setHideButtonSpred4: any = first => {
+    setButSpreadCard4(false);
+    dispatch(StoneActions.getidCardRandom4(changeIndex3));
+  };
   return hideandunhide ? (
     <Flex
       justify={'center'}
@@ -81,241 +106,202 @@ export const CardFlashesStoneFrom: any = props => {
       mt={changehCard}
       w={'100%'}
       h={'100%'}
+      sx={{
+        transform: 'translateY(-50px)',
+      }}
     >
       {/* top cart */}
       <Flex
         sx={{ position: 'relative' }}
         justify={'center'}
-        align={'flex-end'}
+        align={'center'}
+        direction={'column'}
         w={'80vw'}
       >
         {/* cart top */}
-        <Flex
-          justify={'center'}
-          align={'center'}
-          direction={'column'}
-          w={changeWidthDefaule}
-        >
+        <Flex justify={'center'} align={'flex-end'} w={'100%'}>
+          {/* main card */}
           <Flex
-            w={changeSizebgWidth}
-            h={changeSizebgHeight}
+            justify={'space-around'}
+            align={'center'}
+            direction={'column'}
+            w={changeWidthDefaule}
+          >
+            <Flex w={changeSizebgWidth} justify={'center'}>
+              {/* card1 */}
+              <Flex onClick={() => setHideButtonSpred1()}>
+                {InfomationsCart.Court.map((v, i) => {
+                  return i == changeIndex ? (
+                    <ItemsCardUse  key={i} data={v}></ItemsCardUse>
+                  ) : (
+                    ''
+                  );
+                })}
+              </Flex>
+              {/* end card */}
+            </Flex>
+            <Text
+              w={'100%'}
+              align={'center'}
+              mt={10}
+              fz={16}
+              fw={500}
+              color={'white'}
+            >
+              Tổng Quan
+            </Text>
+          </Flex>
+          {/* end main card */}
+        </Flex>
+        {/* end cart top */}
+
+        {/* cart center */}
+        <Flex w={'100%'}>
+          {/* cart left */}
+          <Flex
+            justify={'flex-end'}
+            align={'center'}
+            sx={{
+              transform: 'translateX(-40px)',
+            }}
+            w={'100%'}
+            h={'100%'}
+          >
+            {' '}
+            {/* main card2 */}
+            <Flex
+              justify={'center'}
+              align={'center'}
+              direction={'column'}
+              w={changeWidthDefaule}
+            >
+              <Flex w={changeSizebgWidth} justify={'center'} align={'center'}>
+                {/* card1 */}
+                <Flex onClick={() => setHideButtonSpred2()}>
+                  {InfomationsCart.Court.map((v, i) => {
+                    return i == changeIndex1 ? (
+                      <ItemsCardUse  key={i} data={v}></ItemsCardUse>
+                    ) : (
+                      ''
+                    );
+                  })}
+                </Flex>
+                {/* end card */}
+              </Flex>
+              <Text
+                w={'100%'}
+                align={'center'}
+                mt={10}
+                fz={16}
+                fw={500}
+                color={'white'}
+              >
+                Điểm Mạnh
+              </Text>
+            </Flex>
+            {/* end main card2 */}
+          </Flex>
+          {/* end cart left */}
+          {/* cart right */}
+          <Flex
+            w={'100%'}
+            h={'100%'}
+            justify={'flex-start'}
+            align={'center'}
+            sx={{
+              transform: 'translateX(40px)',
+            }}
+          >
+            {/* main card3 */}
+            <Flex
+              justify={'center'}
+              align={'center'}
+              direction={'column'}
+              w={changeWidthDefaule}
+            >
+              <Flex w={changeSizebgWidth} justify={'center'} align={'center'}>
+                {/* card1 */}
+                <Flex onClick={() => setHideButtonSpred3()}>
+                  {InfomationsCart.Court.map((v, i) => {
+                    return i == changeIndex2 ? (
+                      <ItemsCardUse  key={i} data={v}></ItemsCardUse>
+                    ) : (
+                      ''
+                    );
+                  })}
+                </Flex>
+                {/* end card */}
+              </Flex>
+              <Text
+                w={'100%'}
+                align={'center'}
+                mt={10}
+                fz={16}
+                fw={500}
+                color={'white'}
+              >
+                Điểm Yếu
+              </Text>
+            </Flex>
+            {/* end main card3 */}
+          </Flex>
+          {/* end cart right */}
+        </Flex>
+        {/* end cart center */}
+
+        {/* cart bottom */}
+        <Flex justify={'center'} align={'flex-start'} w={'100%'}>
+          {/* main card4 */}
+          <Flex
             justify={'center'}
             align={'center'}
+            direction={'column'}
+            w={changeWidthDefaule}
           >
-            {/* card */}
-            <div
-              className="flip-box"
-              style={{ width: changeSizebgWidth, height: changeSizebgHeight }}
+            <Flex justify={'center'} align={'center'}>
+              {/* card1 */}
+              <Flex onClick={() => setHideButtonSpred4()}>
+                {InfomationsCart.Court.map((v, i) => {
+                  return i == changeIndex3 ? (
+                    <ItemsCardUse  key={i} data={v}></ItemsCardUse>
+                  ) : (
+                    ''
+                  );
+                })}
+              </Flex>
+              {/* end card */}
+            </Flex>
+            <Text
+              w={'100%'}
+              align={'center'}
+              mt={10}
+              fz={16}
+              fw={500}
+              color={'white'}
             >
-              <div
-                onClick={() => flipCardBack()}
-                ref={flipBack}
-                className="flip-box-inner"
-              >
-                <div className="flip-box-front">
-                  <img
-                    src={backCart}
-                    alt="Paris"
-                    style={{
-                      width: changeSizebgWidth,
-                      height: changeSizebgHeight,
-                    }}
-                  />
-                </div>
-                <div className="flip-box-back">
-                  <img
-                    src={stoneActive}
-                    alt="Paris"
-                    style={{
-                      width: changeSizebgWidth,
-                      height: changeSizebgHeight,
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-            {/* end card */}
+              Kết Quả
+            </Text>
           </Flex>
-          <Text mt={5} fz={16} fw={500} color={'white'}>
-            Tổng Quan
-          </Text>
+          {/* end main card4 */}
         </Flex>
-        {/* stone active */}
+        {/* end cart bottom */}
         <Flex
           sx={{
             position: 'absolute',
-            bottom: changeSizeActive,
+            top: '5px',
             left: changeleftStone,
           }}
           w={changeSizeActiveIcon}
           h={150}
-          bg={`url(${stoneActive})`}
+          bg={`url(${
+            dataStone[selector.snowBall.card_Key_Of_Stone + indexBug]
+              .iconsActive
+          })`}
           bgr={'no-repeat'}
           bgsz={'contain'}
         ></Flex>
       </Flex>
-      {/* center cart */}
-      <Flex
-        w={changeWidthPc}
-        justify={'space-around'}
-        align={'center'}
-        sx={{ position: 'relative' }}
-      >
-        {/* cart left */}
-        <Flex
-          justify={'center'}
-          align={'center'}
-          direction={'column'}
-          w={changeWidthDefaule}
-        >
-          <Flex w={changeSizebgWidth} h={changeSizebgHeight}>
-            {/* card */}
-            <div
-              className="flip-box"
-              style={{ width: changeSizebgWidth, height: changeSizebgHeight }}
-            >
-              <div
-                onClick={() => flipCardBack1()}
-                ref={flipBack1}
-                className="flip-box-inner"
-              >
-                <div className="flip-box-front">
-                  <img
-                    src={backCart}
-                    alt="Paris"
-                    style={{
-                      width: changeSizebgWidth,
-                      height: changeSizebgHeight,
-                    }}
-                  />
-                </div>
-                <div className="flip-box-back">
-                  <img
-                    src={stoneActive}
-                    alt="Paris"
-                    style={{
-                      width: changeSizebgWidth,
-                      height: changeSizebgHeight,
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-            {/* end card */}
-          </Flex>
-          <Text mt={5} fz={16} fw={500} color={'white'}>
-            Điểm mạnh
-          </Text>
-        </Flex>
-
-        {/* cart right */}
-        <Flex
-          justify={'center'}
-          align={'center'}
-          direction={'column'}
-          w={changeWidthDefaule}
-        >
-          <Flex
-            w={changeSizebgWidth}
-            h={changeSizebgHeight}
-            bgr={'no-repeat'}
-            bgsz={'contain'}
-          >
-            {/* card */}
-            <div
-              className="flip-box"
-              style={{ width: changeSizebgWidth, height: changeSizebgHeight }}
-            >
-              <div
-                onClick={() => flipCardBack2()}
-                ref={flipBack2}
-                className="flip-box-inner"
-              >
-                <div className="flip-box-front">
-                  <img
-                    src={backCart}
-                    alt="Paris"
-                    style={{
-                      width: changeSizebgWidth,
-                      height: changeSizebgHeight,
-                    }}
-                  />
-                </div>
-                <div className="flip-box-back">
-                  <img
-                    src={stoneActive}
-                    alt="Paris"
-                    style={{
-                      width: changeSizebgWidth,
-                      height: changeSizebgHeight,
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-            {/* end card */}
-          </Flex>
-          <Text mt={5} fz={16} fw={500} color={'white'}>
-            Điểm yếu
-          </Text>
-        </Flex>
-      </Flex>
-      {/* bottom cart */}
-      <Flex justify={'center'} w={'80%'}>
-        {/* cart bottom */}
-        <Flex
-          justify={'center'}
-          align={'center'}
-          direction={'column'}
-          w={changeWidthDefaule}
-        >
-          <Flex w={changeSizebgWidth} h={changeSizebgHeight}>
-            {' '}
-            {/* card */}
-            <div
-              className="flip-box"
-              style={{ width: changeSizebgWidth, height: changeSizebgHeight }}
-            >
-              <div
-                onClick={() => flipCardBack3()}
-                ref={flipBack3}
-                className="flip-box-inner"
-              >
-                <div className="flip-box-front">
-                  <img
-                    src={backCart}
-                    alt="Paris"
-                    style={{
-                      width: changeSizebgWidth,
-                      height: changeSizebgHeight,
-                    }}
-                  />
-                </div>
-                <div className="flip-box-back">
-                  <img
-                    src={stoneActive}
-                    alt="Paris"
-                    style={{
-                      width: changeSizebgWidth,
-                      height: changeSizebgHeight,
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-            {/* end card */}
-          </Flex>
-          <Text mt={5} fz={16} fw={500} color={'white'}>
-            Kết quả
-          </Text>
-        </Flex>
-      </Flex>
-      {/* position button spread carf */}
-
-      {checks == false ||
-      check1s == false ||
-      check2s == false ||
-      check3s == false ? (
+      {butSpreadCard1 || butSpreadCard2 || butSpreadCard3 || butSpreadCard4 ? (
         ''
       ) : (
         <Flex

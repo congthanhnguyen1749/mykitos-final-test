@@ -27,15 +27,10 @@ export const BodyGetReading: any = () => {
   const dispatch = useDispatch();
   const { StoneActions } = StoneSliceReduce();
 
-  useLayoutEffect(() => {
-    // dispatch(StoneActions.changeStoneValue(chagneBall));
-  }, [chagneBall]);
-
   // end dispatch snowball id
   const changeContentItems: any = (value, index) => {
-    // navigate(`/get/contentItem/${value.link}`);
-    dispatch(StoneActions.changeStoneValue(index));
-    // setChagneBall(index);
+    navigate(`/get/contentItem/${value.link}`);
+    dispatch(StoneActions.ChangeSmowballValue(index));
   };
 
   const location = useLocation();

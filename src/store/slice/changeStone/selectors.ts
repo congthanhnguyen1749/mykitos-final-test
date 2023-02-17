@@ -3,4 +3,7 @@ import { initialState } from '../changeStone/index';
 
 const selectDomain = state => state?.id || initialState;
 
-export const getProfileSelector = createSelector([selectDomain], id => id.stone);
+export const getProfileSelector = createSelector(
+  [selectDomain],
+  id => id,
+);

@@ -7,7 +7,8 @@ import { CardFlashesStoneFrom } from './CardFlashesStoneFrom';
 import { ScrollChangeCard } from './ScrollChangeCard';
 import { ItemsInfoCard } from './ItemsInfoCard';
 import './flipCard.css';
-import './flipCard.css';
+import { InfomationsCart } from './data/data';
+
 export const ContentItemsflashesStone = () => {
   const mobile = useMediaQuery('(max-width: 755px)');
   const loca = useLocation();
@@ -100,13 +101,7 @@ export const ContentItemsflashesStone = () => {
         {/* end header */}
         {/* another navbar */}
         {messageNav ? (
-          <Box
-            w={'100%'}
-       
-            mb={'3vh'}
-            opacity={0}
-            className="chnagehidebut"
-          >
+          <Box w={'100%'} mb={'3vh'} opacity={0} className="chnagehidebut">
             <ScrollChangeCard />
           </Box>
         ) : (
@@ -115,19 +110,15 @@ export const ContentItemsflashesStone = () => {
         {/* end another navbar */}
         {/* content */}
         <Flex w={'100%'} h={'100%'} justify={'center'} align={'center'}>
-          <CardFlashesStoneFrom parentCallback={callbackFunction} />
+          <CardFlashesStoneFrom data={[InfomationsCart, callbackFunction]} />
         </Flex>
-        {message ? (
+        {messageNav ? (
           <Box mt={5}>
-            <ItemsInfoCard />
-            <ItemsInfoCard />
-            <ItemsInfoCard />
             <ItemsInfoCard />
           </Box>
         ) : (
           ''
         )}
-
         {/* end content */}
       </Flex>
     </Box>

@@ -46,11 +46,23 @@ import ImageCardMijor from '../../../../assets/images/Body/icon/card/1.svg';
 // end Mijor
 // ---------------
 // endImageCart
-
+import backCard from '../../../../assets/images/cards/card_back_0.jpg'
+// frontend card
+import CourtCup from '../../../../assets/Rider-Waite-Tarot-78Card/Court/CUPS/king-of-cups.jpg';
+import MajorJustice from '../../../../assets/Rider-Waite-Tarot-78Card/Major/justice.jpg';
+import MinorPentacles from '../../../../assets/Rider-Waite-Tarot-78Card/Minor/PENTACLES/six-of-pentacles.jpg';
+import CUPSCups from '../../../../assets/Rider-Waite-Tarot-78Card/Minor/CUPS/four-of-cups.jpg';
+import MinorWands from '../../../../assets/Rider-Waite-Tarot-78Card/Minor/WANDS/eight-of-wands.jpg';
+import MinorPentac from '../../../../assets/Rider-Waite-Tarot-78Card/Minor/PENTACLES/ace-of-pentacles.jpg';
+import RiderSwords from '../../../../assets/Rider-Waite-Tarot-78Card/Minor/SWORDS/seven-of-swords.jpg';
+import MinorSwords from '../../../../assets/Rider-Waite-Tarot-78Card/Minor/SWORDS/two-of-swords.jpg';
+import MinorShaix from '../../../../assets/Rider-Waite-Tarot-78Card/Minor/SWORDS/ten-of-swords.jpg';
+// end frontend card
 export const InfomationsCart: any = {
   Court: [
     {
-      icon: ImageCardCourt,
+      frontCart: MinorShaix,
+      icon: CourtCup,
       textIntroduce: 'Tổng quan tình yêu',
       textSubtitle: 'Chuyện tình cảm sắp tới của bạn',
       nameCard: 'Seven of Swords',
@@ -62,6 +74,7 @@ export const InfomationsCart: any = {
       key: 0,
     },
     {
+      frontCart: MajorJustice,
       icon: ImageCardCourt1,
       textIntroduce: 'Tổng quan tình yêu',
       textSubtitle: 'Chuyện tình cảm sắp tới của bạn',
@@ -74,6 +87,7 @@ export const InfomationsCart: any = {
       key: 1,
     },
     {
+      frontCart: MinorPentacles,
       icon: ImageCardCourt2,
       textIntroduce: 'Tổng quan tình yêu',
       textSubtitle: 'Chuyện tình cảm sắp tới của bạn',
@@ -87,6 +101,7 @@ export const InfomationsCart: any = {
       key: 2,
     },
     {
+      frontCart: CUPSCups,
       icon: ImageCardCourt3,
       textIntroduce: 'Tổng quan tình yêu',
       textSubtitle: 'Chuyện tình cảm sắp tới của bạn',
@@ -98,9 +113,62 @@ export const InfomationsCart: any = {
         '"Chỉ có đam mê, đam mê rất lớn mới đủ sức giúp tâm hồn thăng hoa để làm những điều vĩ đại.Xung quanh the Empress là hình ảnh bao phủ của một cánh rừng đẹp đẽ và tươi tốt với một dòng suối chảy qua, thể hiện mối liên hệ xúc cảm sâu sắc giữa the Empress với Đất Mẹ (Mother Earth) và cuộc sống. Nàng cảm nhận được sự yên bình từ cây cối, nguồn nước cùng quá trình hồi xuân nét tươi trẻ nhờ nguồn năng lượng của tự nhiên. Phía trước nàng là vụ lúa xuân vàng óng, phản ánh sự sung túc từ mùa vụ vừa được thu hoạch."',
       key: 3,
     },
+    {
+      frontCart: MinorWands,
+      icon: ImageCardCourt3,
+      textIntroduce: 'Tổng quan tình yêu',
+      textSubtitle: 'Chuyện tình cảm sắp tới của bạn',
+      nameCard: 'The Empress',
+      labelCard: 'Sự sinh nở, nữ tính, vẻ đẹp, tự nhiên, sung túc',
+      descriptionCard:
+        '"The Empress là Mẹ Trái Đất (Earth Mother) đúng nghĩa, còn được gọi là the Anima, the Feminine Principle, Demeter, Freyja, và Nữ Thần của sự Sinh Sản. Được cai trị bởi Kim Tinh, hành tinh của tình yêu, sự sáng tạo, sự sinh nở, nghệ thuật, sự hài hòa, xa xỉ, vẻ đẹp và nét yêu kiều.Điểm chính của lá bài Tarot này chính là bản thân the Empress, một phụ nữ hoàn hảo với mái tóc vàng hoe và từ con người nàng tỏa ra một hương thơm yên bình và dịu êm. Nàng đội vương miện ngôi sao trên đầu, thể hiện mối liên hệ của nàng với vương quốc huyền bí của những thiên thần và tiên nữ. Nàng khoác trên mình một chiếc áo choàng có in họa tiết của những quả lựu, tượng trưng cho sự sinh nở, và ngồi trên một chiếc đệm được trang trí bằng những đường nét xa xỉ và mềm mại với chất liệu nhung đỏ có biểu tượng huy hiệu của nữ thần Venus."',
+      describeCard:
+        '"Chỉ có đam mê, đam mê rất lớn mới đủ sức giúp tâm hồn thăng hoa để làm những điều vĩ đại.Xung quanh the Empress là hình ảnh bao phủ của một cánh rừng đẹp đẽ và tươi tốt với một dòng suối chảy qua, thể hiện mối liên hệ xúc cảm sâu sắc giữa the Empress với Đất Mẹ (Mother Earth) và cuộc sống. Nàng cảm nhận được sự yên bình từ cây cối, nguồn nước cùng quá trình hồi xuân nét tươi trẻ nhờ nguồn năng lượng của tự nhiên. Phía trước nàng là vụ lúa xuân vàng óng, phản ánh sự sung túc từ mùa vụ vừa được thu hoạch."',
+      key: 4,
+    },
+    {
+      frontCart: MinorPentac,
+      icon: ImageCardCourt3,
+      textIntroduce: 'Tổng quan tình yêu',
+      textSubtitle: 'Chuyện tình cảm sắp tới của bạn',
+      nameCard: 'The Empress',
+      labelCard: 'Sự sinh nở, nữ tính, vẻ đẹp, tự nhiên, sung túc',
+      descriptionCard:
+        '"The Empress là Mẹ Trái Đất (Earth Mother) đúng nghĩa, còn được gọi là the Anima, the Feminine Principle, Demeter, Freyja, và Nữ Thần của sự Sinh Sản. Được cai trị bởi Kim Tinh, hành tinh của tình yêu, sự sáng tạo, sự sinh nở, nghệ thuật, sự hài hòa, xa xỉ, vẻ đẹp và nét yêu kiều.Điểm chính của lá bài Tarot này chính là bản thân the Empress, một phụ nữ hoàn hảo với mái tóc vàng hoe và từ con người nàng tỏa ra một hương thơm yên bình và dịu êm. Nàng đội vương miện ngôi sao trên đầu, thể hiện mối liên hệ của nàng với vương quốc huyền bí của những thiên thần và tiên nữ. Nàng khoác trên mình một chiếc áo choàng có in họa tiết của những quả lựu, tượng trưng cho sự sinh nở, và ngồi trên một chiếc đệm được trang trí bằng những đường nét xa xỉ và mềm mại với chất liệu nhung đỏ có biểu tượng huy hiệu của nữ thần Venus."',
+      describeCard:
+        '"Chỉ có đam mê, đam mê rất lớn mới đủ sức giúp tâm hồn thăng hoa để làm những điều vĩ đại.Xung quanh the Empress là hình ảnh bao phủ của một cánh rừng đẹp đẽ và tươi tốt với một dòng suối chảy qua, thể hiện mối liên hệ xúc cảm sâu sắc giữa the Empress với Đất Mẹ (Mother Earth) và cuộc sống. Nàng cảm nhận được sự yên bình từ cây cối, nguồn nước cùng quá trình hồi xuân nét tươi trẻ nhờ nguồn năng lượng của tự nhiên. Phía trước nàng là vụ lúa xuân vàng óng, phản ánh sự sung túc từ mùa vụ vừa được thu hoạch."',
+      key: 5,
+    },
+    {
+      frontCart: RiderSwords,
+      icon: ImageCardCourt3,
+      textIntroduce: 'Tổng quan tình yêu',
+      textSubtitle: 'Chuyện tình cảm sắp tới của bạn',
+      nameCard: 'The Empress',
+      labelCard: 'Sự sinh nở, nữ tính, vẻ đẹp, tự nhiên, sung túc',
+      descriptionCard:
+        '"The Empress là Mẹ Trái Đất (Earth Mother) đúng nghĩa, còn được gọi là the Anima, the Feminine Principle, Demeter, Freyja, và Nữ Thần của sự Sinh Sản. Được cai trị bởi Kim Tinh, hành tinh của tình yêu, sự sáng tạo, sự sinh nở, nghệ thuật, sự hài hòa, xa xỉ, vẻ đẹp và nét yêu kiều.Điểm chính của lá bài Tarot này chính là bản thân the Empress, một phụ nữ hoàn hảo với mái tóc vàng hoe và từ con người nàng tỏa ra một hương thơm yên bình và dịu êm. Nàng đội vương miện ngôi sao trên đầu, thể hiện mối liên hệ của nàng với vương quốc huyền bí của những thiên thần và tiên nữ. Nàng khoác trên mình một chiếc áo choàng có in họa tiết của những quả lựu, tượng trưng cho sự sinh nở, và ngồi trên một chiếc đệm được trang trí bằng những đường nét xa xỉ và mềm mại với chất liệu nhung đỏ có biểu tượng huy hiệu của nữ thần Venus."',
+      describeCard:
+        '"Chỉ có đam mê, đam mê rất lớn mới đủ sức giúp tâm hồn thăng hoa để làm những điều vĩ đại.Xung quanh the Empress là hình ảnh bao phủ của một cánh rừng đẹp đẽ và tươi tốt với một dòng suối chảy qua, thể hiện mối liên hệ xúc cảm sâu sắc giữa the Empress với Đất Mẹ (Mother Earth) và cuộc sống. Nàng cảm nhận được sự yên bình từ cây cối, nguồn nước cùng quá trình hồi xuân nét tươi trẻ nhờ nguồn năng lượng của tự nhiên. Phía trước nàng là vụ lúa xuân vàng óng, phản ánh sự sung túc từ mùa vụ vừa được thu hoạch."',
+      key: 6,
+    },
+    {
+      frontCart: MinorSwords,
+      icon: ImageCardCourt3,
+      textIntroduce: 'Tổng quan tình yêu',
+      textSubtitle: 'Chuyện tình cảm sắp tới của bạn',
+      nameCard: 'The Empress',
+      labelCard: 'Sự sinh nở, nữ tính, vẻ đẹp, tự nhiên, sung túc',
+      descriptionCard:
+        '"The Empress là Mẹ Trái Đất (Earth Mother) đúng nghĩa, còn được gọi là the Anima, the Feminine Principle, Demeter, Freyja, và Nữ Thần của sự Sinh Sản. Được cai trị bởi Kim Tinh, hành tinh của tình yêu, sự sáng tạo, sự sinh nở, nghệ thuật, sự hài hòa, xa xỉ, vẻ đẹp và nét yêu kiều.Điểm chính của lá bài Tarot này chính là bản thân the Empress, một phụ nữ hoàn hảo với mái tóc vàng hoe và từ con người nàng tỏa ra một hương thơm yên bình và dịu êm. Nàng đội vương miện ngôi sao trên đầu, thể hiện mối liên hệ của nàng với vương quốc huyền bí của những thiên thần và tiên nữ. Nàng khoác trên mình một chiếc áo choàng có in họa tiết của những quả lựu, tượng trưng cho sự sinh nở, và ngồi trên một chiếc đệm được trang trí bằng những đường nét xa xỉ và mềm mại với chất liệu nhung đỏ có biểu tượng huy hiệu của nữ thần Venus."',
+      describeCard:
+        '"Chỉ có đam mê, đam mê rất lớn mới đủ sức giúp tâm hồn thăng hoa để làm những điều vĩ đại.Xung quanh the Empress là hình ảnh bao phủ của một cánh rừng đẹp đẽ và tươi tốt với một dòng suối chảy qua, thể hiện mối liên hệ xúc cảm sâu sắc giữa the Empress với Đất Mẹ (Mother Earth) và cuộc sống. Nàng cảm nhận được sự yên bình từ cây cối, nguồn nước cùng quá trình hồi xuân nét tươi trẻ nhờ nguồn năng lượng của tự nhiên. Phía trước nàng là vụ lúa xuân vàng óng, phản ánh sự sung túc từ mùa vụ vừa được thu hoạch."',
+      key: 8,
+    },
   ],
   Major: [
     {
+      frontCart: ImageCardCourt1,
       icon: ImageCardMajor,
       description: 'Body.Cart2.description',
       label: 'Body.Cart2.label',
@@ -109,6 +177,7 @@ export const InfomationsCart: any = {
   ],
   Minor: [
     {
+      frontCart: ImageCardCourt1,
       icon: ImageCardMijor,
       description: 'Body.Cart2.description',
       label: 'Body.Cart2.label',
@@ -117,13 +186,14 @@ export const InfomationsCart: any = {
   ],
 };
 
-export const dataStone: Object[] = [
+export const dataStone: any = [
   {
     title: 'Đá Thạch Anh Trắng',
     label:
       'Thanh tẩy các yếu tố tiêu cực sang tích cực, làm cân bằng năng lượng âm và năng lượng dương trả lại năng lượng sạch trong các lá bài.',
     coin: '5',
     key: '4',
+    indexMain: 0,
     active: '4',
     activeText: '0',
     iconsUnActive: whiteS,
@@ -135,6 +205,7 @@ export const dataStone: Object[] = [
       'Bảo vệ các lá bài trước các năng lượng tiêu cực, loại bỏ các năng lượng không mong muốn.',
     coin: '10',
     key: '0',
+    indexMain: 1,
     activeText: '1',
     active: '0',
     iconsUnActive: purpleS,
@@ -145,6 +216,7 @@ export const dataStone: Object[] = [
     label: 'liên hệ và gắn kết các phần trong thế giới tâm linh vào lá bài.',
     coin: '15',
     key: '1',
+    indexMain: 2,
     activeText: '2',
     active: '1',
     iconsUnActive: yellowS,
@@ -156,6 +228,7 @@ export const dataStone: Object[] = [
     label: 'có tác dụng thanh tẩy mạnh, giúp các nguồn năng lượng ổn định.',
     coin: '25',
     key: '2',
+    indexMain: 3,
     activeText: '3',
     active: '2',
     iconsUnActive: redS,
@@ -166,6 +239,7 @@ export const dataStone: Object[] = [
     label: 'làm dịu lại các năng lượng xấu, có tác dụng mang đến sự hòa hợp.',
     coin: '35',
     key: '3',
+    indexMain: 4,
     activeText: '4',
     active: '3',
     iconsUnActive: pinkS,
@@ -210,7 +284,7 @@ export const LabelTextcrystal: any = [
     iconCrystal: Darkvioletcrystal,
     description: 'Body.Darkvioletcrystal.description',
     label: 'Body.Darkvioletcrystal.label',
-    key: 5,
+    key: 4,
     descriptions: 'Chủ đề Gia đình',
     link: 'familytheme',
   },
@@ -218,7 +292,7 @@ export const LabelTextcrystal: any = [
     iconCrystal: Whitecrystal,
     description: 'Body.Whitecrystal.description',
     label: 'Body.Whitecrystal.label',
-    key: 6,
+    key: 5,
     descriptions: 'Chủ đề Sự nghiệp',
     link: 'careertheme',
   },
@@ -226,7 +300,7 @@ export const LabelTextcrystal: any = [
     iconCrystal: Glaxycrystal,
     description: 'Body.Glaxycrystal.description',
     label: 'Body.Glaxycrystal.label',
-    key: 7,
+    key: 6,
     descriptions: 'Chủ đề Quan hệ xã hội',
     link: 'sosietytheme',
   },
@@ -234,14 +308,14 @@ export const LabelTextcrystal: any = [
 
 export const DataItemCard: any = [
   {
-    icon: cart1, 
+    icon: cart1,
     key: 1,
   },
   {
     icon: cart2,
     key: 2,
   },
-  
+
   {
     icon: cart4,
     key: 4,
@@ -279,4 +353,3 @@ export const DataItemCard: any = [
     key: 12,
   },
 ];
-   

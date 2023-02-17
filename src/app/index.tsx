@@ -19,8 +19,10 @@ import { ContentItemsChooseStone } from './components/Body/ContentItemsChooseSto
 import { ContentItemsflashesStone } from './components/Body/ContentItemsflashesStone';
 import { Box } from '@mantine/core';
 import { createSlice } from 'utils/@reduxjs/toolkit';
+import { StoneSliceReduce } from 'store/slice/changeStone';
 export function App() {
   const { i18n } = useTranslation();
+  StoneSliceReduce();
   return (
     <BrowserRouter>
       <Box w={'100%'} h={'100%'}>
