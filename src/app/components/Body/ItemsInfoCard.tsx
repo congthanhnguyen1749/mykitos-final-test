@@ -32,7 +32,7 @@ export const ItemsInfoCard = ({ active }) => {
   const widthMobileInfoItems = mobile ? '343px' : '1170px';
   const widthMobilebox = mobile ? '220px' : '250px';
   const sizeTextLable = mobile ? 18 : 24;
-  const changeSizeImg = mobile ? '-88px' : '0';
+  const changeSizeImg = mobile ? '-148px' : '0';
   const changeTextSizeBottom = mobile ? 15 : 20;
   const changeTextSizeTop = mobile ? 'auto' : 270;
   const changeActive = () => {
