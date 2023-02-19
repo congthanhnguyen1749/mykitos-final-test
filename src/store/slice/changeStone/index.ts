@@ -9,16 +9,19 @@ export const initialState: ChangeStone = {
   snowBall: {
     snowBall_Index: 0,
     card_Key_Of_SnowBall: 0,
-    card_Key_Of_Stone: 1,
+    card_Key_Of_Stone: 0,
     get_Card_Key_Face: true,
+    set_index_card: [1, 2, 3, 4],
+    ref1: '',
+    ref2: '',
     card1: false,
     card2: false,
     card3: false,
     card4: false,
-    idcard1:0,
-    idcard2:0,
-    idcard3:0,
-    idcard4:0,
+    idcard1: 0,
+    idcard2: 0,
+    idcard3: 0,
+    idcard4: 0,
   },
 
   // // stone properties
@@ -70,11 +73,21 @@ const slice = createSlice({
     getCardRandom4: (state: ChangeStone, action) => {
       state.snowBall.card4 = action.payload;
     },
+    // lấy giá trị true false từ card khi nhấn vào
+    setArrayCard: (state: ChangeStone, action) => {
+      state.snowBall.set_index_card = action.payload;
+    },
+    hh1: (state: ChangeStone, action) => {
+      state.snowBall.ref1 = action.payload;
+    },
+    hh2: (state: ChangeStone, action) => {
+      state.snowBall.ref2 = action.payload;
+    },
 
-    getidCardRandom1: (state: ChangeStone, action) =>{},
-    getidCardRandom2: (state: ChangeStone, action) =>{},
-    getidCardRandom3: (state: ChangeStone, action) =>{},
-    getidCardRandom4: (state: ChangeStone, action) =>{},
+    getidCardRandom1: (state: ChangeStone, action) => {},
+    getidCardRandom2: (state: ChangeStone, action) => {},
+    getidCardRandom3: (state: ChangeStone, action) => {},
+    getidCardRandom4: (state: ChangeStone, action) => {},
   },
 });
 

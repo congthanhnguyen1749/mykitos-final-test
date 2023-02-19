@@ -64,6 +64,7 @@ export const BodyContentItems = () => {
         className="chnagehidebut"
         justify={'flex-start'}
         direction={'column'}
+        mt={20}
         align={'center'}
       >
         {newAr[0].map((v, i) => {

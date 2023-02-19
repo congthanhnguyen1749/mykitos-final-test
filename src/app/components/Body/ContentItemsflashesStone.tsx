@@ -8,12 +8,13 @@ import { ScrollChangeCard } from './ScrollChangeCard';
 import { ItemsInfoCard } from './ItemsInfoCard';
 import './flipCard.css';
 import { InfomationsCart } from './data/data';
+import { getProfileSelector } from 'store/slice/changeStone/selectors';
+import { useSelector } from 'react-redux';
 
 export const ContentItemsflashesStone = () => {
   const mobile = useMediaQuery('(max-width: 755px)');
   const loca = useLocation();
   const changeref: any = React.useRef();
-  const changeSizeHeightButton: any = mobile ? 38 : 58;
   const navigate = useNavigate();
   const [ftrue, setFtrue] = React.useState(false);
   const changeRouter: any = () => {
@@ -23,30 +24,22 @@ export const ContentItemsflashesStone = () => {
   const backPage: any = () => {
     navigate(`/get/contentItemsChooseStone/${loca.pathname.slice(30)}`);
   };
-  const [message, setMessage]: any = React.useState(false);
   const [messageNav, setMessageNav]: any = React.useState(false);
 
   const callbackFunction = childData => {
-    setMessage(childData);
     setMessageNav(!messageNav);
     changeref.current.style.background = 'rgba(0,0,0,.6)';
   };
-  const [navSize, setnavSize]: any = React.useState('');
-  const [navColor, setnavColor]: any = React.useState(0);
-  const listenScrollEvent: any = () => {
-    window.scrollY > 320 ? setnavColor(1) : setnavColor(0);
-    window.scrollY > 320 ? setnavSize('fixed') : setnavSize('relative');
-  };
-  React.useEffect(() => {
-    window.addEventListener('scroll', listenScrollEvent);
-    return () => {
-      window.removeEventListener('scroll', listenScrollEvent);
-    };
-  }, []);
+
   const location = useLocation();
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
+  // selector
+
+  const selector = useSelector(getProfileSelector);
+  console.log(selector.snowBall.set_index_card, 'ddd');
+  const arrayCard = selector.snowBall.set_index_card;
   return (
     <Box opacity={0} className="chnagehidebut">
       <Flex
@@ -114,7 +107,13 @@ export const ContentItemsflashesStone = () => {
         </Flex>
         {messageNav ? (
           <Box mt={5}>
-            <ItemsInfoCard />
+            {arrayCard.map((v, i) => {
+              return (
+                <Flex key={i} m={'10px 0 10px 0'}>
+                  <ItemsInfoCard active={v} />
+                </Flex>
+              );
+            })}
           </Box>
         ) : (
           ''

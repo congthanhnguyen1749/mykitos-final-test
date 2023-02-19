@@ -20,6 +20,7 @@ export const BodyDailyCardItemsGroup: any = (props: BodyItemProps) => {
         margin: '5px 5px',
         boxShadow: '4px 4px 4px 0 rgba(255, 255, 255, 0.25)',
         border: '1px solid rgba(255, 255, 255, .7)',
+        cursor: 'pointer',
       }}
     >
       <Flex

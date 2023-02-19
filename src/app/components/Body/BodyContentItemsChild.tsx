@@ -104,6 +104,7 @@ export const BodyContentItemsChild: any = () => {
               height: changemobileTextW,
               marginBottom: '30px',
               borderRadius: '100%',
+              cursor: 'pointer',
             }}
             src={`${getdataImg[0].iconCrystal}`}
             onClick={() => changeHoverRotate()}

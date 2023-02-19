@@ -46,7 +46,7 @@ import ImageCardMijor from '../../../../assets/images/Body/icon/card/1.svg';
 // end Mijor
 // ---------------
 // endImageCart
-import backCard from '../../../../assets/images/cards/card_back_0.jpg'
+import backCard from '../../../../assets/images/cards/card_back_0.jpg';
 // frontend card
 import CourtCup from '../../../../assets/Rider-Waite-Tarot-78Card/Court/CUPS/king-of-cups.jpg';
 import MajorJustice from '../../../../assets/Rider-Waite-Tarot-78Card/Major/justice.jpg';
@@ -78,7 +78,7 @@ export const InfomationsCart: any = {
       icon: ImageCardCourt1,
       textIntroduce: 'Tổng quan tình yêu',
       textSubtitle: 'Chuyện tình cảm sắp tới của bạn',
-      nameCard: 'The Fool',
+      nameCard: 'Justice',
       labelCard: 'Sự phản bội, lừa dối, chiếm lấy rồi bỏ trốn, lén lút',
       descriptionCard:
         'Seven of Swords cho thấy một người đàn ông lén trốn ra khỏi trại quân đội với năm thanh kiếm trong tay. Hai thanh kiếm cắm trên mặt đất, sau lưng ông. Gương mặt của ông cho thấy sự tự tin và ngạo nghễ, như thể chắc chắn rằng phi vụ trôm cắp đã thành công. Tuy nhiên, các binh sĩ đã phát hiện ra hắn.',
@@ -89,7 +89,7 @@ export const InfomationsCart: any = {
     {
       frontCart: MinorPentacles,
       icon: ImageCardCourt2,
-      textIntroduce: 'Tổng quan tình yêu',
+      textIntroduce: 'Điểm mạnh tình yêu',
       textSubtitle: 'Chuyện tình cảm sắp tới của bạn',
       nameCard: 'The Magician',
       labelCard:
@@ -142,7 +142,7 @@ export const InfomationsCart: any = {
     {
       frontCart: RiderSwords,
       icon: ImageCardCourt3,
-      textIntroduce: 'Tổng quan tình yêu',
+      textIntroduce: 'Kết quả tình yêu',
       textSubtitle: 'Chuyện tình cảm sắp tới của bạn',
       nameCard: 'The Empress',
       labelCard: 'Sự sinh nở, nữ tính, vẻ đẹp, tự nhiên, sung túc',
@@ -155,7 +155,7 @@ export const InfomationsCart: any = {
     {
       frontCart: MinorSwords,
       icon: ImageCardCourt3,
-      textIntroduce: 'Tổng quan tình yêu',
+      textIntroduce: 'Điểm yếu tình yêu',
       textSubtitle: 'Chuyện tình cảm sắp tới của bạn',
       nameCard: 'The Empress',
       labelCard: 'Sự sinh nở, nữ tính, vẻ đẹp, tự nhiên, sung túc',

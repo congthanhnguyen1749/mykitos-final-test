@@ -1,11 +1,9 @@
-import { Box, Flex, Image, Text, keyframes } from '@mantine/core';
+import { Flex, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import React, { useLayoutEffect, useState } from 'react';
-import stoneActive from '../../../assets/images/Body/icon/stone/WebStone/WhiteB.svg';
-import backCart from '../../../assets/images/cards/card_back_0.jpg';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './flipCard.css';
-import { InfomationsCart, LabelTextcrystal, dataStone } from './data/data';
+import { InfomationsCart, dataStone } from './data/data';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProfileSelector } from 'store/slice/changeStone/selectors';
 import ItemsCardUse from './itemsCardUse';
@@ -24,13 +22,11 @@ export const CardFlashesStoneFrom: any = props => {
   const changeSizeWidthButton: any = mobile ? 150 : 150;
   const changeSizeText: any = mobile ? 20 : 20;
   const changeSizebgWidth: any = mobile ? 45 : 70;
-  const changeSizebgHeight: any = mobile ? 80 : 120;
+  const configmobile: any = mobile ? 1 : 0;
   const changeWidthDefaule: any = mobile ? 90 : 'auto';
   const changeSizeActiveIcon: any = mobile ? 58 : 108;
   const changehCard: any = mobile ? '5vh' : '10vh';
   const changemobilemargin: any = mobile ? 10 : 40;
-  const indexBug: any = mobile ? 0 : 1;
-  const changeWidthPc: any = mobile ? '70%' : '20%';
 
   // change index to random card index
   const changeleftStone: any = mobile ? '3%' : '13%';
@@ -98,6 +94,7 @@ export const CardFlashesStoneFrom: any = props => {
     setButSpreadCard4(false);
     dispatch(StoneActions.getidCardRandom4(changeIndex3));
   };
+
   return hideandunhide ? (
     <Flex
       justify={'center'}
@@ -121,6 +118,7 @@ export const CardFlashesStoneFrom: any = props => {
         {/* cart top */}
         <Flex justify={'center'} align={'flex-end'} w={'100%'}>
           {/* main card */}
+
           <Flex
             justify={'space-around'}
             align={'center'}
@@ -132,7 +130,7 @@ export const CardFlashesStoneFrom: any = props => {
               <Flex onClick={() => setHideButtonSpred1()}>
                 {InfomationsCart.Court.map((v, i) => {
                   return i == changeIndex ? (
-                    <ItemsCardUse  key={i} data={v}></ItemsCardUse>
+                    <ItemsCardUse key={i} data={v}></ItemsCardUse>
                   ) : (
                     ''
                   );
@@ -180,7 +178,7 @@ export const CardFlashesStoneFrom: any = props => {
                 <Flex onClick={() => setHideButtonSpred2()}>
                   {InfomationsCart.Court.map((v, i) => {
                     return i == changeIndex1 ? (
-                      <ItemsCardUse  key={i} data={v}></ItemsCardUse>
+                      <ItemsCardUse key={i} data={v}></ItemsCardUse>
                     ) : (
                       ''
                     );
@@ -224,7 +222,7 @@ export const CardFlashesStoneFrom: any = props => {
                 <Flex onClick={() => setHideButtonSpred3()}>
                   {InfomationsCart.Court.map((v, i) => {
                     return i == changeIndex2 ? (
-                      <ItemsCardUse  key={i} data={v}></ItemsCardUse>
+                      <ItemsCardUse key={i} data={v}></ItemsCardUse>
                     ) : (
                       ''
                     );
@@ -263,7 +261,7 @@ export const CardFlashesStoneFrom: any = props => {
               <Flex onClick={() => setHideButtonSpred4()}>
                 {InfomationsCart.Court.map((v, i) => {
                   return i == changeIndex3 ? (
-                    <ItemsCardUse  key={i} data={v}></ItemsCardUse>
+                    <ItemsCardUse key={i} data={v}></ItemsCardUse>
                   ) : (
                     ''
                   );
@@ -294,8 +292,11 @@ export const CardFlashesStoneFrom: any = props => {
           w={changeSizeActiveIcon}
           h={150}
           bg={`url(${
-            dataStone[selector.snowBall.card_Key_Of_Stone + indexBug]
-              .iconsActive
+            dataStone[
+              selector.snowBall.card_Key_Of_Stone == 5 - configmobile
+                ? 0
+                : selector.snowBall.card_Key_Of_Stone - configmobile
+            ].iconsActive
           })`}
           bgr={'no-repeat'}
           bgsz={'contain'}

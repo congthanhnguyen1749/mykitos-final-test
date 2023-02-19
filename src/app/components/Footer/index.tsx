@@ -9,11 +9,14 @@ import { useScrollIntoView } from '@mantine/hooks';
 const Footer = () => {
   const mobile: any = useMediaQuery('(max-width: 1450px)');
   const setTextPD = mobile ? '0px' : '45px';
-  const setmb = mobile ? '18px' : '0px';
+  const setmb = mobile ? '10px' : '0px';
+  const setmt = mobile ? '0' : '81px';
   const setFlex = mobile ? 'flex-start' : 'flex-end';
   const sethContact = mobile ? '125%' : '100%';
   const setwicon = mobile ? '130%' : '100%';
-  const { scrollIntoView, targetRef } = useScrollIntoView<HTMLDivElement>({ offset: 60 });
+  const { scrollIntoView, targetRef } = useScrollIntoView<HTMLDivElement>({
+    offset: 60,
+  });
   return (
     <Flex direction={'column'} justify={'center'} align={'center'} w={'100%'}>
       <Flex
@@ -112,9 +115,13 @@ const Footer = () => {
                 </Flex>
               </Flex>
             </Flex>
-            <Flex mb={setmb} justify={setFlex} w={'100%'}>
-              <Flex align={'center'} h={setwicon}>
-                <img src={QR} style={{ height: '145px' }} alt="logo" />
+            <Flex mt={setmt} mb={setmb} justify={setFlex} w={'100%'}>
+              <Flex ml={3} align={'center'} justify={'center'} h={setwicon}>
+                <img
+                  src={QR}
+                  style={{ height: `${mobile ? '130px' : '140px'}` }}
+                  alt="logo"
+                />
                 <Flex
                   h={'100%'}
                   direction={'column'}
@@ -123,26 +130,45 @@ const Footer = () => {
                 >
                   <img
                     src={GG}
-                    style={{ height: '67px', marginBottom: '10px' }}
+                    style={{
+                      height: `${mobile ? '60px' : '69px'}`,
+                      marginBottom: '10px',
+                    }}
                     alt="logo"
                   />
-                  <img src={AP} style={{ height: '65px' }} alt="logo" />
+                  <img
+                    src={AP}
+                    style={{ height: `${mobile ? '59px' : '67px'}` }}
+                    alt="logo"
+                  />
                 </Flex>
               </Flex>
             </Flex>
           </SimpleGrid>
         </Flex>
       </Flex>
-      <Flex justify={'center'} w={'100%'} bg={'#090F1B'} h={'146px'}>
+      <Flex justify={'center'} w={'100%'} bg={'#090F1B'}>
         <Flex w={'80%'} direction={'column'}>
-          <Text m={'2px 0'}  color={'white'} fw={400} fz={18} align="left">
+          <Text
+            m={'13px 0 2px 0'}
+            color={'white'}
+            fw={400}
+            fz={18}
+            align="left"
+          >
             Công ty TNHH VIETDEFI
           </Text>
           <Text m={'2px 0'} color={'white'} fw={400} fz={18} align="left">
             Địa chỉ công ty: Lô 6 khu đô thị Nam Thanh, ngõ 1 đường Nguyễn Thị
             Duệ, Yên Hòa, Cầu Giấy, Hà Nội
           </Text>
-          <Text m={'2px 0'} color={'white'} fw={400} fz={18} align="left">
+          <Text
+            m={'10px 0 25px 0'}
+            color={'white'}
+            fw={400}
+            fz={18}
+            align="left"
+          >
             © 2021 VIETDEFI
           </Text>
         </Flex>

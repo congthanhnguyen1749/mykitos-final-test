@@ -1,7 +1,7 @@
-import React, { useEffect, useLayoutEffect } from 'react';
+import React, { useLayoutEffect } from 'react';
 import { ReactComponent as Arrowleft } from '../../../assets/images/Body/icon/arrow/arrow-narrow-left.svg';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { Box, Flex, Image, Text } from '@mantine/core';
+import { Box, Flex, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { CarsulSlideMantine } from './CarsulSlideMantine';
 import { dataStone } from './data/data';
@@ -12,9 +12,6 @@ export const ContentItemsChooseStone = () => {
   const navigate = useNavigate();
   const backPage: any = () => {
     navigate(`/get/contentItemsChild/${loca.pathname.slice(29)}`);
-  };
-  const changePageItems: any = () => {
-    navigate(`/get/contentItemsChooseStone/${loca.pathname.slice(29)}`);
   };
   const skipPage: any = () => {
     navigate(`/get/contentItemsflashesStone/${loca.pathname.slice(29)}`);
@@ -32,6 +29,7 @@ export const ContentItemsChooseStone = () => {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
+
   return (
     <Flex
       opacity={0}
@@ -70,12 +68,7 @@ export const ContentItemsChooseStone = () => {
       </Flex>
       {/* end header */}
       {/* content */}
-      <Flex
-        justify={'center'}
-        align={'center'}
-        onClick={() => changePageItems()}
-        w={'100%'}
-      >
+      <Flex justify={'center'} align={'center'} w={'100%'}>
         <Flex w={'100%'} direction={'column'} align={'center'}>
           <Text
             align="center"

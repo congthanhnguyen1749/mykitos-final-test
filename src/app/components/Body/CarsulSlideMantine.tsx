@@ -6,8 +6,9 @@ import arrowLeft from '../../../assets/images/Body/icon/arrow/leftWithCoin.svg';
 import arrowRight from '../../../assets/images/Body/icon/arrow/rightWithCoin.svg';
 import coin from '../../../assets/images/Body/icon/coin/Xu.svg';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { StoneSliceReduce } from 'store/slice/changeStone';
+import { getProfileSelector } from 'store/slice/changeStone/selectors';
 export interface bodyStoneInfoProps {
   data: any;
 }
@@ -31,15 +32,18 @@ export const CarsulSlideMantine: any = (props: bodyStoneInfoProps) => {
   const dispatch = useDispatch();
   const { StoneActions } = StoneSliceReduce();
   // end dispatch get id
+  const selector: any = useSelector(getProfileSelector);
   const chnageslide: any = e => {
     setKeyChange(e);
     setChangeLabel(e);
-    dispatch(StoneActions.getStoneKeyOfOldFace(e))
+    dispatch(StoneActions.getStoneKeyOfOldFace(e + 1));
   };
 
   const changerouters: any = params => {
     navigate(`/get/contentItemsflashesStone/${loca.pathname.slice(29)}`);
   };
+  // fix active stone on phone
+  const fixInterface = mobile ? 'iconsActive' : 'iconsUnActive';
   return (
     <Flex
       mt={magTop}
@@ -82,8 +86,11 @@ export const CarsulSlideMantine: any = (props: bodyStoneInfoProps) => {
                 m={2}
               >
                 <img
+                  style={mobile ? { width: '100px' } : { width: 'auto' }}
                   src={
                     keyChange == value.key
+                      ? value.iconsActive
+                      : mobile
                       ? value.iconsActive
                       : value.iconsUnActive
                   }
