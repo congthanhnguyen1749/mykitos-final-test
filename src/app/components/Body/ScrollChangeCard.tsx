@@ -27,27 +27,26 @@ export const ScrollChangeCard = () => {
   const [butSpreadCard1, setButSpreadCard1]: any = useState(true);
   const [arryayContentCard, setarryayContentCard]: any = useState([]);
   const setHideButtonSpred1: any = (changeIndex, i) => {
-    console.log(changeIndex, 'main1');
-    const changeview =
-      changeIndex == 0
-        ? setButSpreadCard1(360)
-        : changeIndex == 1
-        ? setButSpreadCard1(360)
-        : changeIndex == 2
-        ? setButSpreadCard1(906)
-        : changeIndex == 3
-        ? setButSpreadCard1(906)
-        : changeIndex == 4
-        ? setButSpreadCard1(1452)
-        : changeIndex == 5
-        ? setButSpreadCard1(1452)
-        : changeIndex == 6
-        ? setButSpreadCard1(2118)
-        : changeIndex == 7
-        ? setButSpreadCard1(2118)
-        : setButSpreadCard1(0);
+    // console.log(changeIndex, 'main1');
+    // const changeview =
+    //   changeIndex == 0
+    //     ? setButSpreadCard1(360)
+    //     : changeIndex == 1
+    //     ? setButSpreadCard1(360)
+    //     : changeIndex == 2
+    //     ? setButSpreadCard1(906)
+    //     : changeIndex == 3
+    //     ? setButSpreadCard1(906)
+    //     : changeIndex == 4
+    //     ? setButSpreadCard1(1452)
+    //     : changeIndex == 5
+    //     ? setButSpreadCard1(1452)
+    //     : changeIndex == 6
+    //     ? setButSpreadCard1(2118)
+    //     : changeIndex == 7
+    //     ? setButSpreadCard1(2118)
+    //     : setButSpreadCard1(0);
   };
-  window.scrollTo(0, butSpreadCard1);
   function TaoSoNgauNhien(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
@@ -63,6 +62,7 @@ export const ScrollChangeCard = () => {
       setChangeIndex3(numRan3);
     }, 100);
     setarryayContentCard([numRan, numRan1, numRan2, numRan3]);
+    // window.scrollTo(0, butSpreadCard1);
   }, []);
 
   // dispatchers
@@ -84,6 +84,7 @@ export const ScrollChangeCard = () => {
         top: '0',
         left: '0',
         overflowY: 'auto',
+        transition: 'all 1s linear',
       }}
     >
       <Flex
@@ -100,7 +101,14 @@ export const ScrollChangeCard = () => {
         bgsz={'contain'}
       ></Flex>
       {/* begin */}
-      <Flex m={chanfe} justify={'center'} align={'flex-end'}>
+      <Flex
+        sx={{
+          transition: 'all 1s linear',
+        }}
+        m={chanfe}
+        justify={'center'}
+        align={'flex-end'}
+      >
         {/* main card */}
 
         <Flex
@@ -109,6 +117,16 @@ export const ScrollChangeCard = () => {
           direction={'column'}
           w={changeWidthDefaule}
         >
+          <Text
+            w={'100%'}
+            align={'center'}
+            fz={changesizetext}
+            fw={500}
+            color={'white'}
+            mb={-12}
+          >
+            {InfomationsCart.Court[changeIndex].nameCard}
+          </Text>
           <Flex w={changeSizebgWidth} justify={'center'}>
             {/* card1 */}
             {InfomationsCart.Court.map((v, i) => {
@@ -149,6 +167,16 @@ export const ScrollChangeCard = () => {
           direction={'column'}
           w={changeWidthDefaule}
         >
+          <Text
+            w={'100%'}
+            align={'center'}
+            fz={changesizetext}
+            fw={500}
+            color={'white'}
+            mb={-12}
+          >
+            {InfomationsCart.Court[changeIndex1].nameCard}
+          </Text>
           <Flex w={changeSizebgWidth} justify={'center'}>
             {/* card1 */}
             {InfomationsCart.Court.map((v, i) => {
@@ -189,6 +217,16 @@ export const ScrollChangeCard = () => {
           direction={'column'}
           w={changeWidthDefaule}
         >
+          <Text
+            w={'100%'}
+            align={'center'}
+            fz={changesizetext}
+            fw={500}
+            color={'white'}
+            mb={-12}
+          >
+            {InfomationsCart.Court[changeIndex2].nameCard}
+          </Text>
           <Flex w={changeSizebgWidth} justify={'center'}>
             {/* card1 */}
             {InfomationsCart.Court.map((v, i) => {
@@ -229,6 +267,16 @@ export const ScrollChangeCard = () => {
           direction={'column'}
           w={changeWidthDefaule}
         >
+          <Text
+            w={'100%'}
+            align={'center'}
+            fz={changesizetext}
+            fw={500}
+            color={'white'}
+            mb={-12}
+          >
+            {InfomationsCart.Court[changeIndex3].nameCard}
+          </Text>
           <Flex w={changeSizebgWidth} justify={'center'}>
             {/* card1 */}
             {InfomationsCart.Court.map((v, i) => {
