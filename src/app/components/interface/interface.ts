@@ -4,6 +4,8 @@ export interface HeaderMenuIconProps {
   iconInactived?: any;
   key?: number;
   label?: string;
+  iconMobileActived?: any;
+  data?: any;
 }
 export interface HeaderMenuIconGroupProps {
   data: any;

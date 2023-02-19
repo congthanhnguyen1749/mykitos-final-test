@@ -38,7 +38,7 @@ export const WebHeader: any = () => {
           />
         ) : null}
         <HeaderUserGroup />
-        {/* <LanguageSwitch data={languageData} /> */}
+        <LanguageSwitch data={languageData} />
       </Flex>
     </Header>
   );

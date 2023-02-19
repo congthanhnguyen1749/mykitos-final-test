@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import { Link, useParams } from 'react-router-dom';
 import { useMediaQuery } from '@mantine/hooks';
 import { LanguageSwitch } from './LanguageSwitch';
+import { HeaderMenuIconMobile } from './HeaderMenuIconMobile';
 export function HeaderMenuIconGroup(props: HeaderMenuIconGroupProps) {
   const mobile: any = useMediaQuery('(max-width: 768px)');
   const params: any = useParams<{ keyactive: string }>();
@@ -29,21 +30,30 @@ export function HeaderMenuIconGroup(props: HeaderMenuIconGroupProps) {
       align={changealign}
       w={changewidth}
     >
-      {props.data.map((v, i) => {
+      {props.data.map((v, ie) => {
+        console.log(ie, v);
         return (
-          <Box key={i} onClick={e => ItemActive(v)}>
+          <Box key={ie} onClick={e => ItemActive(v)}>
             <Link
               style={{ textDecoration: 'none' }}
               to={`/${v.key}/${v.link}`}
               key={v.key}
               state={'hello, im a passed message!'}
             >
-              <HeaderMenuIcon
-                active={params.keyactive == v.key}
-                iconActived={v.iconActived}
-                iconInactived={v.iconInactived}
-                label={t(v.label)}
-              />
+              {mobile ? (
+                <HeaderMenuIconMobile
+                  active={params.keyactive == v.key}
+                  data={v}
+                />
+              ) : (
+                <HeaderMenuIcon
+                  active={params.keyactive == v.key}
+                  iconActived={v.iconActived}
+                  iconInactived={v.iconInactived}
+                  label={t(v.label)}
+                  key={ie}
+                />
+              )}
             </Link>
           </Box>
         );

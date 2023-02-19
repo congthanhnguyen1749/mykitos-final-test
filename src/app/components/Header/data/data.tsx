@@ -3,17 +3,20 @@ import * as React from 'react';
 // cart
 import Icon_ActiveCart from '../../../../assets/images/icons/card/card.svg';
 import Icon_UnActiveCart from '../../../../assets/images/icons/card/card2.svg';
-import Icon_UnActiveCartMobile from '../../../../assets/images/Header/button_header/Frame 3466182.svg';
+import Icon_ActiveCartMobile from '../../../../assets/images/Header/cart/active.svg';
+import Icon_UnActiveCartMobile from '../../../../assets/images/Header/cart/uncactive.svg';
 
 // center
 import Icon_ActiveCenter from '../../../../assets/images/icons/center/Component 59.svg';
-import Icon_ActiveCenterMobile from '../../../../assets/images/Header/button_header/Frame 3466437.svg';
 import Icon_UnActiveCenter from '../../../../assets/images/icons/center/center.svg';
+import Icon_ActiveCenterMobile from '../../../../assets/images/Header/card/active.svg';
+import Icon_UnActiveCenterMobile from '../../../../assets/images/Header/card/unactive.svg';
 
 // snowBall
 import Icon_ActiveSnowball from '../../../../assets/images/icons/iconSnowBall/Frame 3466290.svg';
-import Icon_ActiveSnowballMobile from '../../../../assets/images/Header/button_header/Property 1=Variant3.svg';
 import Icon_UnActiveSnowball from '../../../../assets/images/icons/iconSnowBall/iconNoColorDailyCard.svg';
+import Icon_ActiveSnowballMobile from '../../../../assets/images/Header/snowball/active.svg';
+import Icon_UnActiveSnowballMobile from '../../../../assets/images/Header/snowball/unac.svg';
 
 // change language
 import Icon_Vi from '../../../../assets/images/icons//iconChangeLang/Flag/FlagVietNam/flagvie.svg';
@@ -27,8 +30,10 @@ import userCircle from '../../../../assets/images/icons/loginAndCoin/iconLogin/i
 export const iconData: Object[] = [
   {
     iconActived: Icon_ActiveSnowball,
-    iconMobileActived: Icon_ActiveSnowballMobile,
+    iconMobileActived: Icon_UnActiveSnowballMobile,
+    Icon_UnActiveSnowballMobile: Icon_UnActiveSnowballMobile,
     iconInactived: Icon_UnActiveSnowball,
+    Icon_UnActiveCenterMobile: Icon_ActiveSnowballMobile,
     key: 'daily',
     label: 'Header.iconMenu.iconSnowBall',
     link: 'dailycard',
@@ -36,7 +41,8 @@ export const iconData: Object[] = [
   {
     iconActived: Icon_ActiveCenter,
     iconInactived: Icon_UnActiveCenter,
-    iconMobileActived: Icon_ActiveCenterMobile,
+    iconMobileActived: Icon_UnActiveCenterMobile,
+    Icon_UnActiveCenterMobile: Icon_ActiveCenterMobile,
     key: 'get',
     label: 'Header.iconMenu.iconCard',
     link: 'getreading',
@@ -45,6 +51,8 @@ export const iconData: Object[] = [
     iconActived: Icon_ActiveCart,
     iconMobileActived: Icon_UnActiveCartMobile,
     iconInactived: Icon_UnActiveCart,
+    Icon_UnActiveCenterMobile: Icon_ActiveCartMobile,
+    Icon_ActiveCartMobile: Icon_ActiveCartMobile,
     key: 'cart',
     label: 'Header.iconMenu.iconCart',
     link: 'cart',
