@@ -11,9 +11,7 @@ export const apiGet = async (url: string, header: any) => {
     return data;
   } catch (error) {
     if (axios.isAxiosError(error)) {
-      console.log('error: ', error.message);
     } else {
-      console.log('error: ', 'undefined');
     }
     const response: BaseResponse = {
       data: undefined,
@@ -33,9 +31,7 @@ export const apiPost = async (url: string, payload: any, header: any) => {
     return data;
   } catch (error) {
     if (axios.isAxiosError(error)) {
-      console.log('error: ', error.message);
     } else {
-      console.log('error: ', 'undefined');
     }
     const response: BaseResponse = {
       data: undefined,

@@ -31,7 +31,6 @@ export function HeaderMenuIconGroup(props: HeaderMenuIconGroupProps) {
       w={changewidth}
     >
       {props.data.map((v, ie) => {
-        console.log(ie, v);
         return (
           <Box key={ie} onClick={e => ItemActive(v)}>
             <Link

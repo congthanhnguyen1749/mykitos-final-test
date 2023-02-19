@@ -38,7 +38,6 @@ export const ContentItemsflashesStone = () => {
   // selector
 
   const selector = useSelector(getProfileSelector);
-  console.log(selector.snowBall.set_index_card, 'ddd');
   const arrayCard = selector.snowBall.set_index_card;
   return (
     <Box opacity={0} className="chnagehidebut">

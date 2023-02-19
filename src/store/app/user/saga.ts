@@ -66,7 +66,6 @@ export function* login() {
 
     yield put(actions.response({ response: loginResponse, type: 'login' }));
   } catch (err: any) {
-    console.log('Error: ', err);
     const response: BaseResponse = {
       error: 1,
       message: 'system_error',
@@ -135,7 +134,6 @@ export function* createProfile() {
       token: user.token,
       'content-type': 'appication/json',
     });
-    console.log(response);
     if (response.error === 0) yield put(actions.handleCheckProfileAxist(3));
   } catch (err: any) {
     const response: BaseResponse = {
@@ -166,7 +164,6 @@ export function* updatePreferences(isSkip) {
         token: user.token,
       },
     );
-    console.log(response);
     if (response.error === 0) yield put(actions.handleCheckProfileAxist(0));
   } catch (err: any) {
     const response: BaseResponse = {
@@ -183,13 +180,11 @@ export function* updateProfileInformation(action) {
   try {
     const user: User = yield select(selectUser);
     const body = action.payload;
-    console.log(body);
     const response = yield apiPost('/v1/gc/profile/updatepersonalinfo', body, {
       userId: user.id,
       token: user.token,
       'content-type': 'appication/json',
     });
-    console.log(response);
     if (response.error === 0) {
       const data: CheckProfileResponse = {
         data: { ...action.payload },
@@ -228,7 +223,6 @@ export function* handleChangePassword(action) {
       'content-type': 'appication/json',
     });
 
-    console.log(response);
     if (response.error === SUCCESS || response.error === WRONG_PASSWORD) {
       yield put(
         actions.setResponseUpdateProfile({

@@ -9,7 +9,6 @@ export function HeaderMenuIconMobile(props: HeaderMenuIconProps) {
   const changesizeicon: any = mobile ? '40px' : '';
   const changeamargin: any = mobile ? '10px' : 'auto';
   const changeamarginLeft: any = mobile ? '5px' : 'auto';
-  console.log(props.data);
   return (
     <Flex justify={'center'} align={'center'}>
       <Box

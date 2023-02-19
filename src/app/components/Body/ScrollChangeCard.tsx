@@ -27,7 +27,6 @@ export const ScrollChangeCard = () => {
   const [butSpreadCard1, setButSpreadCard1]: any = useState(true);
   const [arryayContentCard, setarryayContentCard]: any = useState([]);
   const setHideButtonSpred1: any = (changeIndex, i) => {
-    // console.log(changeIndex, 'main1');
     // const changeview =
     //   changeIndex == 0
     //     ? setButSpreadCard1(360)

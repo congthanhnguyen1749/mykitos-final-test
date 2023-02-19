@@ -25,7 +25,6 @@ export const ItemsInfoCard = ({ active }) => {
   const { StoneActions } = StoneSliceReduce();
   React.useEffect(() => {
     setHeight(ref.current.offsetTop);
-    console.log([ref.current]);
   }, []);
   const [arrowAndShowBox, setArrowAndShowBox] = React.useState(true);
   const mobile = useMediaQuery('(max-width: 755px)');
@@ -45,7 +44,6 @@ export const ItemsInfoCard = ({ active }) => {
   useLayoutEffect(() => {
     dispatch(StoneActions.hh1(height));
   }, []);
-  console.log(height);
   return (
     // main
     <Flex
