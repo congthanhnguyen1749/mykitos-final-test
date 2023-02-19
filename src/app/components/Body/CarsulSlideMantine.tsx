@@ -20,7 +20,7 @@ export const CarsulSlideMantine: any = (props: bodyStoneInfoProps) => {
   const changeArrow = mobile ? '265px' : '400px';
   const headerText = mobile ? '1.1rem' : '1.5rem';
   const labelcontentFront = mobile ? '.8rem' : '1.2rem';
-  const changetoparrow = mobile ? '518px' : '700.5px';
+  const changetoparrow = mobile ? '418px' : '700.5px';
   const changewidthparrow = mobile ? '380px' : '480px';
   const changeLeft = mobile ? '-15px' : '0px';
   const changeH = mobile ? '200px' : '280px';

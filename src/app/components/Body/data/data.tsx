@@ -65,10 +65,10 @@ export const InfomationsCart: any = {
       icon: CourtCup,
       textIntroduce: 'Tổng quan tình yêu',
       textSubtitle: 'Chuyện tình cảm sắp tới của bạn',
-      nameCard: 'Seven of Swords',
+      nameCard: 'Swords',
       labelCard: 'Sự phản bội, lừa dối, chiếm lấy rồi bỏ trốn, lén lút',
       descriptionCard:
-        '"The Fool được đánh số 0, con số của tiềm năng vô hạn, và không thực sự có một vị trí cụ thể trong thứ tự chuỗi các lá bài Tarot. The Fool có thể là điểm bắt đầu của các lá Ẩn Chính Major Arcana hoặc là điểm kết thúc. Major Arcana thường được xem là hành trình cuộc sống của The Fool nơi chàng ta luôn hiện diện và do đó không là con số nào cả.The Fool đang bắt đầu chuyến hành trình của chàng ta với viễn cảnh tương lai bất xác định. Mặt trời đang mọc phía sau chàng, tượng trưng cho bước khởi đầu của cuộc hành trình. The Fool đang đi về hướng tây bắc, hướng của sự bất định. Khuôn mặt chàng ngẩng cao hướng về phía bầu trời, hay ta có thể nói, rằng chàng đang đối mặt với Đấng Siêu nhiên. Bước chân chàng đang dần rời khỏi vách đá, nhưng liệu chàng ta có nhận thức được điều ấy? Chàng ta đã có mọi dụng cụ và phương tiện cần thiết cho cuộc hành trình chứa trong chiếc túi phía sau, nhưng chàng ta chưa hề mở nó ra. Bông hoa hồng trắng trên tay thể hiện sự trong trắng và ngây thơ. Chàng có một chú chó trắng nhỏ bảo vệ mình trong suốt chuyến hành trình, cũng như dẫn dắt chàng vào các bài học mà chàng sẽ phải tiếp thu trong suốt cuộc hành trình. Những ngọn núi đằng sau The Fool đại diện cho phần vương quốc của Đấng Siêu nhiên mà chàng ta vừa rời bỏ và sẽ nỗ lực trong suốt cả cuộc đời của mình để lấy lại."',
+        '"Fool được đánh số 0, con số của tiềm năng vô hạn, và không thực sự có một vị trí cụ thể trong thứ tự chuỗi các lá bài Tarot. The Fool có thể là điểm bắt đầu của các lá Ẩn Chính Major Arcana hoặc là điểm kết thúc. Major Arcana thường được xem là hành trình cuộc sống của The Fool nơi chàng ta luôn hiện diện và do đó không là con số nào cả.The Fool đang bắt đầu chuyến hành trình của chàng ta với viễn cảnh tương lai bất xác định. Mặt trời đang mọc phía sau chàng, tượng trưng cho bước khởi đầu của cuộc hành trình. The Fool đang đi về hướng tây bắc, hướng của sự bất định. Khuôn mặt chàng ngẩng cao hướng về phía bầu trời, hay ta có thể nói, rằng chàng đang đối mặt với Đấng Siêu nhiên. Bước chân chàng đang dần rời khỏi vách đá, nhưng liệu chàng ta có nhận thức được điều ấy? Chàng ta đã có mọi dụng cụ và phương tiện cần thiết cho cuộc hành trình chứa trong chiếc túi phía sau, nhưng chàng ta chưa hề mở nó ra. Bông hoa hồng trắng trên tay thể hiện sự trong trắng và ngây thơ. Chàng có một chú chó trắng nhỏ bảo vệ mình trong suốt chuyến hành trình, cũng như dẫn dắt chàng vào các bài học mà chàng sẽ phải tiếp thu trong suốt cuộc hành trình. Những ngọn núi đằng sau The Fool đại diện cho phần vương quốc của Đấng Siêu nhiên mà chàng ta vừa rời bỏ và sẽ nỗ lực trong suốt cả cuộc đời của mình để lấy lại."',
       describeCard:
         'Về vấn đề công việc, đây là một lá bài trong xấu có tốt. Lá bài hàm ý công việc của bạn đang hoặc sẽ có trục trặc khiến bạn phải đau khổ. Tuy nhiên, những khó khăn sẽ qua đi rất nhanh khi bạn làm chủ cảm xúc và sử dụng chúng như nguồn sức mạnh lớn, thì con đường phía trước tuy không ngắn nhưng bạn đã thấy được mình phải làm gì. Nên cẩn trọng với những kế hoạch công việc, dự án bạn đang và sẽ thực hiện trong thời gian này.',
       key: 0,
@@ -105,7 +105,7 @@ export const InfomationsCart: any = {
       icon: ImageCardCourt3,
       textIntroduce: 'Tổng quan tình yêu',
       textSubtitle: 'Chuyện tình cảm sắp tới của bạn',
-      nameCard: 'The Empress',
+      nameCard: 'Empress',
       labelCard: 'Sự sinh nở, nữ tính, vẻ đẹp, tự nhiên, sung túc',
       descriptionCard:
         '"The Empress là Mẹ Trái Đất (Earth Mother) đúng nghĩa, còn được gọi là the Anima, the Feminine Principle, Demeter, Freyja, và Nữ Thần của sự Sinh Sản. Được cai trị bởi Kim Tinh, hành tinh của tình yêu, sự sáng tạo, sự sinh nở, nghệ thuật, sự hài hòa, xa xỉ, vẻ đẹp và nét yêu kiều.Điểm chính của lá bài Tarot này chính là bản thân the Empress, một phụ nữ hoàn hảo với mái tóc vàng hoe và từ con người nàng tỏa ra một hương thơm yên bình và dịu êm. Nàng đội vương miện ngôi sao trên đầu, thể hiện mối liên hệ của nàng với vương quốc huyền bí của những thiên thần và tiên nữ. Nàng khoác trên mình một chiếc áo choàng có in họa tiết của những quả lựu, tượng trưng cho sự sinh nở, và ngồi trên một chiếc đệm được trang trí bằng những đường nét xa xỉ và mềm mại với chất liệu nhung đỏ có biểu tượng huy hiệu của nữ thần Venus."',
@@ -118,7 +118,7 @@ export const InfomationsCart: any = {
       icon: ImageCardCourt3,
       textIntroduce: 'Tổng quan tình yêu',
       textSubtitle: 'Chuyện tình cảm sắp tới của bạn',
-      nameCard: 'The Empress',
+      nameCard: 'Ace',
       labelCard: 'Sự sinh nở, nữ tính, vẻ đẹp, tự nhiên, sung túc',
       descriptionCard:
         '"The Empress là Mẹ Trái Đất (Earth Mother) đúng nghĩa, còn được gọi là the Anima, the Feminine Principle, Demeter, Freyja, và Nữ Thần của sự Sinh Sản. Được cai trị bởi Kim Tinh, hành tinh của tình yêu, sự sáng tạo, sự sinh nở, nghệ thuật, sự hài hòa, xa xỉ, vẻ đẹp và nét yêu kiều.Điểm chính của lá bài Tarot này chính là bản thân the Empress, một phụ nữ hoàn hảo với mái tóc vàng hoe và từ con người nàng tỏa ra một hương thơm yên bình và dịu êm. Nàng đội vương miện ngôi sao trên đầu, thể hiện mối liên hệ của nàng với vương quốc huyền bí của những thiên thần và tiên nữ. Nàng khoác trên mình một chiếc áo choàng có in họa tiết của những quả lựu, tượng trưng cho sự sinh nở, và ngồi trên một chiếc đệm được trang trí bằng những đường nét xa xỉ và mềm mại với chất liệu nhung đỏ có biểu tượng huy hiệu của nữ thần Venus."',
@@ -131,7 +131,7 @@ export const InfomationsCart: any = {
       icon: ImageCardCourt3,
       textIntroduce: 'Tổng quan tình yêu',
       textSubtitle: 'Chuyện tình cảm sắp tới của bạn',
-      nameCard: 'The Empress',
+      nameCard: 'Empress',
       labelCard: 'Sự sinh nở, nữ tính, vẻ đẹp, tự nhiên, sung túc',
       descriptionCard:
         '"The Empress là Mẹ Trái Đất (Earth Mother) đúng nghĩa, còn được gọi là the Anima, the Feminine Principle, Demeter, Freyja, và Nữ Thần của sự Sinh Sản. Được cai trị bởi Kim Tinh, hành tinh của tình yêu, sự sáng tạo, sự sinh nở, nghệ thuật, sự hài hòa, xa xỉ, vẻ đẹp và nét yêu kiều.Điểm chính của lá bài Tarot này chính là bản thân the Empress, một phụ nữ hoàn hảo với mái tóc vàng hoe và từ con người nàng tỏa ra một hương thơm yên bình và dịu êm. Nàng đội vương miện ngôi sao trên đầu, thể hiện mối liên hệ của nàng với vương quốc huyền bí của những thiên thần và tiên nữ. Nàng khoác trên mình một chiếc áo choàng có in họa tiết của những quả lựu, tượng trưng cho sự sinh nở, và ngồi trên một chiếc đệm được trang trí bằng những đường nét xa xỉ và mềm mại với chất liệu nhung đỏ có biểu tượng huy hiệu của nữ thần Venus."',
@@ -144,7 +144,7 @@ export const InfomationsCart: any = {
       icon: ImageCardCourt3,
       textIntroduce: 'Kết quả tình yêu',
       textSubtitle: 'Chuyện tình cảm sắp tới của bạn',
-      nameCard: 'The Empress',
+      nameCard: 'Empress',
       labelCard: 'Sự sinh nở, nữ tính, vẻ đẹp, tự nhiên, sung túc',
       descriptionCard:
         '"The Empress là Mẹ Trái Đất (Earth Mother) đúng nghĩa, còn được gọi là the Anima, the Feminine Principle, Demeter, Freyja, và Nữ Thần của sự Sinh Sản. Được cai trị bởi Kim Tinh, hành tinh của tình yêu, sự sáng tạo, sự sinh nở, nghệ thuật, sự hài hòa, xa xỉ, vẻ đẹp và nét yêu kiều.Điểm chính của lá bài Tarot này chính là bản thân the Empress, một phụ nữ hoàn hảo với mái tóc vàng hoe và từ con người nàng tỏa ra một hương thơm yên bình và dịu êm. Nàng đội vương miện ngôi sao trên đầu, thể hiện mối liên hệ của nàng với vương quốc huyền bí của những thiên thần và tiên nữ. Nàng khoác trên mình một chiếc áo choàng có in họa tiết của những quả lựu, tượng trưng cho sự sinh nở, và ngồi trên một chiếc đệm được trang trí bằng những đường nét xa xỉ và mềm mại với chất liệu nhung đỏ có biểu tượng huy hiệu của nữ thần Venus."',
@@ -157,7 +157,7 @@ export const InfomationsCart: any = {
       icon: ImageCardCourt3,
       textIntroduce: 'Điểm yếu tình yêu',
       textSubtitle: 'Chuyện tình cảm sắp tới của bạn',
-      nameCard: 'The Empress',
+      nameCard: 'Empress',
       labelCard: 'Sự sinh nở, nữ tính, vẻ đẹp, tự nhiên, sung túc',
       descriptionCard:
         '"The Empress là Mẹ Trái Đất (Earth Mother) đúng nghĩa, còn được gọi là the Anima, the Feminine Principle, Demeter, Freyja, và Nữ Thần của sự Sinh Sản. Được cai trị bởi Kim Tinh, hành tinh của tình yêu, sự sáng tạo, sự sinh nở, nghệ thuật, sự hài hòa, xa xỉ, vẻ đẹp và nét yêu kiều.Điểm chính của lá bài Tarot này chính là bản thân the Empress, một phụ nữ hoàn hảo với mái tóc vàng hoe và từ con người nàng tỏa ra một hương thơm yên bình và dịu êm. Nàng đội vương miện ngôi sao trên đầu, thể hiện mối liên hệ của nàng với vương quốc huyền bí của những thiên thần và tiên nữ. Nàng khoác trên mình một chiếc áo choàng có in họa tiết của những quả lựu, tượng trưng cho sự sinh nở, và ngồi trên một chiếc đệm được trang trí bằng những đường nét xa xỉ và mềm mại với chất liệu nhung đỏ có biểu tượng huy hiệu của nữ thần Venus."',

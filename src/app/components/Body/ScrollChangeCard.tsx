@@ -84,7 +84,6 @@ export const ScrollChangeCard = () => {
         top: '0',
         left: '0',
         overflowY: 'auto',
-        transition: 'all 1s linear',
       }}
     >
       <Flex
@@ -101,14 +100,7 @@ export const ScrollChangeCard = () => {
         bgsz={'contain'}
       ></Flex>
       {/* begin */}
-      <Flex
-        sx={{
-          transition: 'all 1s linear',
-        }}
-        m={chanfe}
-        justify={'center'}
-        align={'flex-end'}
-      >
+      <Flex sx={{}} m={chanfe} justify={'center'} align={'flex-end'}>
         {/* main card */}
 
         <Flex
@@ -224,6 +216,8 @@ export const ScrollChangeCard = () => {
             fw={500}
             color={'white'}
             mb={-12}
+            mt={5}
+            sx={{ wordWrap: 'break-word' }}
           >
             {InfomationsCart.Court[changeIndex2].nameCard}
           </Text>
