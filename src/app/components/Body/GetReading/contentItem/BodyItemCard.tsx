@@ -1,6 +1,6 @@
 import { Box, Flex, Image, Text } from '@mantine/core';
 import React from 'react';
-import Coin from '../../../assets/images/Body/icon/coin/Xu.svg';
+import Coin from '../../../../../assets/images/Body/icon/coin/Xu.svg';
 import { useMediaQuery } from '@mantine/hooks';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { StoneSliceReduce } from 'store/slice/changeStone';
@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 export const BodyItemCard = ({ props }) => {
   const mobile = useMediaQuery('(max-width: 755px)');
   const changesizemargintop = mobile ? '13px' : '';
-  const changesizeborder = mobile ? '235px' : '389px';
+  const changesizeborder = mobile ? '235px' : 'auto';
   const changesizeimg = mobile ? '6px 8px 6px 8px' : '12px 16px 12px 16px';
   const navigate = useNavigate();
   const loca = useLocation();
@@ -29,7 +29,7 @@ export const BodyItemCard = ({ props }) => {
       h={changesizeborder}
       mt={changesizemargintop}
     >
-      <img src={props.icon} />
+      <img style={{marginBottom:'5px'}} src={props.icon} />
       <Flex
         justify={'center'}
         align={'center'}
@@ -48,7 +48,13 @@ export const BodyItemCard = ({ props }) => {
         h={40}
         bg={'rgba(255, 65, 99, 1)'}
       >
-        <Image width={22} height={22} m={'0'} p={'0'} src={Coin}></Image>
+        <Image
+          width={22}
+          height={22}
+          m={'0'}
+          p={'0'}
+          src={Coin}
+        ></Image>
         <Text m={' 0 0 0 -5px'} color={'white'} fz={'16px'} fw={'500'}>
           25
         </Text>

@@ -1,16 +1,16 @@
 import React, { useLayoutEffect, useRef } from 'react';
-import { ReactComponent as Arrowleft } from '../../../assets/images/Body/icon/arrow/arrow-narrow-left.svg';
+import { ReactComponent as Arrowleft } from '../../../../../assets/images/Body/icon/arrow/arrow-narrow-left.svg';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Box, Button, Flex, Text } from '@mantine/core';
 import { useMediaQuery, useScrollIntoView } from '@mantine/hooks';
-import { CardFlashesStoneFrom } from './CardFlashesStoneFrom';
 import { ScrollChangeCard } from './ScrollChangeCard';
 import { ItemsInfoCard } from './ItemsInfoCard';
-import './flipCard.css';
-import { InfomationsCart } from './data/data';
+import '../../GetReading/flipCard.css';
+import { InfomationsCart } from '../../data/data';
 import { getProfileSelector } from 'store/slice/changeStone/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import { StoneSliceReduce } from 'store/slice/changeStone';
+import { CardFlashesStoneFrom } from './CardFlashesStoneFrom';
 
 export const ContentItemsflashesStone = () => {
   const { scrollIntoView, targetRef }: any = useScrollIntoView<HTMLDivElement>({

@@ -2,16 +2,16 @@ import { Box, Flex, Image, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import React, { useLayoutEffect } from 'react';
 // arrow
-import arrowTop from '../../../assets/images/Body/icon/arrow/arrowTop.svg';
-import './flipCard.css';
-import arrowBottom from '../../../assets/images/Body/icon/arrow/arrowBottom.svg';
+import arrowTop from '../../../../../assets/images/Body/icon/arrow/arrowTop.svg';
+import '../../GetReading/flipCard.css';
+import arrowBottom from '../../../../../assets/images/Body/icon/arrow/arrowBottom.svg';
 // end arrow
 // cart
 import cardtest from '../../../assets/images/cards/card_back_2.png';
 import { useLocation } from 'react-router-dom';
 import { getProfileSelector } from 'store/slice/changeStone/selectors';
 import { useDispatch, useSelector } from 'react-redux';
-import { InfomationsCart } from './data/data';
+import { InfomationsCart } from '../../data/data';
 import useRef from 'react';
 import { StoneSliceReduce } from 'store/slice/changeStone';
 // end card
@@ -106,12 +106,11 @@ export const ItemsInfoCard = ({ active }) => {
         {arrowAndShowBox ? (
           <Flex direction={'column'} w={'100%'}>
             <Flex align={'flex-start'} w={'100%'} h={changeTextSizeTop}>
-              
-                <Image
-                  sx={{marginTop:"14px"}}
-                  src={InfomationsCart.Court[active].frontCart}
-                  width={130}
-                ></Image>
+              <Image
+                sx={{ marginTop: '14px' }}
+                src={InfomationsCart.Court[active].frontCart}
+                width={130}
+              ></Image>
               <Box w={'100%'} h={'100%'} ml={8}>
                 <Text fw={700} size={sizeTextLable} lh={2.3} color={'white'}>
                   {InfomationsCart.Court[active].nameCard}
@@ -121,7 +120,7 @@ export const ItemsInfoCard = ({ active }) => {
                 </Text>
                 <br />
                 <Text fw={400} size={15} color={'rgba(159, 187, 216, 1)'}>
-                  {InfomationsCart.Court[active].describeCard} 
+                  {InfomationsCart.Court[active].describeCard}
                 </Text>
               </Box>
             </Flex>

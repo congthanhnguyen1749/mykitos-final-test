@@ -1,7 +1,7 @@
 import { Box, Flex, Image, Text } from '@mantine/core';
 import React, { useLayoutEffect } from 'react';
-import { ReactComponent as Arrowleft } from '../../../assets/images/Body/icon/arrow/arrow-narrow-left.svg';
-import './flipCard.css';
+import { ReactComponent as Arrowleft } from '../../../../../assets/images/Body/icon/arrow/arrow-narrow-left.svg';
+import '../flipCard.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useMediaQuery } from '@mantine/hooks';
 export const TitleItemChange = () => {

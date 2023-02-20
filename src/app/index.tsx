@@ -9,17 +9,17 @@ import { NotFoundPage } from './pages/NotFoundPage/Loadable';
 
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
-import { BodyCartGroup } from './components/Body/BodyCartGroup';
-import { BodyDailyCardGroup } from './components/Body/BodyDailyCardGroup';
-import { BodyGetReading } from './components/Body/BodyGetReading';
+import { BodyCartGroup } from './components/Body/Cart/BodyCartGroup';
 import { Invoid } from './components/Header/Invoid';
-import { BodyContentItems } from './components/Body/BodyContentItems';
-import { BodyContentItemsChild } from './components/Body/BodyContentItemsChild';
-import { ContentItemsChooseStone } from './components/Body/ContentItemsChooseStone';
-import { ContentItemsflashesStone } from './components/Body/ContentItemsflashesStone';
+import { BodyContentItems } from './components/Body/GetReading/contentItem/BodyContentItems';
+import { BodyContentItemsChild } from './components/Body/GetReading/ContentItemsChild/BodyContentItemsChild';
 import { Box } from '@mantine/core';
 import { createSlice } from 'utils/@reduxjs/toolkit';
 import { StoneSliceReduce } from 'store/slice/changeStone';
+import { ContentItemsflashesStone } from './components/Body/GetReading/flashesStone/ContentItemsflashesStone';
+import { ContentItemsChooseStone } from './components/Body/GetReading/ChooseStone/ContentItemsChooseStone';
+import { BodyDailyCardGroup } from './components/Body/Dailycard/BodyDailyCardGroup';
+import { BodyGetReading } from './components/Body/GetReading/Group/BodyGetReading';
 export function App() {
   const { i18n } = useTranslation();
   StoneSliceReduce();

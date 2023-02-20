@@ -1,6 +1,6 @@
 import { Box } from '@mantine/core';
 import React from 'react';
-import Icon_ActiveCart from '../../../assets/images/icons/card/card.svg';
+import Icon_ActiveCart from '../../../../assets/images/icons/card/card.svg';
 export const BodyCartGroup = () => {
   return (
     <Box

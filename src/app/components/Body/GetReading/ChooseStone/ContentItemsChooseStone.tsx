@@ -1,11 +1,11 @@
 import React, { useLayoutEffect } from 'react';
-import { ReactComponent as Arrowleft } from '../../../assets/images/Body/icon/arrow/arrow-narrow-left.svg';
+import { ReactComponent as Arrowleft } from '../../../../../assets/images/Body/icon/arrow/arrow-narrow-left.svg';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Box, Flex, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { CarsulSlideMantine } from './CarsulSlideMantine';
-import { dataStone } from './data/data';
-import './flipCard.css';
+import { dataStone } from '../../data/data';
+import '../flipCard.css';
 
 export const ContentItemsChooseStone = () => {
   const loca = useLocation();

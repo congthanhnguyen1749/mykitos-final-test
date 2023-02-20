@@ -1,9 +1,9 @@
 import { Flex, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import React, { useLayoutEffect, useState } from 'react';
-import './flipCard.css';
+import '../flipCard.css';
 
-import { InfomationsCart, dataStone } from './data/data';
+import { InfomationsCart, dataStone } from '../../data/data';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProfileSelector } from 'store/slice/changeStone/selectors';
 import ItemsCardUse from './itemsCardUse';

@@ -1,12 +1,12 @@
 import React, { useRef } from 'react';
-import '../Body/flipCard.css';
+import '../../GetReading/flipCard.css';
 import { Box, Flex } from '@mantine/core';
 import backCard from '../../../assets/Rider-Waite-Tarot-78Card/Major/the-tower.jpg';
-import CourtCup from '../../../assets/images/cards/card_back_0.jpg';
+import CourtCup from '../../../../../assets/images/cards/card_back_0.jpg';
 import { getProfileSelector } from 'store/slice/changeStone/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import { StoneSliceReduce } from 'store/slice/changeStone';
-import { InfomationsCart } from './data/data';
+import { InfomationsCart } from '../../data/data';
 import { useMediaQuery } from '@mantine/hooks';
 const ItemsCardUse: any = ({ data, active, index }) => {
   // response

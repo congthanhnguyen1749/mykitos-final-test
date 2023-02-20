@@ -1,10 +1,10 @@
 import React from 'react';
 import { BodyDailyCardItemsGroup } from './BodyDailyCardItemsGroup';
 import { Box, Flex, SimpleGrid, Text } from '@mantine/core';
-import { LabelTextcrystal } from './data/data';
+import { LabelTextcrystal } from '../../data/data';
 import { useMediaQuery } from '@mantine/hooks';
 import { useNavigate, useLocation } from 'react-router-dom';
-import './flipCard.css';
+import '../flipCard.css';
 import { useLayoutEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { StoneSliceReduce } from 'store/slice/changeStone';

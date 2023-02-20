@@ -1,13 +1,13 @@
 import React, { useLayoutEffect, useRef } from 'react';
-import { ReactComponent as Arrowleft } from '../../../assets/images/Body/icon/arrow/arrow-narrow-left.svg';
+import { ReactComponent as Arrowleft } from '../../../../../assets/images/Body/icon/arrow/arrow-narrow-left.svg';
 import Violetcrystal from '../../../assets/images/Body/Crystalball/whitecrystal.svg';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Box, Flex, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
-import { LabelTextcrystal } from './data/data';
+import { LabelTextcrystal } from '../../data/data';
 import { Transform } from 'stream';
 import { useUserSlice } from 'store/app/user';
-import './flipCard.css';
+import '../../GetReading/flipCard.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProfileSelector } from 'store/slice/changeStone/selectors';
 import { StoneSliceReduce } from 'store/slice/changeStone';

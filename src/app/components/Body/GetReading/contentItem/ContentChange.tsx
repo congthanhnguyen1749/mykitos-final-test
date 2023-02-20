@@ -6,20 +6,20 @@ import { useMediaQuery } from '@mantine/hooks';
 export interface getDataItemCard {
   data?: any;
 }
-export const ContentChange:any = (props: getDataItemCard) => {
+export const ContentChange: any = (props: getDataItemCard) => {
   const mobile = useMediaQuery('(max-width: 755px)');
   const pc = useMediaQuery('(max-width: 1231px)');
   const pc1 = useMediaQuery('(max-width: 990px)');
   const boxwrap = mobile ? 'wrap' : 'nowrap';
-  const heightBorder = mobile ? 'auto' : '400px';
+  const heightBorder = mobile ? 'auto' : 'auto';
   const heightboxpc1 = pc1 ? '680px' : '931px';
   const heightboxpc = pc ? heightboxpc1 : '1170px';
   const widthtbox = mobile ? '284px' : heightboxpc;
-  return ( 
+  return (
     <Flex
       w={widthtbox}
       h={heightBorder}
-      bg={'rgba(0, 0, 0, 0.4);'}  
+      bg={'rgba(0, 0, 0, 0.4);'}
       m={'20px 0 0px 0'}
       justify={'center'}
       align={'center'}

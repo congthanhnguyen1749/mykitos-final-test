@@ -1,11 +1,11 @@
 import { Box, Flex } from '@mantine/core';
 import React from 'react';
-import { TitleItemChange } from './TitleItemChange';
-import { ContentChange } from './ContentChange';
-import './flipCard.css';
-import { DataItemCard } from './data/data';
+import '../../GetReading/flipCard.css';
+import { DataItemCard } from '../../data/data';
 import { useMediaQuery } from '@mantine/hooks';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { ContentChange } from './ContentChange';
+import { TitleItemChange } from './TitleItemChange';
 export const BodyContentItems = () => {
   const [changvalueCard, setchangvalueCard] = React.useState(0);
   const mobile = useMediaQuery('(max-width: 755px)');
