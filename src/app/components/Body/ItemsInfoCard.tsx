@@ -29,10 +29,7 @@ export const ItemsInfoCard = ({ active }) => {
   const [arrowAndShowBox, setArrowAndShowBox] = React.useState(true);
   const mobile = useMediaQuery('(max-width: 755px)');
   const widthMobileInfoItems = mobile ? '343px' : '1170px';
-  const widthMobilebox = mobile ? '220px' : '250px';
   const sizeTextLable = mobile ? 18 : 24;
-  const changeSizeImg = mobile ? '-148px' : '0';
-  const changeTextSizeBottom = mobile ? 15 : 20;
   const changeTextSizeTop = mobile ? 'auto' : 270;
   const changeActive = () => {
     setArrowAndShowBox(!arrowAndShowBox);
@@ -73,7 +70,7 @@ export const ItemsInfoCard = ({ active }) => {
             <Image src={InfomationsCart.Court[active].frontCart} width={34} />
             <Box ml={10}>
               <Text fw={700} fz={18} lh={2} color={'rgba(255, 255, 255, 1)'}>
-                Tổng quan tình yêu
+                {InfomationsCart.Court[active].textIntroduce}
               </Text>
               <Text fw={500} fz={13} lh={1.4} color={'rgba(159, 187, 216, 1)'}>
                 {InfomationsCart.Court[active].textSubtitle}
@@ -108,19 +105,13 @@ export const ItemsInfoCard = ({ active }) => {
         {/* bottom */}
         {arrowAndShowBox ? (
           <Flex direction={'column'} w={'100%'}>
-            <Flex align={'center'} w={'100%'} h={changeTextSizeTop}>
-              <Flex
-                justify={'center'}
-                align={'center'}
-                w={widthMobilebox}
-                h={'100%'}
-              >
+            <Flex align={'flex-start'} w={'100%'} h={changeTextSizeTop}>
+              
                 <Image
-                  sx={{ transform: `translateY(${changeSizeImg})` }}
+                  sx={{marginTop:"14px"}}
                   src={InfomationsCart.Court[active].frontCart}
                   width={130}
                 ></Image>
-              </Flex>
               <Box w={'100%'} h={'100%'} ml={8}>
                 <Text fw={700} size={sizeTextLable} lh={2.3} color={'white'}>
                   {InfomationsCart.Court[active].nameCard}
@@ -130,7 +121,7 @@ export const ItemsInfoCard = ({ active }) => {
                 </Text>
                 <br />
                 <Text fw={400} size={15} color={'rgba(159, 187, 216, 1)'}>
-                  {InfomationsCart.Court[active].describeCard}
+                  {InfomationsCart.Court[active].describeCard} 
                 </Text>
               </Box>
             </Flex>
@@ -139,7 +130,7 @@ export const ItemsInfoCard = ({ active }) => {
                 mt={10}
                 align="left"
                 fw={400}
-                size={changeTextSizeBottom}
+                size={mobile ? 15 : 20}
                 lh={1.5}
                 color={'white'}
               >

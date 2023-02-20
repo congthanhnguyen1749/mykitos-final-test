@@ -80,7 +80,7 @@ const slice = createSlice({
     hh1: (state: ChangeStone, action) => {
       state.snowBall.ref1 = action.payload;
     },
-    hh2: (state: ChangeStone, action) => {
+    ref2s: (state: ChangeStone, action) => {
       state.snowBall.ref2 = action.payload;
     },
 

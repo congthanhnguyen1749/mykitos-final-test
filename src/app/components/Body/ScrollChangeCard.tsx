@@ -26,26 +26,7 @@ export const ScrollChangeCard = () => {
   // end get id stoned active
   const [butSpreadCard1, setButSpreadCard1]: any = useState(true);
   const [arryayContentCard, setarryayContentCard]: any = useState([]);
-  const setHideButtonSpred1: any = (changeIndex, i) => {
-    // const changeview =
-    //   changeIndex == 0
-    //     ? setButSpreadCard1(360)
-    //     : changeIndex == 1
-    //     ? setButSpreadCard1(360)
-    //     : changeIndex == 2
-    //     ? setButSpreadCard1(906)
-    //     : changeIndex == 3
-    //     ? setButSpreadCard1(906)
-    //     : changeIndex == 4
-    //     ? setButSpreadCard1(1452)
-    //     : changeIndex == 5
-    //     ? setButSpreadCard1(1452)
-    //     : changeIndex == 6
-    //     ? setButSpreadCard1(2118)
-    //     : changeIndex == 7
-    //     ? setButSpreadCard1(2118)
-    //     : setButSpreadCard1(0);
-  };
+  const setHideButtonSpred1: any = (changeIndex, i) => {};
   function TaoSoNgauNhien(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
@@ -66,9 +47,6 @@ export const ScrollChangeCard = () => {
 
   // dispatchers
 
-  const dispatch = useDispatch();
-  const { StoneActions } = StoneSliceReduce();
-  dispatch(StoneActions.setArrayCard(arryayContentCard));
   // 93.8
 
   return (
@@ -122,7 +100,10 @@ export const ScrollChangeCard = () => {
             {/* card1 */}
             {InfomationsCart.Court.map((v, i) => {
               return i == changeIndex ? (
-                <Flex onClick={i => setHideButtonSpred1(changeIndex, i)}>
+                <Flex
+                  key={i}
+                  onClick={i => setHideButtonSpred1(changeIndex, i)}
+                >
                   <ItemsCardUse
                     index={changeIndex}
                     active={true}
@@ -172,7 +153,10 @@ export const ScrollChangeCard = () => {
             {/* card1 */}
             {InfomationsCart.Court.map((v, i) => {
               return i == changeIndex1 ? (
-                <Flex onClick={() => setHideButtonSpred1(changeIndex1, i)}>
+                <Flex
+                  key={i}
+                  onClick={() => setHideButtonSpred1(changeIndex1, i)}
+                >
                   <ItemsCardUse
                     index={changeIndex1}
                     active={true}
@@ -224,7 +208,10 @@ export const ScrollChangeCard = () => {
             {/* card1 */}
             {InfomationsCart.Court.map((v, i) => {
               return i == changeIndex2 ? (
-                <Flex onClick={() => setHideButtonSpred1(changeIndex2, i)}>
+                <Flex
+                  key={i}
+                  onClick={() => setHideButtonSpred1(changeIndex2, i)}
+                >
                   <ItemsCardUse
                     index={changeIndex2}
                     active={true}
@@ -274,7 +261,10 @@ export const ScrollChangeCard = () => {
             {/* card1 */}
             {InfomationsCart.Court.map((v, i) => {
               return i == changeIndex3 ? (
-                <Flex onClick={() => setHideButtonSpred1(changeIndex3, i)}>
+                <Flex
+                  key={i}
+                  onClick={() => setHideButtonSpred1(changeIndex3, i)}
+                >
                   <ItemsCardUse
                     index={changeIndex3}
                     active={true}

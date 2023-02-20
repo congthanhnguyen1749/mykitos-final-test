@@ -1,25 +1,25 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import { ReactComponent as Arrowleft } from '../../../assets/images/Body/icon/arrow/arrow-narrow-left.svg';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { Box, Flex, Text } from '@mantine/core';
-import { useMediaQuery } from '@mantine/hooks';
+import { Box, Button, Flex, Text } from '@mantine/core';
+import { useMediaQuery, useScrollIntoView } from '@mantine/hooks';
 import { CardFlashesStoneFrom } from './CardFlashesStoneFrom';
 import { ScrollChangeCard } from './ScrollChangeCard';
 import { ItemsInfoCard } from './ItemsInfoCard';
 import './flipCard.css';
 import { InfomationsCart } from './data/data';
 import { getProfileSelector } from 'store/slice/changeStone/selectors';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { StoneSliceReduce } from 'store/slice/changeStone';
 
 export const ContentItemsflashesStone = () => {
+  const { scrollIntoView, targetRef }: any = useScrollIntoView<HTMLDivElement>({
+    offset: 60,
+  });
   const mobile = useMediaQuery('(max-width: 755px)');
   const loca = useLocation();
   const changeref: any = React.useRef();
   const navigate = useNavigate();
-  const [ftrue, setFtrue] = React.useState(false);
-  const changeRouter: any = () => {
-    setFtrue(!ftrue);
-  };
   const textHeader = mobile ? '18px' : '28px';
   const backPage: any = () => {
     navigate(`/get/contentItemsChooseStone/${loca.pathname.slice(30)}`);
@@ -50,7 +50,6 @@ export const ContentItemsflashesStone = () => {
         mih={'90vh'}
       >
         {/* header */}
-
         <Flex
           ref={changeref}
           w={'100%'}
@@ -93,7 +92,13 @@ export const ContentItemsflashesStone = () => {
         {/* end header */}
         {/* another navbar */}
         {messageNav ? (
-          <Box w={'100%'} mb={'3vh'} opacity={0} className="chnagehidebut">
+          <Box
+            onClick={() => scrollIntoView()}
+            w={'100%'}
+            mb={'3vh'}
+            opacity={0}
+            className="chnagehidebut"
+          >
             <ScrollChangeCard />
           </Box>
         ) : (
@@ -101,11 +106,17 @@ export const ContentItemsflashesStone = () => {
         )}
         {/* end another navbar */}
         {/* content */}
-        <Flex w={'100%'} h={'100%'} justify={'center'} align={'center'}>
+        <Flex
+          w={'100%'}
+          ref={targetRef}
+          h={'100%'}
+          justify={'center'}
+          align={'center'}
+        >
           <CardFlashesStoneFrom data={[InfomationsCart, callbackFunction]} />
         </Flex>
         {messageNav ? (
-          <Box mt={5}>
+          <Flex justify={'center'} align={'center'} direction={'column'} mt={5}>
             {arrayCard.map((v, i) => {
               return (
                 <Flex key={i} m={'10px 0 10px 0'}>
@@ -113,7 +124,29 @@ export const ContentItemsflashesStone = () => {
                 </Flex>
               );
             })}
-          </Box>
+            <Flex
+              sx={{
+                border: '2px solid white',
+                borderRadius: '18px',
+                cursor: 'pointer',
+                backgroundColor: 'rgba(0,0,0,.4)',
+                boxShadow:
+                  '0 0 0.1rem #fff, 0 0 0.1rem #fff, 0 0 0.1rem #ff2c52, 0 0 0.1rem #ff2c52, 0 0 0.4rem #ff2c52, inset 0 0 0.4rem #ff2c52',
+                ':hover': {
+                  backgroundColor: 'rgba(0,0,0,.3)',
+                },
+              }}
+              w={150}
+              m={'50px 20px 80px 20px'}
+              h={mobile ? 51 : 58}
+              justify={'center'}
+              align={'center'}
+            >
+              <Text color={'white'} fw={500} fz={mobile ? 18 : 20}>
+                Viết nhật ký
+              </Text>
+            </Flex>
+          </Flex>
         ) : (
           ''
         )}
