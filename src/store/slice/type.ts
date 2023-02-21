@@ -34,3 +34,24 @@ export interface ChangeStone {
     id?: any;
   };
 }
+
+export interface Login {
+  id: number;
+  isLogined: boolean;
+  register: {
+    error: number;
+    message: string;
+  };
+  login: {
+    error: number;
+    message: string;
+    savePassword: boolean;
+  };
+  profile: {
+    nickname?: string;
+    picture?: string;
+    date_of_birth?: string;
+    zodiac?: string;
+    gender?: string;
+  };
+}

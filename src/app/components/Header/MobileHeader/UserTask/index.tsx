@@ -61,7 +61,7 @@ export const UserListTask = () => {
           color: 'white',
           width: '100%',
           height: '100vh',
-          position: 'absolute',
+          position: 'fixed',
           top: '0',
           right: '-100%',
           transition: 'all .5s linear ',

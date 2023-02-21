@@ -2,14 +2,18 @@ import { Center, Stack, BackgroundImage, Box, Flex } from '@mantine/core';
 import * as React from 'react';
 import Background from '../../../../assets/images/background/galaxy.jpg';
 import { WebHeader } from 'app/components/Header/WebHeader';
-import { Outlet, useLocation } from 'react-router-dom';
+import { Navigate, Outlet, useLocation } from 'react-router-dom';
 import { useMediaQuery } from '@mantine/hooks';
 import { MobileHeader } from 'app/components/Header/MobileHeader/MobileHeader';
 import Footer from 'app/components/Footer';
-export function DemoComponents() {
+import { RegisterAndLoginSelector } from 'store/slice/Login/selectors';
+import { useSelector } from 'react-redux';
+export function AppMykitos() {
   const loca = useLocation();
   const tablet = useMediaQuery('(max-width: 992px)');
   const mobile = useMediaQuery('(max-width: 768px)');
+  const selec = useSelector(RegisterAndLoginSelector);
+
   return (
     <BackgroundImage
       src={Background}
@@ -46,7 +50,7 @@ export function DemoComponents() {
           h={'100%'}
         >
           <Stack>
-            <Outlet></Outlet>
+            {selec.isLogined ? <Outlet></Outlet> : <Navigate to="/login" /> }
           </Stack>
         </Center>
         <Box>

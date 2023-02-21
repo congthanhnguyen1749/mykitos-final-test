@@ -1,6 +1,6 @@
 import { lazyLoad } from 'utils/loadable';
 
-export const DemoComponents = lazyLoad(
+export const AppMykitos = lazyLoad(
   () => import('./index'),
-  module => module.DemoComponents,
+  module => module.AppMykitos,
 );
