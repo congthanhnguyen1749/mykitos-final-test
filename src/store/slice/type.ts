@@ -37,7 +37,10 @@ export interface ChangeStone {
 
 export interface Login {
   id: number;
+  // xác định xem người dùng đã đăng nhập rồi hay chưa
   isLogined: boolean;
+  // kiểm tra xem người dùng có nhấn vào puên mật khẩu không
+  isFogotPW: boolean;
   register: {
     error: number;
     message: string;

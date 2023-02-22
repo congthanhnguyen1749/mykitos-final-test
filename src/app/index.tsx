@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BrowserRouter, Routes, Route, } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AppMykitos } from './pages/Demo/components/Loadable';
 import { DemoPhaser } from './pages/Demo/phaser/Loadable';
 import { DemoPiXi } from './pages/Demo/pixi/Loadable';
@@ -17,10 +17,13 @@ import { ContentItemsflashesStone } from './components/Body/GetReading/flashesSt
 import { ContentItemsChooseStone } from './components/Body/GetReading/ChooseStone/ContentItemsChooseStone';
 import { BodyDailyCardGroup } from './components/Body/Dailycard/BodyDailyCardGroup';
 import { BodyGetReading } from './components/Body/GetReading/Group/BodyGetReading';
-import { Login } from './components/Login';
 import { PorgotPW } from './components/Login/ForgotPassword/PorgotPW';
-import { LoginPage } from './components/Login/LoginPage/LoginPage';
 import { Register } from './components/Login/Register/Register';
+import { LoginPage } from './components/Login/LoginPages';
+import { SetNameUser } from './components/Login/Register/setNameuser';
+import { CompareUserName } from './components/Login/ForgotPassword/CompareUserName';
+import { GetOtp } from './components/Login/ForgotPassword/GetOtp';
+import { SendCodeToChangePassword } from './components/Login/ForgotPassword/SendCodeToChangePassword';
 export function App() {
   const { i18n } = useTranslation();
   StoneSliceReduce();
@@ -58,11 +61,27 @@ export function App() {
               ></Route>
             </Route>
           </Route>
-          <Route path="/login" element={<Login />}>
-            <Route path="/login/porgotpw" element={<PorgotPW />}></Route>
-            <Route path="/login/loginpage" element={<LoginPage />}></Route>
-            <Route path="/login/register" element={<Register />}></Route>
-          </Route>
+          {/* login */}
+          <Route path="/login/porgotpw" element={<PorgotPW />}></Route>
+          <Route
+            path="/login/porgotpw/compareusername"
+            element={<CompareUserName />}
+          ></Route>
+          <Route
+            path="/login/porgotpw/compareusername/GetOtp"
+            element={<GetOtp />}
+          ></Route>
+          <Route
+            path="/login/porgotpw/compareusername/GetOtp/sendcodetochangepassword"
+            element={<SendCodeToChangePassword />}
+          ></Route>
+          <Route path="/login" element={<LoginPage />}></Route>
+          <Route path="/login/register" element={<Register />}></Route>
+          <Route
+            path="/login/register/setname"
+            element={<SetNameUser />}
+          ></Route>
+          {/* end login */}
           <Route path="/demo/three" element={<DemoThree />}></Route>
           <Route path="/demo/phaser" element={<DemoPhaser />}></Route>
           <Route path="/demo/pixi" element={<DemoPiXi />}></Route>

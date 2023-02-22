@@ -25,21 +25,19 @@ import '../../Body/GetReading/flipCard.css';
 import logoText from '../../../../assets/images/Login/LogoLogin/Group.svg';
 import { languageData } from '../../Header/data/data';
 import { LanguageSwitch } from '../../Header/LanguageSwitch';
-export const PorgotPW = () => {
+import { Link } from 'react-router-dom';
+export const LoginPage = () => {
   const mobile = useMediaQuery('(max-width: 768px)');
   const form = useForm({
     initialValues: {
       name: '',
       password: '',
-      confirmPassword: '',
     },
     validate: {
       name: value =>
-        value.length < 2 ? 'Độ dài của tên phải lớn hơn 2 !' : null,
+        value.length < 6 ? 'Độ dài của tên phải lớn hơn 6 !' : null,
       password: (value, values) =>
         value !== values.name ? 'Mật khẩu không chính xác !' : null,
-      confirmPassword: (value, values) =>
-        value !== values.password ? 'Passwords did not match' : null,
     },
   });
   return (
@@ -165,48 +163,6 @@ export const PorgotPW = () => {
                   },
                 }}
               />
-              <PasswordInput
-                mt="sm"
-                placeholder="Xác nhận mật khẩu"
-                {...form.getInputProps('confirmPassword')}
-                sx={{
-                  '& .mantine-Input-input': {
-                    width: mobile ? '343px' : '570px',
-                    background: 'rgba(0, 0, 0, 0.4)',
-                    height: mobile ? '47px' : '58px',
-                    display: 'flex',
-                    borderRadius: '8px',
-                    alignItems: 'center',
-                  },
-                  '& ::placeholder': {
-                    color: '#9FBBD8',
-                    fontSize: mobile ? '18px' : '20px',
-                  },
-                  '& .mantine-Input-input input': {
-                    width: '100%',
-                    color: '#9FBBD8',
-                    height: '100%',
-                  },
-                  '& .mantine-1jdmi3h': {
-                    height: '100%',
-                    width: mobile ? '20%' : '10%',
-                    color: '#9FBBD8',
-                  },
-                  '& .mantine-1rzga8z': {
-                    left: '5px',
-                  },
-                  '& .mantine-UnstyledButton-root': {
-                    ':hover': {
-                      background: 'none',
-                    },
-                  },
-                  '& .mantine-UnstyledButton-root svg': {
-                    height: '19px',
-                    width: '18px',
-                    color: '#9FBBD8',
-                  },
-                }}
-              />
               <Flex
                 w={'100%'}
                 h={'30px'}
@@ -234,13 +190,7 @@ export const PorgotPW = () => {
                     label="Lưu mật khẩu"
                   />
                 </Flex>
-                <Anchor
-                  sx={{
-                    textDecoration: 'none',
-                  }}
-                  href="/login/porgotpw"
-                  mt={5}
-                >
+                <Link style={{ marginTop: '5px' }} to={'/login/register'}>
                   <Text
                     sx={{
                       color: 'white',
@@ -253,7 +203,7 @@ export const PorgotPW = () => {
                     {' '}
                     Quên mật khẩu
                   </Text>
-                </Anchor>
+                </Link>
               </Flex>
               <Group position="center" mt="lg">
                 <Button
@@ -334,12 +284,16 @@ export const PorgotPW = () => {
                 mt={5}
               >
                 <Text color="white">Bạn chưa có tài khoản?</Text>
-                <Anchor ml={5} href="https://mantine.dev/" color="white">
+                <Link
+                  style={{ marginLeft: '5px', color: 'white' }}
+                  to={'/login/register'}
+                  color="white"
+                >
                   <Text color="White" fw={700} fz={16}>
                     {' '}
                     Đăng ký
                   </Text>
-                </Anchor>
+                </Link>
               </Flex>
               <Flex justify={'center'} align={'center'} mt="lg">
                 <Button

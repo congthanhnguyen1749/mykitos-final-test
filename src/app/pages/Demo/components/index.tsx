@@ -50,7 +50,7 @@ export function AppMykitos() {
           h={'100%'}
         >
           <Stack>
-            {selec.isLogined ? <Outlet></Outlet> : <Navigate to="/login" /> }
+            {selec.isLogined ? <Outlet></Outlet> : <Navigate to="/login" />}
           </Stack>
         </Center>
         <Box>

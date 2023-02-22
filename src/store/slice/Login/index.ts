@@ -8,6 +8,7 @@ export const initialState: Login = {
   // snowBall properties
   id: 0,
   isLogined: false,
+  isFogotPW: true,
   register: {
     error: 0,
     message: 'hi',
@@ -15,7 +16,7 @@ export const initialState: Login = {
   login: {
     error: 0,
     message: 'hi',
-    savePassword: true,
+    savePassword: false,
   },
   profile: {
     nickname: 'hi',
@@ -29,7 +30,11 @@ export const initialState: Login = {
 const slice = createSlice({
   name: 'login',
   initialState,
-  reducers: {},
+  reducers: {
+    SetIsForgotPW: (state: Login, action) => {
+      state.isFogotPW = action.payload;
+    },
+  },
 });
 
 export const { actions: RegAndLog, reducer } = slice;

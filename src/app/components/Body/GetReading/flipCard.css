@@ -37,11 +37,25 @@
   animation: alo linear 3s 1s forwards alternate;
   animation: alo linear 0.5s 0.2s forwards alternate;
 }
+
+.hideAndUnhide {
+  animation: hauh linear 1s forwards alternate infinite;
+}
 @keyframes alo {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes hauh {
+  0% {
+    box-shadow: 0 0 0.1rem blue, 0 0 0.1rem #12bfeb, 0 0 0.1rem #fa7b92,
+      0 0 0.1rem #fc879c, 0 0 0.4rem #ee899c, inset 0 0 0.4rem #f88499;
+  }
+  100% {
+    box-shadow: 0 0 0.18rem #cebb0f, 0 0 0.18rem #fff, 0 0 0.18rem #ff2c52,
+      0 0 0.18rem #ff2c52, 0 0 0.18rem #ff2c52, inset 0 0 0.18rem #ff2c52;
   }
 }
