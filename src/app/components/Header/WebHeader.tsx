@@ -26,7 +26,7 @@ export const WebHeader: any = () => {
         padding: '0',
       }}
     >
-      <Flex align="center" justify="space-around" h={'100%'}>
+      <Flex align="center" justify="space-around" w={'100%'} h={'100%'}>
         <Box onClick={() => changenavIcon()} w={logoWidth}>
           <Logo />
         </Box>

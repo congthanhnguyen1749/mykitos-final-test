@@ -7,7 +7,8 @@ export const initialState: Login = {
   //   stone
   // snowBall properties
   id: 0,
-  isLogined: false,
+  // kiểm tra xem người dùng đã đăng nhập rồi hay chưa.
+  isLogined: true,
   isFogotPW: true,
   register: {
     error: 0,

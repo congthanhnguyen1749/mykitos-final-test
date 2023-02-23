@@ -58,3 +58,6 @@ export interface Login {
     gender?: string;
   };
 }
+export interface DailyCardState {
+  isFreeCard: boolean;
+}

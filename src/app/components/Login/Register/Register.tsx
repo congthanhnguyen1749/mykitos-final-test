@@ -214,14 +214,8 @@ export const Register = () => {
                   },
                 }}
               />
-              <Flex
-                w={'100%'}
-                h={'30px'}
-                mt={5}
-                justify={'space-between'}
-                align={'center'}
-              >
-                <Flex mt={mobile ? 15 : 5}>
+              <Flex h={'30px'} mt={5} justify={'flex-start'} align={'center'}>
+                <Flex w={'100%'} mt={mobile ? 15 : 5}>
                   {' '}
                   <Checkbox
                     mt={5}
@@ -239,21 +233,28 @@ export const Register = () => {
                     }}
                   />
                   <Text fz={mobile ? 12 : 14} ml={5} mt={4} color="white">
-                    <Flex>
-                      {' '}
-                      Đồng ý với{' '}
-                      <Link to={''}>
-                        <Text m={'0 3px'} fw={700} color="white">
-                          Điều khoản sử dụng
-                        </Text>
-                      </Link>{' '}
-                      và{' '}
-                      <Link to={''}>
-                        <Text m={'0 3px'} fw={700} color="white">
-                          Chính sách bảo mật
-                        </Text>
-                      </Link>{' '}
-                      của Mystikos
+                    <Flex sx={{ flexWrap: 'wrap' }}>
+                      <Text color="white">
+                        Đồng ý với{' '}
+                        <Link to={''}>
+                          <span
+                            style={{
+                              color: 'white',
+                              fontWeight: '700',
+                            }}
+                          >
+                            Điều khoản sử dụng
+                          </span>{' '}
+                        </Link>
+                        và{' '}
+                        <Link to={''}>
+                          <span style={{ fontWeight: '700', color: 'white' }}>
+                            {' '}
+                            Chính sách bảo mật
+                          </span>{' '}
+                        </Link>
+                        của Mystikos
+                      </Text>
                     </Flex>
                   </Text>
                 </Flex>
@@ -348,7 +349,6 @@ export const Register = () => {
                   </Text>
                 </Link>
               </Flex>
-             
             </Flex>
           </Flex>
           {/* end validatae */}

@@ -24,6 +24,8 @@ import { SetNameUser } from './components/Login/Register/setNameuser';
 import { CompareUserName } from './components/Login/ForgotPassword/CompareUserName';
 import { GetOtp } from './components/Login/ForgotPassword/GetOtp';
 import { SendCodeToChangePassword } from './components/Login/ForgotPassword/SendCodeToChangePassword';
+import { ResetPassword } from './components/Login/ForgotPassword/resetPassword';
+import { DailyCardSpreadEveryday } from './components/Body/Dailycard/dailyCardSpreadEveryday';
 export function App() {
   const { i18n } = useTranslation();
   StoneSliceReduce();
@@ -43,6 +45,7 @@ export function App() {
               <Route path="dailycard" element={<BodyDailyCardGroup />}></Route>
               <Route path="getreading" element={<BodyGetReading />}></Route>
               <Route path="cart" element={<BodyCartGroup />}></Route>
+
               <Route
                 path="contentItem/*"
                 element={<BodyContentItems />}
@@ -59,6 +62,10 @@ export function App() {
                 path="contentItemsflashesStone/*"
                 element={<ContentItemsflashesStone />}
               ></Route>
+              <Route
+                path="dailycardspreadeveryday"
+                element={<DailyCardSpreadEveryday />}
+              ></Route>
             </Route>
           </Route>
           {/* login */}
@@ -74,6 +81,10 @@ export function App() {
           <Route
             path="/login/porgotpw/compareusername/GetOtp/sendcodetochangepassword"
             element={<SendCodeToChangePassword />}
+          ></Route>
+          <Route
+            path="/login/porgotpw/compareusername/GetOtp/sendcodetochangepassword/resetpassword"
+            element={<ResetPassword />}
           ></Route>
           <Route path="/login" element={<LoginPage />}></Route>
           <Route path="/login/register" element={<Register />}></Route>

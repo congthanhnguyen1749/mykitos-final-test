@@ -190,7 +190,10 @@ export const LoginPage = () => {
                     label="Lưu mật khẩu"
                   />
                 </Flex>
-                <Link style={{ marginTop: '5px' }} to={'/login/register'}>
+                <Link
+                  style={{ marginTop: '5px' }}
+                  to={'/login/porgotpw/compareusername'}
+                >
                   <Text
                     sx={{
                       color: 'white',

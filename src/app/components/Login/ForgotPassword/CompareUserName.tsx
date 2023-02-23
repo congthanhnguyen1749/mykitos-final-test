@@ -34,7 +34,7 @@ import '../../Body/GetReading/flipCard.css';
 import logoText from '../../../../assets/images/Login/LogoLogin/Group.svg';
 import { languageData } from '../../Header/data/data';
 import { LanguageSwitch } from '../../Header/LanguageSwitch';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 export const CompareUserName = () => {
   const [changelaberWarnning, setChangelaberWarnning] = React.useState(false);
   const mobile: any = useMediaQuery('(max-width: 768px)');
@@ -53,9 +53,16 @@ export const CompareUserName = () => {
         value !== values.password ? 'Mật khẩu không khớp !' : null,
     },
   });
+  const navigate = useNavigate();
   const changeWarning: any = () => {
     console.log('object');
     setChangelaberWarnning(!changelaberWarnning);
+  };
+  const backPage: any = () => {
+    navigate('/login');
+  };
+  const nextRole: any = () => {
+    navigate('/login/porgotpw/compareusername/GetOtp');
   };
   return (
     <Flex justify={'center'} align={'center'} direction={'column'}>
@@ -93,7 +100,7 @@ export const CompareUserName = () => {
           {/* validatae */}
           <Flex w={'100%'} justify={'space-between'} mt={30}>
             <Flex>
-              <img src={arl} alt="" />
+              <img onClick={() => backPage()} src={arl} alt="" />
               <Text ml={6} fw={600} fz={20} color="white">
                 Quên mật khẩu{' '}
               </Text>
@@ -131,7 +138,9 @@ export const CompareUserName = () => {
               },
             }}
           />{' '}
-          <Text fz={16} fw={500} mt={10} color='rgba(159, 187, 216, 1)'>Vui lòng cung cấp tên đăng nhập để lấy lại mật khẩu.</Text>
+          <Text fz={16} fw={500} mt={10} color="rgba(159, 187, 216, 1)">
+            Vui lòng cung cấp tên đăng nhập để lấy lại mật khẩu.
+          </Text>
           <Flex
             sx={{
               marginTop: '30px',
@@ -140,6 +149,7 @@ export const CompareUserName = () => {
             align={'center'}
           >
             <Button
+              onClick={() => nextRole()}
               sx={{
                 width: '150px',
                 height: mobile ? '51px' : '58px',
