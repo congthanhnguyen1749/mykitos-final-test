@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.cards {
+  position: relative;
+  float: left;
+  margin-right: 10px;
+  background: #fff;
+  -webkit-box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+div[class*='suit']:before {
+  position: absolute;
+  font-size: 35px;
+  left: 5px;
+  top: 5px;
+}
+div[class*='suit']:before {
+  position: absolute;
+  font-size: 35px;
+  left: 5px;
+  top: 5px;
+}
+
+div[class*='suit']:after {
+  position: absolute;
+  font-size: 35px;
+  right: 5px;
+  bottom: 5px;
+}
+.hand {
+  margin: 50px;
+}
+
+/* For modern browsers */
+.hand:before,
+.hand:after {
+  content: '';
+  display: table;
+}
+
+.hand:after {
+  clear: both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.hand {
+  zoom: 1;
+}
+
+.cards {
+  cursor: pointer;
+}
+.spread {
+  position: relative;
+}
+
+.spread > .cards {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: top 0.3s ease, left 0.3s ease;
+  -moz-transition: top 0.3s ease, left 0.3s ease;
+  -o-transition: top 0.3s ease, left 0.3s ease;
+  -ms-transition: top 0.3s ease, left 0.3s ease;
+  transition: top 0.3s ease, left 0.3s ease;
+}
+/* .spread:hover .suitdiamonds {
+  transform: translateY(-25px) !important;
+}
+
+.spread:hover .suithearts {
+  transform: translateY(-25px) ;
+}
+
+.spread:hover .suitclubs {
+  transform: translateY(-25px) !important;
+}
+
+.spread:hover .suitspades {
+  transform: translateY(-25px) !important;
+}
+.spread:hover .suitspades2 {
+  transform: translateY(-25px) !important;
+}
+.spread:hover .suitspades3 {
+  transform: translateY(-25px) !important;
+}
+.spread:hover .suitspades4 {
+  transform: translateY(-25px) !important;
+}
+.spread:hover .suitspades5 {
+  transform: translateY(-25px) !important;
+} */
+.spread > .cards {
+  -webkit-box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.4);
+}

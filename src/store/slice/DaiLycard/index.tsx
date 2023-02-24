@@ -5,6 +5,8 @@ import { DailyCardState } from '../type';
 
 export const initialState: DailyCardState = {
   isFreeCard: true,
+  getIdCard: 1,
+
 };
 
 const slice = createSlice({
@@ -13,6 +15,9 @@ const slice = createSlice({
   reducers: {
     SetNumberWhenUseCardFree: (state: DailyCardState, action) => {
       state.isFreeCard = action.payload;
+    },
+    GetIndexCard: (state: DailyCardState, action) => {
+      state.getIdCard = action.payload;
     },
   },
 });
