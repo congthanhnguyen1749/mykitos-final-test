@@ -26,6 +26,9 @@ import { GetOtp } from './components/Login/ForgotPassword/GetOtp';
 import { SendCodeToChangePassword } from './components/Login/ForgotPassword/SendCodeToChangePassword';
 import { ResetPassword } from './components/Login/ForgotPassword/resetPassword';
 import { DailyCardSpreadEveryday } from './components/Body/Dailycard/dailyCardSpreadEveryday';
+import { OpenInfoCard } from './components/Body/Dailycard/OpenInfoCard';
+import { InfoItems } from './components/Body/Dailycard/InfoItems';
+import { GetUsedCard } from './components/Body/Dailycard/GetUsedCard';
 export function App() {
   const { i18n } = useTranslation();
   StoneSliceReduce();
@@ -65,6 +68,18 @@ export function App() {
               <Route
                 path="dailycardspreadeveryday"
                 element={<DailyCardSpreadEveryday />}
+              ></Route>
+              <Route
+                path="openinfocard"
+                element={<OpenInfoCard />}
+              ></Route>
+              <Route
+                path="infoitems"
+                element={<InfoItems />}
+              ></Route>
+              <Route
+                path="getusedcard"
+                element={<GetUsedCard />}
               ></Route>
             </Route>
           </Route>

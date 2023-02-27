@@ -61,6 +61,9 @@ import MinorShaix from '../../../../assets/Rider-Waite-Tarot-78Card/Minor/SWORDS
 export const InfomationsCart: any = {
   Court: [
     {
+      frontCart: backCard,
+    },
+    {
       frontCart: MinorShaix,
       icon: CourtCup,
       textIntroduce: 'Tổng quan tình yêu',

@@ -52,12 +52,12 @@
 }
 @keyframes hauh {
   0% {
-    box-shadow: 0 0 0.1rem blue, 0 0 0.1rem #12bfeb, 0 0 0.1rem #fa7b92,
+    box-shadow: 0 0 0.1rem blue, 0 0 0.1rem blue, 0 0 0.1rem #fa7b92,
       0 0 0.1rem #fc879c, 0 0 0.4rem #ee899c, inset 0 0 0.4rem #f88499;
   }
   100% {
-    box-shadow: 0 0 0.18rem #cebb0f, 0 0 0.18rem #fff, 0 0 0.18rem #ff2c52,
-      0 0 0.18rem #ff2c52, 0 0 0.18rem #ff2c52, inset 0 0 0.18rem #ff2c52;
+    box-shadow: 0 0 0.18rem #cebb0f, 0 0 0.18rem #fff, 0 0 0.18rem blue,
+      0 0 0.18rem blue, 0 0 0.18rem blue, inset 0 0 0.18rem #ff2c52;
   }
 }
 
@@ -104,9 +104,9 @@
  
   background-image: linear-gradient(
     var(--rotate),
-    #ff2c52,
-    #cebb0f 43%,
-    #ff2c52
+    gray,
+    #ece496 43%,
+    blue
   );
   position: absolute;
   z-index: -1;
@@ -129,9 +129,9 @@
   filter: blur(calc(var(--card-height) / 6));
   background-image: linear-gradient(
     var(--rotate),
-    #ff2c52,
-    #cebb0f 43%,
-    #ff2c52
+    white,
+    gray 43%,
+    gray
   );
   opacity: 1;
   transition: opacity 0.5s;
@@ -148,7 +148,7 @@
 }
 
 a {
-  color: #ff2c52;
+  color: #e990a0;
   text-decoration: none;
   font-family: sans-serif;
   font-weight: bold;

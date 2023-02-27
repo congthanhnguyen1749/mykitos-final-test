@@ -19,15 +19,17 @@ export const DailyCardSpreadEveryday = () => {
   };
   const backRole = () => {
     navigate('/daily/dailycard');
-
   }
   const selecIndexCard = useSelector(RegisterDailyCard)
-
+  const openInfoCard = () => {
+    console.log(selecIndexCard.getIdCard);
+    navigate(selecIndexCard.getIdCard == 0 ? '' : '/daily/openinfocard');
+  }
   return (
-    <Flex className='chnagehidebut'opacity={0} w={'100%'} h={'100vh'}>
+    <Flex className='chnagehidebut' opacity={0} w={'100%'} h={'100vh'}>
       {/* header */}
       <Flex w={'80vw'} direction={'column'} h={'100%'}>
-        <Flex mt={50} w={'100%'} h={50} justify={'space-between'}>
+        <Flex mt={mobile ? 20 : 70} w={'100%'} h={50} justify={'space-between'}>
           <Flex
             onClick={() => backRole()}
             w={mobile ? 35 : 50}
@@ -58,6 +60,7 @@ export const DailyCardSpreadEveryday = () => {
         >
           <Flex
             w={130}
+            onClick={() => openInfoCard()}
             className="card"
             h={227}
             sx={{ background: `url(${InfomationsCart.Court[selecIndexCard.getIdCard].frontCart})`, border: '2px solid white', ":hover": { boxShadow: '1px 2px 3px white', transition: 'all .3s ease' }, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
@@ -67,7 +70,7 @@ export const DailyCardSpreadEveryday = () => {
         {/* spread card */}
         <Flex justify={'center'} align={'center'} w={'100%'}
           h={'500px'} direction={'column'}>
-          <Text fz={mobile ? 18 : 20} fw={600} color='#9FBBD8'>Chọn một lá tổng quan tình yêu</Text>
+          <Text fz={mobile ? 18 : 20} fw={600} color='#9FBBD8'>Chọn một lá bài</Text>
           <SpreadCardHome data={InfomationsCart} />
         </Flex>
         {/* end spread card */}

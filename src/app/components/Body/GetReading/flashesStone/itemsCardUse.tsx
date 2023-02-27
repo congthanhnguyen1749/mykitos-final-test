@@ -40,7 +40,7 @@ const ItemsCardUse: any = ({ data, active, index }) => {
     ref.current.style.transition = '.8s all ease';
   };
   const imageActive = active
-    ? InfomationsCart.Court[index].frontCart
+    ? InfomationsCart.Court[0].frontCart
     : `${data.frontCart}`;
   return (
     <Flex

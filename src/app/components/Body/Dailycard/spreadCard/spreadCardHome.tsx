@@ -69,7 +69,7 @@ export const SpreadCardHome = (props: dataCard) => {
           transform: mobile ? 'rotate(0)' : 'rotate(0)', ":hover": {
             transform: 'translateY(-25px)',
             zIndex: 1,
-            boxShadow: ' 0 0 0.1rem #fff, 0 0 0.3rem #fff, 0 0 0.3rem #ff2c52, 0 0 0.3rem #ff2c52, 0 0 0.6rem #ff2c52, inset 0 0 0.6rem #ff2c52'
+            boxShadow: ' 0 0 0.1rem #fff, 0 0 0.3rem #fff, 0 0 0.3rem #ff2c52, 0 0 0.3rem #ff2c52, 0 0 0.6rem #ff2c52, inset 0 0 0.6rem blue'
           }
         },
         '& .cards.suitspades2': {
@@ -79,7 +79,7 @@ export const SpreadCardHome = (props: dataCard) => {
           transform: mobile ? 'rotate(0)' : 'rotate(0)', ":hover": {
             transform: 'translateY(-25px)',
             zIndex: 1,
-            boxShadow: ' 0 0 0.1rem #fff, 0 0 0.3rem #fff, 0 0 0.3rem #ff2c52, 0 0 0.3rem #ff2c52, 0 0 0.6rem #ff2c52, inset 0 0 0.6rem #ff2c52'
+            boxShadow: ' 0 0 0.1rem #fff, 0 0 0.3rem #fff, 0 0 0.3rem #ff2c52, 0 0 0.3rem #ff2c52, 0 0 0.6rem #ff2c52, inset 0 0 0.6rem blue'
           }
         },
         '& .cards.suitspades3': {
@@ -104,26 +104,26 @@ export const SpreadCardHome = (props: dataCard) => {
         },
         
       }} className="hand spread">
-        <Box onClick={() => chooseCard1(0)} sx={{ border: '2px solid white' }} className="cards suitdiamonds">
+        <Box onClick={() => chooseCard1(1)} sx={{ border: '2px solid white' }} className="cards suitdiamonds">
           <img style={{ width: '100%', height: '100%' }} src={backCard} alt="" />
         </Box>
-        <Box onClick={() => chooseCard2(1)} sx={{ border: '2px solid white' }} className="cards suithearts">
-          <img style={{ width: '100%', height: '100%' }} src={backCard} alt="" />
-
-        </Box>
-        <Box onClick={() => chooseCard3(2)} sx={{ border: '2px solid white' }} className="cards suitclubs">
+        <Box onClick={() => chooseCard2(2)} sx={{ border: '2px solid white' }} className="cards suithearts">
           <img style={{ width: '100%', height: '100%' }} src={backCard} alt="" />
 
         </Box>
-        <Box onClick={() => chooseCard4(3)} sx={{ border: '2px solid white' }} className="cards suitspades">
+        <Box onClick={() => chooseCard3(3)} sx={{ border: '2px solid white' }} className="cards suitclubs">
           <img style={{ width: '100%', height: '100%' }} src={backCard} alt="" />
 
         </Box>
-        <Box onClick={() => chooseCard5(4)} sx={{ border: '2px solid white' }} className="cards suitspades2">
+        <Box onClick={() => chooseCard4(4)} sx={{ border: '2px solid white' }} className="cards suitspades">
           <img style={{ width: '100%', height: '100%' }} src={backCard} alt="" />
 
         </Box>
-        <Box onClick={() => chooseCard6(5)} sx={{ border: '2px solid white' }} className="cards suitspades3">
+        <Box onClick={() => chooseCard5(5)} sx={{ border: '2px solid white' }} className="cards suitspades2">
+          <img style={{ width: '100%', height: '100%' }} src={backCard} alt="" />
+
+        </Box>
+        <Box onClick={() => chooseCard6(6)} sx={{ border: '2px solid white' }} className="cards suitspades3">
           <img style={{ width: '100%', height: '100%' }} src={backCard} alt="" />
 
         </Box>

@@ -5,7 +5,8 @@ import { DailyCardState } from '../type';
 
 export const initialState: DailyCardState = {
   isFreeCard: true,
-  getIdCard: 1,
+  getIdCard: 0,
+  Filter:false,
 
 };
 
@@ -18,6 +19,9 @@ const slice = createSlice({
     },
     GetIndexCard: (state: DailyCardState, action) => {
       state.getIdCard = action.payload;
+    },
+    SetFilter: (state: DailyCardState, action) => {
+      state.Filter = action.payload;
     },
   },
 });

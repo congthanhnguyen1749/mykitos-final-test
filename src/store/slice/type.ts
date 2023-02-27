@@ -60,5 +60,6 @@ export interface Login {
 }
 export interface DailyCardState {
   isFreeCard: boolean;
-  getIdCard: number;
+  getIdCard: any;
+  Filter: boolean;
 }
